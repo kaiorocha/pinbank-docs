@@ -1,0 +1,28 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - LinhaDigitavel
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+  LinhaDigitavel:
+    type: string
+    description: "Linha digitável do boleto\r\n<br />"
+  TipoPagamento:
+    type: string
+    description: "Tipo de pagamento\r\n1   TITULO\r\n2\tARRECADACAO\r\n3\tTRIBUTO"
+    default: '0'
+    enum:
+      - EMPTY
+      - TITULO
+      - ARRECADACAO
+      - TRIBUTO
+xml:
+  name: ConsultarBoletoPagamentoOnlineRequestData

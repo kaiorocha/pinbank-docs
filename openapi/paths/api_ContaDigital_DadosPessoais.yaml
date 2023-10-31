@@ -1,0 +1,62 @@
+post:
+  tags:
+    - ContaDigital
+  summary: Retorna os dados pessoais do Código Cliente
+  operationId: ContaDigital_DadosPessoais
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ConsultarDadosSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/ConsultarDadosSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarDadosSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarDadosSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/ConsultarDadosSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ConsultarDadosSingleResponse.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/ConsultarDadosSingleResponse.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/ConsultarDadosSingleResponse.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/ConsultarDadosSingleResponse.yaml
+  x-codegen-request-body-name: request

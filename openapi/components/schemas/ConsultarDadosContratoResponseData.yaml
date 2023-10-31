@@ -1,0 +1,20 @@
+type: object
+properties:
+  ListaTransacoes:
+    type: array
+    description: "Lista de transações do contrato\r\n<br />"
+    xml:
+      name: Provisionamento
+      wrapped: true
+    items:
+      $ref: ./Provisionamento.yaml
+  ValorTotalBruto:
+    type: number
+    description: "Total bruto\r\n<br />"
+    format: double
+  ValorTotalLiquido:
+    type: number
+    description: "Total líquido\r\n<br />"
+    format: double
+xml:
+  name: ConsultarDadosContratoResponseData

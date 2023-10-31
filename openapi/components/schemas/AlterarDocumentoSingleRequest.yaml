@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./AlterarDocumentoRequestData.yaml
+xml:
+  name: AlterarDocumentoSingleRequest

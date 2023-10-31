@@ -1,0 +1,20 @@
+type: object
+properties:
+  TituloNotificacao:
+    type: string
+    description: "Título da notificação\r\n<br />"
+  TextoNotificacao:
+    type: string
+    description: "Texto da notificação\r\n<br />"
+  Status:
+    type: string
+    description: "Status da notificação\r\n<br />"
+  DataNotificacao:
+    type: string
+    description: "Data da notificação\r\n<br />"
+    format: date-time
+  Lida:
+    type: boolean
+    description: "Notificacao lida\r\n<br />"
+xml:
+  name: ConsultarNotificacaoResponseData

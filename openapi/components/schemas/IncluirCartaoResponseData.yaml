@@ -1,0 +1,7 @@
+type: object
+properties:
+  CartaoId:
+    type: string
+    description: "Id do cartão\r\n<br />"
+xml:
+  name: IncluirCartaoResponseData

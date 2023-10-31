@@ -1,0 +1,7 @@
+type: object
+properties:
+  IdComprovante:
+    type: integer
+    format: int64
+xml:
+  name: CadastrarAgendamentoResponseData

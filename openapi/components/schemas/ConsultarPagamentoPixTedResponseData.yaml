@@ -1,0 +1,53 @@
+type: object
+properties:
+  CodigoPagamento:
+    type: string
+    description: "Código do pagamento\r\n<br />"
+  TipoPessoa:
+    type: string
+    description: "Tipo pessoa\r\n<br />"
+  CpfCnpj:
+    type: string
+    description: "CPF / CNPJ\r\n<br />"
+  ISPB:
+    type: string
+    description: "ISPB\r\n<br />"
+  NomeBanco:
+    type: string
+    description: "Nome banco\r\n<br />"
+  Agencia:
+    type: string
+    description: "Agência\r\n<br />"
+  NumeroConta:
+    type: string
+    description: "Número da conta\r\n<br />"
+  NomeFavorecido:
+    type: string
+    description: "Nome favorecido\r\n<br />"
+  Valor:
+    type: string
+    description: "Valor\r\n<br />"
+  DataPagamento:
+    type: string
+    description: "Data do pagamento\r\n<br />"
+  Status:
+    type: string
+    description: "Status\r\n<br />"
+  HistoricoAtividades:
+    type: array
+    description: "Lista de hitórico de atividades\r\n<br />"
+    xml:
+      name: HistoricoPagamentoTransferencia
+      wrapped: true
+    items:
+      $ref: ./HistoricoPagamentoTransferencia.yaml
+  MotivoRejeicao:
+    type: array
+    description: "Lista de motivos de rejeição\r\n<br />"
+    xml:
+      name: MotivoRejeicaoTransferencia
+      wrapped: true
+    items:
+      $ref: ./MotivoRejeicaoTransferencia.yaml
+xml:
+  name: ConsultarPagamentoPixTedResponseData

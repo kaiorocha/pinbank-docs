@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ConsultarLimitePadraoCartaoRequestData.yaml
+xml:
+  name: ConsultarLimitePadraoCartaoSingleRequest

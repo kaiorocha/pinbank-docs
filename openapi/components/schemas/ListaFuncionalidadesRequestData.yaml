@@ -1,0 +1,11 @@
+required:
+  - CodigoCanal
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+xml:
+  name: ListaFuncionalidadesRequestData

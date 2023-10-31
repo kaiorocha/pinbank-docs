@@ -1,0 +1,62 @@
+post:
+  tags:
+    - ContaDigital
+  summary: Consulta os documentos da conta digital
+  operationId: ContaDigital_ConsultarDocumento
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ConsultarDocumentoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/ConsultarDocumentoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarDocumentoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarDocumentoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/ConsultarDocumentoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ConsultarDocumentoSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/ConsultarDocumentoSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/ConsultarDocumentoSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/ConsultarDocumentoSingleResponseData.yaml
+  x-codegen-request-body-name: request

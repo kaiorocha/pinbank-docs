@@ -1,0 +1,14 @@
+type: object
+properties:
+  Code:
+    type: string
+    description: "Código de Retorno\r\n<br />"
+  Message:
+    type: string
+    description: "Mensagem\r\n<br />"
+  ResponseId:
+    type: string
+    description: "ResponseId\r\n<br />"
+description: "Desbloquear Cartão de Crédito\r\n<br />"
+xml:
+  name: DesbloquearCartaoCreditoResponseData

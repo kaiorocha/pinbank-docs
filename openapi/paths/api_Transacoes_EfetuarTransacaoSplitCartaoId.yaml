@@ -1,0 +1,71 @@
+post:
+  tags:
+    - Transacoes
+  summary: Efetuar transação com ID do cartão e Split de valores.
+  operationId: Transacoes_EfetuarTransacaoSplitCartaoId
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: >-
+            ../components/schemas/EfetuarTransacaoSplitCartaoIdSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: >-
+            ../components/schemas/EfetuarTransacaoSplitCartaoIdSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/EfetuarTransacaoSplitCartaoIdSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/EfetuarTransacaoSplitCartaoIdSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: >-
+            ../components/schemas/EfetuarTransacaoSplitCartaoIdSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/EfetuarTransacaoSplitCartaoIdSingleResponse.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/EfetuarTransacaoSplitCartaoIdSingleResponse.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/EfetuarTransacaoSplitCartaoIdSingleResponse.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/EfetuarTransacaoSplitCartaoIdSingleResponse.yaml
+  x-codegen-request-body-name: request

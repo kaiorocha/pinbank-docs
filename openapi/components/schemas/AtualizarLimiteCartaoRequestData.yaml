@@ -1,0 +1,29 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - IdCartaoPrePago
+  - ValorLimiteDesejado
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  IdCartaoPrePago:
+    type: integer
+    description: "Código identificador do cartão pré-pago\r\n<br />"
+    format: int64
+    default: 0
+  ValorLimiteDesejado:
+    type: integer
+    description: "Valor do limite desejado para o cartão\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+xml:
+  name: AtualizarLimiteCartaoRequestData

@@ -1,0 +1,17 @@
+type: object
+properties:
+  ListaPDF:
+    type: array
+    description: "Lista de Ids para obter o Pdf da Fatura\r\n<br />"
+    xml:
+      name: idFaturaPdf
+      wrapped: true
+    items:
+      $ref: ./idFaturaPdf.yaml
+  TotalRegistros:
+    type: integer
+    description: "Quantidade de registros de pdfs de Faturas\r\n<br />"
+    format: int32
+description: "Obter lista de id´s de Fatura\r\n<br />"
+xml:
+  name: IdFaturaPdfCartaoCreditoResponseData

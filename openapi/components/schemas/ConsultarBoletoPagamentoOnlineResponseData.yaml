@@ -1,0 +1,17 @@
+type: object
+properties:
+  RetornoXMLBase64:
+    type: string
+    description: "Retorno XML da consulta em base64\r\n<br />"
+  RetornoConsultaBoletoPagamentoOnline:
+    $ref: ./RetornoConsultaBoletoPagamentoOnline.yaml
+  PermissaoConsultaBoletoOnline:
+    type: string
+    description: "Retorna se é permitido ou não a consulta do boleto online\r\nPERMITIDO_CONSULTA_ONLINE =&gt; 0\r\nNAO_PERMITIDO_CONSULTA_ONLINE =&gt; 1\r\n<br />"
+    enum:
+      - PERMITIDO_CONSULTA_ONLINE
+      - NAO_PERMITIDO_CONSULTA_ONLINE
+  CanalCorban:
+    $ref: ./PagtoCanalCorban.yaml
+xml:
+  name: ConsultarBoletoPagamentoOnlineResponseData

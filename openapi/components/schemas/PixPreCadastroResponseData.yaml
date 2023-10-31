@@ -1,0 +1,26 @@
+type: object
+properties:
+  CpfCnpj:
+    type: integer
+    description: "Cpf ou Cnpj\r\n<br />"
+    format: int64
+  KeyType:
+    type: string
+    description: "Tipo de chave\r\n<br />"
+  KeyValue:
+    type: string
+    description: "Valor da chave\r\n<br />"
+  DataSolicitacao:
+    type: string
+    description: "Data da solicitação\r\nFormato: \"dd/MM/yyyy\"\r\n<br />"
+  HoraSolicitacao:
+    type: string
+    description: "Hora da solicitação\r\nFormato: \"HH:mm:ss\"\r\n<br />"
+  Status:
+    type: string
+    description: "Status\r\n<br />"
+  Operacao:
+    type: string
+    description: "Operação realizada\r\n<br />"
+xml:
+  name: PixPreCadastroResponseData

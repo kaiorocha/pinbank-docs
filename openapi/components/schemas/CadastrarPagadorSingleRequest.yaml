@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./CadastrarPagadorRequestData.yaml
+xml:
+  name: CadastrarPagadorSingleRequest

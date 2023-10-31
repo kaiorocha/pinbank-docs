@@ -1,0 +1,11 @@
+type: object
+properties:
+  NsuPagamento:
+    type: string
+    description: "NSU Pagamento\r\n<br />"
+  IdComprovante:
+    type: integer
+    description: "Id do comprovate PIX\r\n<br />"
+    format: int64
+xml:
+  name: EfetuarPagamentoPixQrCodeResponseData

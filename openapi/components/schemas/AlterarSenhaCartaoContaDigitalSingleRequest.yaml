@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./AlterarSenhaCartaoContaDigitalRequestData.yaml
+xml:
+  name: AlterarSenhaCartaoContaDigitalSingleRequest

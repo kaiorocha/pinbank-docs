@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./GenerateQRCodeRequestData.yaml
+xml:
+  name: GenerateQRCodeSingleRequest

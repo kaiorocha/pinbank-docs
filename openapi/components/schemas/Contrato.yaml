@@ -1,0 +1,75 @@
+type: object
+properties:
+  NotaFiscal:
+    type: integer
+    description: "Número da nota fiscal\r\n <br />"
+    format: int64
+  Valor:
+    type: number
+    description: "Valor da nota fiscal\r\n <br />"
+    format: double
+  DataVencimento:
+    type: string
+    description: "Data de vencimento\r\n<br />"
+    format: date-time
+  NumeroContrato:
+    type: integer
+    description: "Número do contrato\r\n<br />"
+    format: int32
+  Canal:
+    type: string
+    description: "Canal\r\n<br />"
+  Estabelecimento:
+    type: string
+    description: "Estabelecimento\r\n<br />"
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  CpfCnpjEnviou:
+    type: string
+    description: "Cpf/Cnpj do cliente enviou\r\n<br />"
+  RazaoSocialEnviou:
+    type: string
+    description: Razao Social enviou
+  CodigoClienteRecebedor:
+    type: integer
+    description: "Código do cliente recebedor\r\n<br />"
+    format: int32
+  QuantidadeParcela:
+    type: integer
+    description: "Quantidade\r\n<br />"
+    format: int32
+  ValorBrutoParcela:
+    type: number
+    description: "Valor bruto da parcela\r\n<br />"
+    format: double
+  ValorLiquidoOriginal:
+    type: number
+    description: "Valor líquido original\r\n<br />"
+    format: double
+  Status:
+    type: string
+    description: "Status\r\n<br />"
+  DataGeracao:
+    type: string
+    description: "Data de geração\r\n<br />"
+    format: date-time
+  TermoTransferenciaTransacao:
+    type: string
+    description: "Termo de transferência da transação\r\n<br />"
+  Usuario:
+    type: string
+    description: "Usuário\r\n<br />"
+  ValorLiquidoAdquirente:
+    type: number
+    description: "Valor líquido adquirente\r\n<br />"
+    format: double
+  CpfCnpjClienteCreditado:
+    type: string
+    description: "Cpf/Cnpj do cliente creditado\r\n<br />"
+  RazaoSocialClienteCreditado:
+    type: string
+    description: Razao Social Cliente creditado
+xml:
+  name: Contrato

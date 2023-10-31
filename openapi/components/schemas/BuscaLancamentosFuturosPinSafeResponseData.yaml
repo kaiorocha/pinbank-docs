@@ -1,0 +1,28 @@
+type: object
+properties:
+  QuantidadeCartao:
+    type: integer
+    description: "Quantidade cartão\r\n<br />"
+    format: int32
+  ValorCartao:
+    type: number
+    description: "Valor total cartão\r\n<br />"
+    format: double
+  QuantidadeConta:
+    type: integer
+    description: "Quantidade conta\r\n<br />"
+    format: int32
+  ValorConta:
+    type: number
+    description: "Valor total conta\r\n<br />"
+    format: double
+  ListaFuturosPinSafe:
+    type: array
+    description: "Lista de trasações futuras do PinSafe\r\n<br />"
+    xml:
+      name: PinSafeFuturos
+      wrapped: true
+    items:
+      $ref: ./PinSafeFuturos.yaml
+xml:
+  name: BuscaLancamentosFuturosPinSafeResponseData

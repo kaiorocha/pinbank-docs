@@ -1,0 +1,66 @@
+type: object
+properties:
+  IdAgendamento:
+    type: integer
+    description: "ID do agendamento\r\n<br />"
+    format: int64
+  IdComprovante:
+    type: integer
+    description: "ID do comprovante\r\n<br />"
+    format: int64
+  Valor:
+    type: string
+    description: "Valor\r\n<br />"
+  DataAgendada:
+    type: string
+    description: "Data da transação \r\n<br />"
+  DataSolicitacao:
+    type: string
+    description: "Data da solicitação\r\n<br />"
+  IdStatus:
+    type: string
+    description: "Status\r\n<br />"
+  DescStatus:
+    type: string
+    description: "Descricao Status\r\n<br />"
+  MsgStatus:
+    type: string
+    description: "Mensagem de status\r\n<br />"
+  KeyValue:
+    type: string
+    description: "Chave pix\r\n<br />"
+  KeyType:
+    type: string
+    description: "Tipo da chave pix\r\n<br />"
+  TextoQrCode:
+    type: string
+    description: "QRCode\r\n<br />"
+  DescTipoPix:
+    type: string
+    description: "Descicao do tipo do Pix\r\n<br />"
+  NomeRazaoSocial:
+    type: string
+    description: "Nome Razão social\r\n<br />"
+  TipoPessoa:
+    type: string
+    description: "Tipo de pessoa\r\n<br />"
+  CpfCnpj:
+    type: string
+    description: "cpf cnpj\r\n<br />"
+  CodBanco:
+    type: string
+    description: "Codigo do banco\r\n<br />"
+  Agencia:
+    type: string
+    description: "Agencia\r\n<br />"
+  TipoConta:
+    type: string
+    description: "Tipo da conta\r\n<br />"
+  Conta:
+    type: string
+    description: "Numero da conta\r\n<br />"
+  Descricao:
+    type: string
+    description: "Dados\r\n<br />"
+xml:
+  name: ConsultarDetalheAgendamentoPixResponseData

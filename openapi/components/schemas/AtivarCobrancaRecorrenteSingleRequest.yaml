@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./AtivarCobrancaRecorrenteRequestData.yaml
+xml:
+  name: AtivarCobrancaRecorrenteSingleRequest

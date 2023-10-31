@@ -1,0 +1,27 @@
+type: object
+properties:
+  NomeProduto:
+    type: string
+    description: "Nome do produto\r\n<br />"
+  DescricaoProduto:
+    type: string
+    description: "Descrição do produto\r\n<br />"
+  CodigoProvedor:
+    type: string
+    description: "Código do provedor\r\n<br />"
+  CodigoProduto:
+    type: string
+    description: "Código do produto\r\n<br />"
+  ListSubProdutoOpcao:
+    type: array
+    description: "Lista de opções disponíveis\r\n<br />"
+    xml:
+      name: SubProdutoOpcao
+      wrapped: true
+    items:
+      $ref: ./SubProdutoOpcao.yaml
+  LogoProduto:
+    type: string
+    description: "Logo do Produto\r\n<br />"
+xml:
+  name: SubProdutoDisponivel

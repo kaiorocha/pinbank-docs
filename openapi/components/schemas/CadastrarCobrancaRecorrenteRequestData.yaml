@@ -1,0 +1,30 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - KeyLoja
+  - ListaCobrancas
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do Canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do Cliente\r\n<br />"
+    format: int32
+    default: 0
+  KeyLoja:
+    type: string
+    description: "Key Loja\r\n<br />"
+  ListaCobrancas:
+    type: array
+    description: "Lista de cobranças recorrentes para cadastro\r\n<br />"
+    xml:
+      name: CadastroCobranca
+      wrapped: true
+    items:
+      $ref: ./CadastroCobranca.yaml
+xml:
+  name: CadastrarCobrancaRecorrenteRequestData

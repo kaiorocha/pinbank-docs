@@ -1,0 +1,39 @@
+type: object
+properties:
+  IdFavorecido:
+    type: integer
+    description: "ID do favorecido\r\n<br />"
+    format: int64
+  ApelidoFavorecido:
+    type: string
+    description: "Apelido do favorecido\r\n<br />"
+  NomeRazaoSocial:
+    type: string
+    description: "Nome / razão social\r\n<br />"
+  CpfCnpj:
+    type: string
+    description: "CPF / CNPJ\r\n<br />"
+  Banco:
+    type: integer
+    description: "Código do banco\r\n<br />"
+    format: int32
+  Agencia:
+    type: string
+    description: "Agência\r\n<br />"
+  AgenciaDigito:
+    type: string
+    description: "Dígito da agência\r\n<br />"
+  Conta:
+    type: string
+    description: "Conta\r\n<br />"
+  ContaDigito:
+    type: string
+    description: "Dígito da conta\r\n<br />"
+  TipoPessoa:
+    type: string
+    description: "Tipo pessoa\r\n<br />"
+  TipoConta:
+    type: string
+    description: "Tipo conta\r\n<br />"
+xml:
+  name: ConsultarFavorecidoDocTedResponseData

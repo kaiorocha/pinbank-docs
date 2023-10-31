@@ -1,0 +1,48 @@
+required:
+  - CpfCnpj
+  - Nome
+type: object
+properties:
+  CpfCnpj:
+    type: integer
+    description: "CPF ou CNPJ do sacado (pagador)       \r\n<br />"
+    format: int64
+    default: 0
+  Nome:
+    maxLength: 100
+    type: string
+    description: "Nome do sacado (pagador) \r\n<br />"
+  Endereco:
+    maxLength: 100
+    type: string
+    description: "Endereço\r\n<br />"
+  Bairro:
+    maxLength: 30
+    type: string
+    description: "Bairro\r\n<br />"
+  Cidade:
+    maxLength: 30
+    type: string
+    description: "Cidade\r\n<br />"
+  Cep:
+    type: integer
+    description: "Cep\r\n<br />"
+    format: int32
+  Uf:
+    maxLength: 2
+    type: string
+    description: "UF\r\n<br />"
+  DdiTerceiro:
+    type: integer
+    description: "DDI Celular. Caso preenchido, envia a linha digitável por SMS (sujeito a cobrança de tarifas)\r\n<br />"
+    format: int32
+  DddTerceiro:
+    type: integer
+    description: "DDD Celular. Caso preenchido, envia a linha digitável por SMS (sujeito a cobrança de tarifas)\r\n<br />"
+    format: int32
+  NumeroCelularTerceiro:
+    type: integer
+    description: "Número do celular. Caso preenchido, envia a linha digitável por SMS (sujeito a cobrança de tarifas)\r\n<br />"
+    format: int64
+xml:
+  name: Sacado

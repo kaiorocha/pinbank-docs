@@ -1,0 +1,62 @@
+post:
+  tags:
+    - CartaoCredito
+  summary: Nova Conta PF do Cartão de Crédito
+  operationId: CartaoCredito_NovaContaPFCartaoCredito
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/NovaContaPFCartaoCreditoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/NovaContaPFCartaoCreditoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/NovaContaPFCartaoCreditoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/NovaContaPFCartaoCreditoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/NovaContaPFCartaoCreditoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/NovaContaPFCartaoCreditoSingleResponse.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/NovaContaPFCartaoCreditoSingleResponse.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/NovaContaPFCartaoCreditoSingleResponse.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/NovaContaPFCartaoCreditoSingleResponse.yaml
+  x-codegen-request-body-name: request

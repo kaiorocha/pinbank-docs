@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./AprovarTedRequestData.yaml
+xml:
+  name: AprovarTedSingleRequest

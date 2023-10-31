@@ -1,0 +1,66 @@
+post:
+  tags:
+    - CashOut
+  summary: Excluir favorecido para transferência DOC / TED.
+  operationId: CashOut_ExcluirFavorecidoDocTed
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ExcluirFavorecidoDocTedSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/ExcluirFavorecidoDocTedSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/ExcluirFavorecidoDocTedSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/ExcluirFavorecidoDocTedSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/ExcluirFavorecidoDocTedSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ExcluirFavorecidoDocTedSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ExcluirFavorecidoDocTedSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ExcluirFavorecidoDocTedSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ExcluirFavorecidoDocTedSingleResponseData.yaml
+  x-codegen-request-body-name: request

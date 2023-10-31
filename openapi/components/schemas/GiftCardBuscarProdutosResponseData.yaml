@@ -1,0 +1,15 @@
+type: object
+properties:
+  ListaProdutosDisponiveis:
+    type: array
+    description: "Lista de produtos disponíveis\r\n<br />"
+    xml:
+      name: ProdutoDisponivel
+      wrapped: true
+    items:
+      $ref: ./ProdutoDisponivel.yaml
+  TokenGiftCard:
+    type: string
+    description: "Token de autenticação GiftCard\r\n<br />"
+xml:
+  name: GiftCardBuscarProdutosResponseData

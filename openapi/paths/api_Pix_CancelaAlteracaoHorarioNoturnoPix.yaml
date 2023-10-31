@@ -1,0 +1,71 @@
+post:
+  tags:
+    - Pix
+  summary: Cancela a solicitação de alteração do horário noturno Pix do cliente
+  operationId: Pix_CancelaAlteracaoHorarioNoturnoPix
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: >-
+            ../components/schemas/CancelarAlteracaoHorarioNoturnoPixSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: >-
+            ../components/schemas/CancelarAlteracaoHorarioNoturnoPixSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/CancelarAlteracaoHorarioNoturnoPixSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/CancelarAlteracaoHorarioNoturnoPixSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: >-
+            ../components/schemas/CancelarAlteracaoHorarioNoturnoPixSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/CancelarAlteracaoHorarioNoturnoPixResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/CancelarAlteracaoHorarioNoturnoPixResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/CancelarAlteracaoHorarioNoturnoPixResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/CancelarAlteracaoHorarioNoturnoPixResponseData.yaml
+  x-codegen-request-body-name: request

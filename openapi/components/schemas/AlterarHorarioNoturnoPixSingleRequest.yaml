@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./AlterarHorarioNoturnoPixRequestData.yaml
+xml:
+  name: AlterarHorarioNoturnoPixSingleRequest

@@ -1,0 +1,32 @@
+type: object
+properties:
+  TarifaPercentualRetencao:
+    type: number
+    description: "Percentual retenção\r\n<br />"
+    format: double
+  TarifaPdfEmail:
+    type: number
+    description: "Emissão PDF / Email\r\n<br />"
+    format: double
+  TarifaPagamentoSms:
+    type: number
+    description: "Emissão SMS\r\n<br />"
+    format: double
+  TarifaLiquidacao:
+    type: number
+    description: "Liquidação\r\n<br />"
+    format: double
+  TarifaBaixa:
+    type: number
+    description: "Baixa\r\n<br />"
+    format: double
+  TarifaBoletoPix:
+    type: number
+    description: "Tarifa boleto liquidado por Pix\r\n<br />"
+    format: double
+  PercentualRetencaoBoletoPix:
+    type: number
+    description: "Percentual de retencao boleto liquidado por Pix\r\n<br />"
+    format: double
+xml:
+  name: BoletoCobranca

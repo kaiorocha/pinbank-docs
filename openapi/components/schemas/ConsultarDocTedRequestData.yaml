@@ -1,0 +1,21 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - NossoNumero
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  NossoNumero:
+    type: string
+    description: "Nosso número\r\n<br />"
+xml:
+  name: ConsultarDocTedRequestData

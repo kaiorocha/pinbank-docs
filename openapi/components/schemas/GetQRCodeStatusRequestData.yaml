@@ -1,0 +1,24 @@
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  IdentificadorAdicionalOrigem:
+    type: string
+    description: "Identificador adicional da origem\r\n<br />"
+  IdentificadorQRCode:
+    type: string
+    description: "Identificador do QR Code\r\n<br />"
+  AguardarProcessamento:
+    type: boolean
+    description: "True: A consulta deve aguardar o término do processamento do QR Code \r\nFalse: Retorna o status corrente do Qr Code sem agaurdar o processamento\r\n<br />"
+    default: false
+xml:
+  name: GetQRCodeStatusRequestData

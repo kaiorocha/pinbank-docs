@@ -1,0 +1,62 @@
+post:
+  tags:
+    - CartaoCredito
+  summary: Desbloquear Cartão de Crédito
+  operationId: CartaoCredito_DesbloquearCartaoCredito
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/DesbloquearCartaoCreditoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/DesbloquearCartaoCreditoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/DesbloquearCartaoCreditoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/DesbloquearCartaoCreditoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/DesbloquearCartaoCreditoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/DesbloquearCartaoCreditoSingleResponse.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/DesbloquearCartaoCreditoSingleResponse.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/DesbloquearCartaoCreditoSingleResponse.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/DesbloquearCartaoCreditoSingleResponse.yaml
+  x-codegen-request-body-name: request

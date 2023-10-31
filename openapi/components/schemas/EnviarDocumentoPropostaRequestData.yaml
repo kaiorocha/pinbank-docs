@@ -1,0 +1,31 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - ListaDocumentos
+  - PropostaId
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  PropostaId:
+    type: integer
+    description: "ID da proposta\r\n<br />"
+    format: int64
+  ListaDocumentos:
+    type: array
+    description: "Lista de documentos\r\n<br />"
+    xml:
+      name: DocumentoProposta
+      wrapped: true
+    items:
+      $ref: ./DocumentoProposta.yaml
+xml:
+  name: EnviarDocumentoPropostaRequestData

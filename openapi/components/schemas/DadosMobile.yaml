@@ -1,0 +1,14 @@
+required:
+  - Imei
+  - VersaoApp
+type: object
+properties:
+  VersaoApp:
+    type: string
+    description: "Versão do app\r\n<br />"
+  Imei:
+    type: string
+    description: "Imei\r\n<br />"
+description: "Dados mobile. Quando o login esta sendo ralizado a partir de um dispositivo móvel\r\n<br />"
+xml:
+  name: DadosMobile

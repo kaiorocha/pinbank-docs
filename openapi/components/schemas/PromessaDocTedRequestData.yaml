@@ -1,0 +1,58 @@
+required:
+  - Agencia
+  - CodigoBanco
+  - CodigoCanal
+  - CodigoCliente
+  - ContaCorrente
+  - CpfCnpj
+  - DigitoContaCorrente
+  - IdentificadorOrigem
+  - Valor
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CpfCnpj:
+    maxLength: 14
+    minLength: 11
+    type: string
+    description: "CPF ou CNPJ da conta origem\r\n<br />"
+  CodigoBanco:
+    type: integer
+    description: "Código do banco\r\n<br />"
+    format: int32
+  Agencia:
+    type: integer
+    description: "Número da agência\r\n<br />"
+    format: int32
+    default: 0
+  DigitoAgencia:
+    type: string
+    description: "Dígito do número da agência\r\n<br />"
+  ContaCorrente:
+    type: integer
+    description: "Número da conta corrente\r\n<br />"
+    format: int64
+    default: 0
+  DigitoContaCorrente:
+    type: string
+    description: "Dígito do número da conta corrente\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor da transferência \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  IdentificadorOrigem:
+    maxLength: 32
+    type: string
+    description: Número identificação da Origem
+xml:
+  name: PromessaDocTedRequestData

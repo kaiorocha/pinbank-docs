@@ -1,0 +1,27 @@
+required:
+  - CodigoCanal
+  - CodigoClienteEmail
+  - CodigoVerificacao
+  - SenhaAntiga
+  - SenhaNova
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoClienteEmail:
+    type: string
+    description: "Código do cliente ou email\r\n<br />"
+  SenhaAntiga:
+    type: string
+    description: "Senha antiga\r\n<br />"
+  SenhaNova:
+    type: string
+    description: "Senha nova\r\n<br />"
+  CodigoVerificacao:
+    type: string
+    description: "Código de verificação recebido por email ou sms\r\n<br />"
+xml:
+  name: AlterarSenhaRequestData

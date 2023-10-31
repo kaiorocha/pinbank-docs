@@ -1,0 +1,61 @@
+required:
+  - AuditNumber
+  - CodigoPais
+  - DtTransacao
+  - EnvioCVV2
+  - Moeda
+  - NomeEstabelecimento
+  - PaisEstabelecimento
+  - TipoTransacao
+  - VlTransacao
+type: object
+properties:
+  PaisEstabelecimento:
+    type: string
+    description: "País do estabelecimento (Se não utilizar, enviar sempre BR)\r\n<br />"
+    default: BR
+  DtTransacao:
+    type: string
+    description: "Data da transação\r\n<br />"
+  NumeroCVV2:
+    type: string
+    description: "Número CVV2\r\n<br />"
+  QtdParcelas:
+    type: integer
+    description: "Quantidade parcelas (Obrigatório se parcelado)\r\n<br />"
+    format: int32
+  CidadeEstabelecimento:
+    type: string
+    description: "Cidade do estabelecimento\r\n<br />"
+  EnvioCVV2:
+    type: string
+    description: "Indicador de envio do CVV.\r\n    0 - CVV2 não enviado\r\n    1 - Validar CVV2\r\n    <br />"
+  NumEstabelecimento:
+    type: string
+    description: "Número do estabelecimento\r\n<br />"
+  CodigoPais:
+    type: string
+    description: "Código do país (Se não souber enviar 076)\r\n<br />"
+    default: '076'
+  NomeEstabelecimento:
+    type: string
+    description: "Nome do estabelecimento\r\n<br />"
+  Moeda:
+    type: string
+    description: "Código da moeda\r\n    986 - Real\r\n    840 - Dolar\r\n    <br />"
+  TipoTransacao:
+    type: string
+    description: "Tipo de transação.\r\n    C - Pagamento de contas\r\n    J - Pagamento de contas com juros\r\n    <br />"
+  VlTransacao:
+    type: integer
+    description: "Valor da transação.\r\n<br />"
+    format: int64
+  AuditNumber:
+    type: string
+    description: "NSU - Número sequencial - Controle Emissor\r\n<br />"
+  ValidadeCartao:
+    type: string
+    description: "Validade do cartão (AAMM)\r\n<br />"
+description: ''
+xml:
+  name: AfinzCartaoCreditoDadosPagamentoConta

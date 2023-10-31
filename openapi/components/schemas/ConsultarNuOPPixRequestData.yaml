@@ -1,0 +1,17 @@
+required:
+  - Data
+type: object
+properties:
+  EndToEnd:
+    maxLength: 40
+    type: string
+    description: "EndToEnd\r\n<br />"
+  QrCodeId:
+    type: integer
+    description: "Id Qr Code\r\n<br />"
+    format: int32
+  Data:
+    type: string
+    description: "Data\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+xml:
+  name: ConsultarNuOPPixRequestData

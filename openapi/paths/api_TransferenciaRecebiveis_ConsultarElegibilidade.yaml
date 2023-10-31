@@ -1,0 +1,66 @@
+post:
+  tags:
+    - TransferenciaRecebiveis
+  summary: Consulta elegibilidade
+  operationId: TransferenciaRecebiveis_ConsultarElegibilidade
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ConsultarElegibilidadeSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/ConsultarElegibilidadeSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarElegibilidadeSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarElegibilidadeSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/ConsultarElegibilidadeSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarElegibilidadeSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarElegibilidadeSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarElegibilidadeSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarElegibilidadeSingleResponseData.yaml
+  x-codegen-request-body-name: request

@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./RastreabilidadeRequestData.yaml
+xml:
+  name: RastreabilidadeSingleRequest

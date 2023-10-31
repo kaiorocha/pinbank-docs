@@ -1,0 +1,75 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - DataFinal
+  - DataInicial
+  - IdAprovadorCliente
+  - StatusPagamento
+  - TipoPagamento
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  IdAprovadorCliente:
+    type: integer
+    description: "Id Aprovador\r\n<br />"
+    format: int64
+  TipoPagamento:
+    type: string
+    default: '999'
+    enum:
+      - PIX
+      - TED
+      - CONCESSIONARIA
+      - TRIBUTO
+      - TITULO
+      - TRANSFERENCIA
+      - TODOS
+  StatusPagamento:
+    type: string
+    default: '999'
+    enum:
+      - PENDENTE
+      - APROVADO
+      - ENVIADO
+      - EFETIVADO
+      - DEVOLVIDO
+      - REPROVADO
+      - EXPIRADO
+      - PROCESSANDO
+      - TODOS
+  DataInicial:
+    maxLength: 14
+    type: string
+    description: "Data inicial\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataFinal:
+    maxLength: 14
+    type: string
+    description: "Data final\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  HasTime:
+    type: boolean
+    description: Hora informada
+  Skip:
+    type: integer
+    description: "Página atual (Utilize o skip + take ou offset + take)\r\n<br />"
+    format: int32
+  Take:
+    maximum: 50
+    minimum: 0
+    type: integer
+    description: "Quantidade de itens por página, o máximo é 50\r\n<br />"
+    format: int32
+  Offset:
+    type: integer
+    description: "Índice inicial dos próximos registros do result set (Utilize o skip + take ou offset + take)\r\n<br />"
+    format: int32
+xml:
+  name: ListarTransacoesAprovadorRequestData

@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./PixConsultarChavesRequestData.yaml
+xml:
+  name: PixConsultarChavesSingleRequest

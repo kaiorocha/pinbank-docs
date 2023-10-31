@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./OfertaOptInRequestData.yaml
+xml:
+  name: OfertaOptInSingleRequest

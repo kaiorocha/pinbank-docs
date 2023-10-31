@@ -1,0 +1,8 @@
+type: object
+properties:
+  LinhaDigitavel:
+    type: string
+    description: "Linha Digitavel do Boleto\r\n<br />"
+description: "Linha Digitavel Boleto do Cartão de Crédito\r\n<br />"
+xml:
+  name: LinhaDigitavelBoletoCartaoCreditoResponseData

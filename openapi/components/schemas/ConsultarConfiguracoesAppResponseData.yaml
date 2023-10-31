@@ -1,0 +1,8 @@
+type: object
+properties:
+  DesabilitaCadastroMobile:
+    type: boolean
+    description: "Desabilita cadastro mobile\r\n<br />"
+description: Retorna o dado de permissão de cadastro pelo app
+xml:
+  name: ConsultarConfiguracoesAppResponseData

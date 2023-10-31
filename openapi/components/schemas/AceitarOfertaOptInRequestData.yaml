@@ -1,0 +1,22 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - CodigoOferta
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoOferta:
+    maxLength: 15
+    type: string
+    description: "Código da oferta a ser verificada\r\nValores Disponíveis:\r\n[\"LKPAGTO_CP\"]\r\n<br />"
+xml:
+  name: AceitarOfertaOptInRequestData

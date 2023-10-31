@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ExtratoPosRequestData.yaml
+xml:
+  name: ExtratoPosSingleRequest

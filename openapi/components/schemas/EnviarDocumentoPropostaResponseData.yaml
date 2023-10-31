@@ -1,0 +1,12 @@
+type: object
+properties:
+  ListaRetornoDocumento:
+    type: array
+    description: "Lista retorno de documentos\r\n<br />"
+    xml:
+      name: RetornoDocumento
+      wrapped: true
+    items:
+      $ref: ./RetornoDocumento.yaml
+xml:
+  name: EnviarDocumentoPropostaResponseData

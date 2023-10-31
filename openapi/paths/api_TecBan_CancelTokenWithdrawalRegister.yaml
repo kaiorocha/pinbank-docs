@@ -1,0 +1,71 @@
+post:
+  tags:
+    - TecBan
+  summary: Cancela um registro de saque para terceiro
+  operationId: TecBan_CancelTokenWithdrawalRegister
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: >-
+            ../components/schemas/CancelTokenWithdrawalRegisterSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: >-
+            ../components/schemas/CancelTokenWithdrawalRegisterSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/CancelTokenWithdrawalRegisterSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/CancelTokenWithdrawalRegisterSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: >-
+            ../components/schemas/CancelTokenWithdrawalRegisterSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/CancelTokenWithdrawalRegisterSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/CancelTokenWithdrawalRegisterSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/CancelTokenWithdrawalRegisterSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/CancelTokenWithdrawalRegisterSingleResponseData.yaml
+  x-codegen-request-body-name: request

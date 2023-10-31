@@ -1,0 +1,45 @@
+type: object
+properties:
+  CodigoReceita:
+    type: integer
+    description: "Código da receita\r\n<br />"
+    format: int32
+    default: 0
+  TipoDocumento:
+    type: integer
+    description: "Tipo do documento\r\n<br />"
+    format: int32
+    default: 0
+  CpfCnpj:
+    maxLength: 14
+    minLength: 11
+    type: string
+    description: "CPF ou CNPJ\r\n<br />"
+  Periodo:
+    maxLength: 8
+    type: string
+    description: "Período\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  NumeroReferencia:
+    type: string
+    description: "Número de referência\r\n<br />"
+  ValorPrincipal:
+    type: integer
+    description: "Valor principal\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  ValorJuros:
+    type: integer
+    description: "Valor dos juros \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  ValorMulta:
+    type: integer
+    description: "Valor da multa\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  ValorTotal:
+    type: integer
+    description: "Valor total\r\n<br />"
+    format: int64
+    default: 0
+xml:
+  name: PagamentoTributoDARFRequestData

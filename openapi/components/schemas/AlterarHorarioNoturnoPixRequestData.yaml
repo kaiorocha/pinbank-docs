@@ -1,0 +1,24 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  HorarioNoturnoInicio:
+    type: string
+    description: "Horário noturno inicial\r\n<br />"
+    enum:
+      - H06_00
+      - H20_00
+      - H22_00
+xml:
+  name: AlterarHorarioNoturnoPixRequestData

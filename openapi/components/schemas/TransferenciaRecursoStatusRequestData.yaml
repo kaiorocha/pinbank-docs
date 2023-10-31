@@ -1,0 +1,28 @@
+required:
+  - IdTrAnalise
+  - Observacao
+  - Status
+  - UsrId
+type: object
+properties:
+  IdTrAnalise:
+    type: integer
+    description: "ID da transferência recurso análise\r\n<br />"
+    format: int64
+    default: 0
+  Status:
+    type: string
+    description: "Status da transferência recurso\r\n<br />"
+    default: '0'
+    enum:
+      - APROVAR
+      - REPROVAR
+  UsrId:
+    type: string
+    description: "Usuário alteração\r\n<br />"
+  Observacao:
+    maxLength: 50
+    type: string
+    description: "Observação\r\n<br />"
+xml:
+  name: TransferenciaRecursoStatusRequestData

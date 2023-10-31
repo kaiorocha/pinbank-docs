@@ -1,0 +1,20 @@
+type: object
+properties:
+  TiposTerminais:
+    type: array
+    description: "Lista de tipos de terminal\r\n<br />"
+    xml:
+      name: TipoTerminalSimulador
+      wrapped: true
+    items:
+      $ref: ./TipoTerminalSimulador.yaml
+  Bandeiras:
+    type: array
+    description: "Lista de bandeiras\r\n<br />"
+    xml:
+      name: BandeiraSimulador
+      wrapped: true
+    items:
+      $ref: ./BandeiraSimulador.yaml
+xml:
+  name: TipoTerminalSimuladorResponseData

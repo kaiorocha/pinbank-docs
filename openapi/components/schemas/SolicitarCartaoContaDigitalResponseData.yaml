@@ -1,0 +1,8 @@
+type: object
+properties:
+  IdApelido:
+    type: integer
+    description: "ID do Apelido\r\n<br />"
+    format: int64
+xml:
+  name: SolicitarCartaoContaDigitalResponseData

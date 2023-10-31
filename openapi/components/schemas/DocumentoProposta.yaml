@@ -1,0 +1,31 @@
+required:
+  - Base64Arquivo
+  - FormatoArquivo
+  - NomeArquivo
+  - TipoDocumento
+type: object
+properties:
+  TipoDocumento:
+    type: string
+    description: Tipo do documento
+    enum:
+      - RG
+      - CNH
+      - SELFIE
+      - CPF
+      - TERMO
+  NomeArquivo:
+    type: string
+    description: "Nome do arquivo\r\n<br />"
+  FormatoArquivo:
+    type: string
+    description: "Formato do arquivo\r\n<br />"
+    enum:
+      - JPEG
+      - PNG
+      - PDF
+  Base64Arquivo:
+    type: string
+    description: "Base64 arquivo\r\n<br />"
+xml:
+  name: DocumentoProposta

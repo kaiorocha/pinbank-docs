@@ -1,0 +1,37 @@
+required:
+  - ListaCodigoCanal
+  - ListaCodigoClienteEstabelecimento
+  - TipoOperacao
+type: object
+properties:
+  ListaCodigoCanal:
+    type: array
+    description: "Código do canal\r\n<br />"
+    items:
+      type: integer
+      format: int32
+  ListaCodigoClienteEstabelecimento:
+    type: array
+    description: "Lista de códigos de estabelecimentos\r\n<br />"
+    items:
+      type: integer
+      format: int32
+  TipoOperacao:
+    type: integer
+    description: "Lista de códigos de tipos de operação\r\n<br />"
+    format: int32
+    default: 0
+  DataInicial:
+    type: string
+    description: "Data inicial\r\n<br />"
+    format: date-time
+  DataFinal:
+    type: string
+    description: "Data final\r\n<br />"
+    format: date-time
+  NumeroIp:
+    maxLength: 16
+    type: string
+    description: "Número de Ip\r\n<br />"
+xml:
+  name: RastreabilidadeRequestData

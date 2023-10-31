@@ -1,0 +1,40 @@
+type: object
+properties:
+  Amount:
+    type: integer
+    description: "Valor solicitado\r\n<br />"
+    format: int64
+  Conciliated:
+    type: boolean
+    description: "Se o saque já foi conciliado ou não\r\n<br />"
+  ConfirmationDate:
+    type: string
+    description: "Data da confirmação\r\n<br />"
+  ConfirmedAmount:
+    type: integer
+    description: "Valor confirmado\r\n<br />"
+    format: int64
+  DeniedCode:
+    type: string
+    description: "Código da negativa\r\n<br />"
+  DeniedMessage:
+    type: string
+    description: "Motivo da negativa\r\n<br />"
+  NsuTecBan:
+    type: integer
+    description: "NSU da TecBan\r\n<br />"
+    format: int32
+  Status:
+    type: string
+    description: "Status do saque\r\n<br />"
+    enum:
+      - Confirmed
+      - Requested
+      - AuthorizationDenied
+      - Cancelled
+      - Authorized
+      - ConfirmationDenied
+      - Reversed
+      - Unknown
+xml:
+  name: GetQRCodeWithdrawalStatusResponseData

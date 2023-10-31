@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./TrocaSenhaCartaoCreditoRequestData.yaml
+description: ''
+xml:
+  name: TrocaSenhaCartaoCreditoSingleRequest

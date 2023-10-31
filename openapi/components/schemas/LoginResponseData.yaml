@@ -1,0 +1,18 @@
+type: object
+properties:
+  QtdeTentativasLogin:
+    type: integer
+    description: "Quantidade de logins inválidos. Apos três tentativas o usuário é bloqueado\r\n<br />"
+    format: int32
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  UltimoTermoAceito:
+    type: boolean
+    description: "Ultimo termo aceito\r\ntrue  - se ok\r\nfalse - se nok (exigir atualização de aceite de termos)"
+  ContaTeste:
+    type: boolean
+    description: "Identifica conta de testes\r\ntrue  - conta para uso de testes"
+xml:
+  name: LoginResponseData

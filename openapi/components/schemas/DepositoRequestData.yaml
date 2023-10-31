@@ -1,0 +1,61 @@
+required:
+  - CodigoCanal
+  - CodigoCanalLoja
+  - CodigoCliente
+  - CodigoClienteLoja
+  - DataHoraTransacaoOrigem
+  - NsuTransacaoOrigem
+  - Token
+  - Valor
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoClienteLoja:
+    type: integer
+    description: "Código do cliente da loja\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanalLoja:
+    type: integer
+    description: "Código do canal da loja\r\n<br />"
+    format: int32
+    default: 0
+  Token:
+    type: string
+    description: "Token de seguranca do cliente. Gerado a partir do APP do cliente (CodigoCanal e CodigoCliente)\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor do depósito \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  IdTerminal:
+    type: string
+    description: "Id do terminal\r\n<br />"
+  SerialNumber:
+    type: string
+    description: "Serial number do terminal\r\n<br />"
+  VersaoTerminal:
+    type: string
+    description: "Versão do terminal\r\n<br />"
+  NsuTransacaoOrigem:
+    type: string
+    description: "NSU da transação na origem\r\n<br />"
+  DataHoraTransacaoOrigem:
+    maxLength: 14
+    minLength: 0
+    type: string
+    description: "Data da transação na origem\r\n<br />"
+  Mcc:
+    type: string
+    description: "MCC da loja\r\n<br />"
+xml:
+  name: DepositoRequestData

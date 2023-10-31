@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./ListarCartaoCreditoRequestData.yaml
+description: ''
+xml:
+  name: ListarCartaoCreditoSingleRequest

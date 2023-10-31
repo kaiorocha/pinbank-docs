@@ -1,0 +1,35 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - ListaDocumentos
+  - RgCnhPossuiNumeroCpf
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  RgCnhPossuiNumeroCpf:
+    type: boolean
+    description: "RG ou CNH possui o número de CPF\r\n<br />"
+  CodigoRetorno:
+    type: integer
+    description: "Usado para permitir o registro de Documentação para cadastros Bloqueados\r\nsomente para o codigo de erro 58\r\n<br />"
+    format: int32
+    default: 0
+  ListaDocumentos:
+    type: array
+    description: "Lista de documentos\r\n<br />"
+    xml:
+      name: Documento
+      wrapped: true
+    items:
+      $ref: ./Documento.yaml
+xml:
+  name: IncluirDocumentoRequestData

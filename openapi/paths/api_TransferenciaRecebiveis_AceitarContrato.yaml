@@ -1,0 +1,62 @@
+post:
+  tags:
+    - TransferenciaRecebiveis
+  summary: Aceitar contrato
+  operationId: TransferenciaRecebiveis_AceitarContrato
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/AceitarContratoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/AceitarContratoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/AceitarContratoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/AceitarContratoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/AceitarContratoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/AceitarContratoSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/AceitarContratoSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/AceitarContratoSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/AceitarContratoSingleResponseData.yaml
+  x-codegen-request-body-name: request

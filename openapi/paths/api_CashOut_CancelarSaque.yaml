@@ -1,0 +1,62 @@
+post:
+  tags:
+    - CashOut
+  summary: Cancelamento de saque da conta digital.
+  operationId: CashOut_CancelarSaque
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/CancelarSaqueSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/CancelarSaqueSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/CancelarSaqueSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/CancelarSaqueSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/CancelarSaqueSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CancelarSaqueSingleResponse.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/CancelarSaqueSingleResponse.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/CancelarSaqueSingleResponse.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/CancelarSaqueSingleResponse.yaml
+  x-codegen-request-body-name: request

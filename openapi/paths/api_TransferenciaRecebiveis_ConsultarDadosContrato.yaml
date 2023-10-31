@@ -1,0 +1,66 @@
+post:
+  tags:
+    - TransferenciaRecebiveis
+  summary: Consultar contratos
+  operationId: TransferenciaRecebiveis_ConsultarDadosContrato
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ConsultarDadosContratoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/ConsultarDadosContratoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarDadosContratoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarDadosContratoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/ConsultarDadosContratoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarDadosContratoSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarDadosContratoSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarDadosContratoSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarDadosContratoSingleResponseData.yaml
+  x-codegen-request-body-name: request

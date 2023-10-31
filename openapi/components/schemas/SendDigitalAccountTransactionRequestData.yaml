@@ -1,0 +1,31 @@
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  DeviceId:
+    type: string
+    description: "ID exclusivo do dispositivo do cliente\r\n<br />"
+  NsuOrigem:
+    type: string
+    description: "NSU Origem\r\n<br />"
+  ConteudoQRCode:
+    type: string
+    description: "Conteúdo do QR Code gerado\r\n<br />"
+  ValorGorjeta:
+    type: integer
+    description: "Valor da gorjeta\r\n<br />"
+    format: int64
+    default: 0
+  Token:
+    type: string
+    description: "Token de seguranca.\r\n<br />"
+xml:
+  name: SendDigitalAccountTransactionRequestData

@@ -1,0 +1,24 @@
+required:
+  - DddTelefoneResidencial
+  - DdiTelefoneResidencial
+  - NumeroTelefoneResidencial
+type: object
+properties:
+  DdiTelefoneResidencial:
+    type: integer
+    description: "DDI telefone residencial\r\n<br />"
+    format: int32
+    default: 0
+  DddTelefoneResidencial:
+    type: integer
+    description: "DDD telefone residencial\r\n<br />"
+    format: int32
+    default: 0
+  NumeroTelefoneResidencial:
+    type: integer
+    description: "Número telefone residencial\r\n<br />"
+    format: int64
+    default: 0
+description: "Telefone residencial\r\n<br />"
+xml:
+  name: TelefoneResidencial

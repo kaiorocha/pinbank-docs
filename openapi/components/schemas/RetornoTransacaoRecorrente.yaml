@@ -1,0 +1,25 @@
+type: object
+properties:
+  DataReferencia:
+    type: integer
+    description: "Data de referência\r\n<br />"
+    format: int32
+  Valor:
+    type: integer
+    description: "Valor\r\n<br />"
+    format: int64
+  Status:
+    type: string
+    description: "Status\r\n<br />"
+  DataProcessamento:
+    type: integer
+    description: "Data do processamento\r\n<br />"
+    format: int32
+  DescErro:
+    type: string
+    description: "Descrição de erro \r\n<br />"
+  NsuTransacao:
+    type: string
+    description: "NSU Transação\r\n<br />"
+xml:
+  name: RetornoTransacaoRecorrente

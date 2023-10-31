@@ -1,0 +1,47 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - CodigoSeguranca
+  - DataValidade
+  - IdCobrancaRecorrente
+  - KeyLoja
+  - NomeImpresso
+  - NumeroCartao
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do Canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do Cliente\r\n<br />"
+    format: int32
+    default: 0
+  KeyLoja:
+    type: string
+    description: "Key Loja\r\n<br />"
+  IdCobrancaRecorrente:
+    type: integer
+    description: "ID da cobrança recorrente\r\n<br />"
+    format: int32
+    default: 0
+  NomeImpresso:
+    maxLength: 22
+    type: string
+    description: "Nome Impresso no Cartão\r\n<br />"
+  DataValidade:
+    maxLength: 6
+    type: string
+    description: "Data de Validade \r\nFormato: \"yyyyMM\""
+  NumeroCartao:
+    maxLength: 16
+    type: string
+    description: "Número do cartão\r\n<br />"
+  CodigoSeguranca:
+    maxLength: 4
+    type: string
+    description: "Código de segurança (CVV)\r\n<br />"
+xml:
+  name: AtivarCobrancaRecorrenteRequestData

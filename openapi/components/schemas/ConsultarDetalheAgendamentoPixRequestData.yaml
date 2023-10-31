@@ -1,0 +1,23 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - IdPixAgendado
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  IdPixAgendado:
+    type: integer
+    description: "Id do Pix agendado\r\n<br />"
+    format: int64
+    default: 0
+xml:
+  name: ConsultarDetalheAgendamentoPixRequestData

@@ -1,0 +1,71 @@
+post:
+  tags:
+    - ContaDigital
+  summary: Alterar a senha de um cartão da conta digital
+  operationId: ContaDigital_AlterarSenhaCartaoContaDigital
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: >-
+            ../components/schemas/AlterarSenhaCartaoContaDigitalSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: >-
+            ../components/schemas/AlterarSenhaCartaoContaDigitalSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/AlterarSenhaCartaoContaDigitalSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/AlterarSenhaCartaoContaDigitalSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: >-
+            ../components/schemas/AlterarSenhaCartaoContaDigitalSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/AlterarSenhaCartaoContaDigitalSingleResponse.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/AlterarSenhaCartaoContaDigitalSingleResponse.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/AlterarSenhaCartaoContaDigitalSingleResponse.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/AlterarSenhaCartaoContaDigitalSingleResponse.yaml
+  x-codegen-request-body-name: request

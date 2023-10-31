@@ -1,0 +1,46 @@
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  LpfId:
+    type: integer
+    description: "Lpf Id     \r\n<br />"
+    format: int64
+  ValorOriginal:
+    type: integer
+    description: "Valor original do PIX   \r\n<br />"
+    format: int64
+  ValorDisponivelDevolucao:
+    type: integer
+    description: "Valor disponível para devolução\r\n<br />"
+    format: int64
+  SomaValoresDevovidos:
+    type: integer
+    description: "Soma de valores devolvidos do PIX original\r\n<br />"
+    format: int64
+  DataTransacao:
+    type: string
+    description: "Data da transação do PIX original\r\n<br />"
+    format: date-time
+  DescricaoTransacao:
+    type: string
+    description: "Descricao da transação do PIX original\r\n<br />"
+  DataLimiteDevolucaoPix:
+    type: string
+    description: "Data limite para a devolução do Pix\r\n<br />"
+    format: date-time
+  DestinatarioNome:
+    type: string
+    description: "Destinatario da devolução do Pix\r\n<br />"
+  DestinatarioInstituicao:
+    type: string
+    description: "Instituição do destinatario da devolução do Pix\r\n<br />"
+description: ''
+xml:
+  name: PixDevolucaoConsultaResponseData

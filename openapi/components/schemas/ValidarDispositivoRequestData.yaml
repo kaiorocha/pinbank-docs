@@ -1,0 +1,39 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - HashDispositivo
+  - IdentificadorDispositivo
+  - MarcaDispositivo
+  - ModeloDispositivo
+  - SistemaOperacional
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  MarcaDispositivo:
+    type: string
+    description: "Marca do dispositivo\r\n<br />"
+  IdentificadorDispositivo:
+    type: string
+    description: "Identificador do dispositivo\r\n<br />"
+  ModeloDispositivo:
+    type: string
+    description: "Modelo do dispositivo\r\n<br />"
+  SistemaOperacional:
+    type: integer
+    description: "Sistema Operacional\r\n0 - Android\r\n1 - iOS\r\n<br />"
+    format: int32
+    default: 0
+  HashDispositivo:
+    type: string
+    description: "Hash do dispositivo\r\n<br />"
+xml:
+  name: ValidarDispositivoRequestData

@@ -1,0 +1,74 @@
+type: object
+properties:
+  VlLimiteCredito:
+    type: integer
+    description: "Valor do limíte de crédito do Portador\r\n <br />"
+    format: int64
+  NmEmbossed:
+    type: string
+    description: "Nome gravado no cartão\r\n <br />"
+  VlAutorizacoesPendentes:
+    type: integer
+    description: "Autorizações Pendentes\r\n <br />"
+    format: int64
+  VlSaldoAtual:
+    type: integer
+    description: "Saldo Atual\r\n <br />"
+    format: int64
+  CodSubProduto:
+    type: string
+    description: "Código do Subproduto.\r\n <br />"
+  VlSaldoAnterior:
+    type: integer
+    description: "Saldo Anterior\r\n <br />"
+    format: int64
+  DiaVencimento:
+    type: string
+    description: "Dia de Vencimento\r\n <br />"
+  CodProduto:
+    type: string
+    description: "Código do Produto\r\n <br />"
+  VlLimiteCreditoDisponivel:
+    type: integer
+    description: "Valor de Limite de Crédito Disponível\r\n <br />"
+    format: int64
+  NrConta:
+    type: string
+    description: "Numero de Conta\r\n <br />"
+  IndClienteVIP:
+    type: string
+    description: "Indicador Cliente VIP\r\n <br />"
+  VlSaldoParceladoPendente:
+    type: integer
+    description: "Valor Saldo Parcelado Pendente\r\n <br />"
+    format: int64
+  CodBloqueio:
+    type: string
+    description: "Código de Bloqueio\r\n <br />"
+  DtUltimoBloqueio:
+    type: string
+    description: "Data Bloqueio\r\n <br />"
+  VlLimiteSaque:
+    type: integer
+    description: "Valor de Limite de Saque\r\n <br />"
+    format: int64
+  IdTipo:
+    type: string
+    description: "Propriedade do Tipo de Cartão\r\nA - Conta \r\nP - Titular \r\nS - Adicional \r\n'' - Empresarial\r\n <br />"
+  VlComprasFaturar:
+    type: integer
+    description: "Valor total compras à faturar.\r\n <br />"
+    format: int64
+  DtValidadeCartao:
+    type: string
+    description: Propriedade de Data de Validade do Cartao
+  VlLimiteUtilizado:
+    type: integer
+    description: "Valor do limíte utilizado no cartão\r\n <br />"
+    format: int64
+  DtMelhorCompra:
+    type: string
+    description: "Data melhor compra\r\n<br />"
+description: Informações gerais
+xml:
+  name: InformacoesGerais

@@ -1,0 +1,12 @@
+type: object
+properties:
+  TipoVinculo:
+    type: string
+    description: "Tipo do vínculo\r\n<br />"
+    enum:
+      - APROVADOR
+      - SOLICITANTE
+      - APROVADOR_SOLICITANTE
+      - SEM_VINCULO
+xml:
+  name: ConsultarVinculoResponseData

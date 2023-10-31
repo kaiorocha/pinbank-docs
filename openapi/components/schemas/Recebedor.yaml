@@ -1,0 +1,16 @@
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código cliente do recebedor\r\n<br />"
+    format: int32
+  CodigoCanal:
+    type: integer
+    description: "Código canal do recebedor\r\n<br />"
+    format: int32
+  IdPlano:
+    type: integer
+    description: "Id do plano\r\n<br />"
+    format: int32
+xml:
+  name: Recebedor

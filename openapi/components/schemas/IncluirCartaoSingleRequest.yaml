@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./IncluirCartaoRequestData.yaml
+xml:
+  name: IncluirCartaoSingleRequest

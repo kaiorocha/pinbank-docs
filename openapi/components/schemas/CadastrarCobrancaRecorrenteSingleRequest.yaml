@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./CadastrarCobrancaRecorrenteRequestData.yaml
+xml:
+  name: CadastrarCobrancaRecorrenteSingleRequest

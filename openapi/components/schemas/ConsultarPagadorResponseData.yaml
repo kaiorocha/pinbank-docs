@@ -1,0 +1,28 @@
+type: object
+properties:
+  IdPagador:
+    type: integer
+    description: "ID do pagador\r\n<br />"
+    format: int64
+  Apelido:
+    type: string
+    description: "Apelido do pagador\r\n<br />"
+  RazaoSocialPagador:
+    type: string
+    description: "Nome / razão social pagador\r\n<br />"
+  CpfCnpjPagador:
+    type: integer
+    description: "CPF / CNPJ Pagador\r\n<br />"
+    format: int64
+  TipoPessoa:
+    type: string
+    description: "Tipo pessoa\r\n<br />"
+  EmailPagador:
+    type: string
+    description: "Email pagador\r\n<br />"
+  CelularPagador:
+    type: integer
+    description: "Celular pagador\r\n<br />"
+    format: int64
+xml:
+  name: ConsultarPagadorResponseData

@@ -1,0 +1,15 @@
+type: object
+properties:
+  StatusContaDigital:
+    type: string
+    description: "Status da conta digital\r\n<br />"
+  ListaDocumentosCadastrados:
+    type: array
+    description: "Lista de documentos cadastrados\r\n<br />"
+    xml:
+      name: DocumentoCadastrado
+      wrapped: true
+    items:
+      $ref: ./DocumentoCadastrado.yaml
+xml:
+  name: ConsultarDocumentoResponseData

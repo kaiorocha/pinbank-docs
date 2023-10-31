@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./InformaLiquidacaoRequestData.yaml
+description: ''
+xml:
+  name: InformaLiquidacaoSingleRequest

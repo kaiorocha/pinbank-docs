@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./AlterarStatusDynamicQrCodeRequestData.yaml
+xml:
+  name: AlterarStatusDynamicQrCodeSingleRequest

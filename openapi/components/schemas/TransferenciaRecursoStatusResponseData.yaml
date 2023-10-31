@@ -1,0 +1,12 @@
+type: object
+properties:
+  NsuPagamento:
+    type: string
+    description: "NSU Pagamento\r\n<br />"
+  IdComprovante:
+    type: integer
+    description: "Id do comprovante gerado\r\n<br />"
+    format: int64
+description: TransferenciaRecursoStatusResponseData
+xml:
+  name: TransferenciaRecursoStatusResponseData

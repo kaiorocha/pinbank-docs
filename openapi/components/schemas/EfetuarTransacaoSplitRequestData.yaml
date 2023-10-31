@@ -1,0 +1,88 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - CodigoSeguranca
+  - DataValidade
+  - FormaPagamento
+  - KeyLoja
+  - NomeImpresso
+  - NumeroCartao
+  - QuantidadeParcelas
+  - Split
+  - Valor
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do Canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do Cliente\r\n<br />"
+    format: int32
+    default: 0
+  KeyLoja:
+    type: string
+    description: "Key Loja\r\n<br />"
+  NomeImpresso:
+    maxLength: 22
+    type: string
+    description: "Nome impresso no cartão\r\n<br />"
+  DataValidade:
+    maxLength: 6
+    type: string
+    description: "Data de Validade \r\nFormato: \"yyyyMM\"\r\n<br />"
+  NumeroCartao:
+    maxLength: 16
+    type: string
+    description: "Número do cartão\r\n<br />"
+  CodigoSeguranca:
+    maxLength: 4
+    type: string
+    description: "Código de segurança (CVV)\r\n<br />"
+  Valor:
+    type: number
+    description: "Valor da transação\r\nEx: R$ 1,00 =&gt; 100\r\n<br />"
+    format: double
+    default: 0
+  FormaPagamento:
+    maxLength: 1
+    type: string
+    description: "Forma de pagamento\r\n1 = A Vista\r\n2 = Parcelado sem juros\r\n3 = Parcelado com juros\r\n<br />"
+  QuantidadeParcelas:
+    type: integer
+    description: "Quantidade de Parcelas\r\nPara \"FormaPagamento\" = 1, enviar 1\r\n<br />"
+    format: int32
+    default: 0
+  DescricaoPedido:
+    maxLength: 100
+    type: string
+    description: "Descrição do pedido\r\n<br />"
+  IpAddressComprador:
+    maxLength: 15
+    type: string
+    description: "Ip Address do comprador\r\n<br />"
+  CpfComprador:
+    type: integer
+    description: "CPF comprador        \r\n<br />"
+    format: int64
+    default: 0
+  NomeComprador:
+    maxLength: 100
+    type: string
+    description: "Nome do comprador\r\n<br />"
+  TransacaoPreAutorizada:
+    type: boolean
+    description: "Transação pré autorizada\r\nTrue: \r\nA autorização da transação não é efetivada no momento da requisição, sendo necessário capturar a transação posteriormente \r\nEndpoint: /api/Transacoes/CapturarTransacao\r\n<br />\r\nFalse:\r\nEfetiva a autorização da transação no momento da requisição\r\n<br />"
+    default: false
+  Split:
+    type: array
+    description: Split
+    xml:
+      name: DadosSplit
+      wrapped: true
+    items:
+      $ref: ./DadosSplit.yaml
+xml:
+  name: EfetuarTransacaoSplitRequestData

@@ -1,0 +1,46 @@
+type: object
+properties:
+  IdCartao:
+    type: integer
+    description: "ID do cartão\r\n<br />"
+    format: int32
+  DataCadastro:
+    type: string
+    description: "Data de cadastro\r\n<br />"
+  Apelido:
+    type: string
+    description: "Apelido\r\n<br />"
+  Status:
+    type: string
+    description: "Status\r\n<br />"
+  DescStatus:
+    type: string
+    description: "Descrição status\r\n<br />"
+  NumeroCartao:
+    type: string
+    description: "Numero do cartão\r\n<br />"
+  NomePortador:
+    type: string
+    description: "Nome do portador\r\n<br />"
+  CpfPortador:
+    type: string
+    description: "CPF do portador\r\n<br />"
+  EmissorCartao:
+    type: string
+    description: "Nome do emissor do cartão\r\n<br />"
+  LimiteCartao:
+    type: integer
+    description: "Limite do cartão\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+  SaldoUnificado:
+    type: boolean
+    description: "Saldo unificado\r\n<br />"
+  MovimentoCartao:
+    type: integer
+    description: "Movimento do cartão\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+  BloqueioEcommerce:
+    type: boolean
+    description: "Bloqueio Ecommerce        \r\n<br />"
+xml:
+  name: CartaoPre

@@ -1,0 +1,24 @@
+required:
+  - DddTelefoneComercial
+  - NumeroTelefoneComercial
+  - RamalTelefoneComercial
+type: object
+properties:
+  DddTelefoneComercial:
+    type: integer
+    description: "DDD telefone comercial\r\n<br />"
+    format: int32
+    default: 0
+  NumeroTelefoneComercial:
+    type: integer
+    description: "Número telefone comercial\r\n<br />"
+    format: int64
+    default: 0
+  RamalTelefoneComercial:
+    type: integer
+    description: "Ramal telefone comercial\r\n<br />"
+    format: int32
+    default: 0
+description: "Telefone comercial  \r\n<br />"
+xml:
+  name: TelefoneComercial

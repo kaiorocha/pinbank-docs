@@ -1,0 +1,33 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - IdCobrancaRecorrente
+  - KeyLoja
+  - Valor
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do Canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do Cliente\r\n<br />"
+    format: int32
+    default: 0
+  KeyLoja:
+    type: string
+    description: "Key Loja\r\n<br />"
+  IdCobrancaRecorrente:
+    type: integer
+    description: "ID cobrança recorrente\r\n<br />"
+    format: int32
+    default: 0
+  Valor:
+    type: integer
+    description: "Valor da cobrança, que será debitado no cartão do cliente no dia especificado no parâmetro DiaDebito\r\nEx: R$ 1,00 =&gt; 100\r\n<br />"
+    format: int32
+    default: 0
+xml:
+  name: EfetuarTransacaoCobrancaRecorrenteRequestData

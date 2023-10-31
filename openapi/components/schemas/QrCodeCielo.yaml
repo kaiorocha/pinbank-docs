@@ -1,0 +1,16 @@
+type: object
+properties:
+  NumeroLogicoTerminal:
+    type: string
+    description: "Número lógico do terminal\r\n<br />"
+  NumeroParcelas:
+    type: string
+    description: "Número de parcelas\r\n<br />"
+  TipoTransacao:
+    type: string
+    description: "Tipo da transação\r\n<br />"
+    enum:
+      - Venda
+      - Cancelamento
+xml:
+  name: QrCodeCielo

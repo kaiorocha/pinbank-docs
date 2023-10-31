@@ -1,0 +1,73 @@
+post:
+  tags:
+    - ContaDigital
+  summary: >-
+    Bloqueia ou desbloqueia um cartão da conta digital para realizar transações
+    ecommerce
+  operationId: ContaDigital_BloqueioCartaoContaDigitalEcommerce
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: >-
+            ../components/schemas/BloqueioCartaoContaDigitalEcommerceSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: >-
+            ../components/schemas/BloqueioCartaoContaDigitalEcommerceSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/BloqueioCartaoContaDigitalEcommerceSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/BloqueioCartaoContaDigitalEcommerceSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: >-
+            ../components/schemas/BloqueioCartaoContaDigitalEcommerceSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/BloqueioCartaoContaDigitalEcommerceSingleResponse.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/BloqueioCartaoContaDigitalEcommerceSingleResponse.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/BloqueioCartaoContaDigitalEcommerceSingleResponse.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/BloqueioCartaoContaDigitalEcommerceSingleResponse.yaml
+  x-codegen-request-body-name: request

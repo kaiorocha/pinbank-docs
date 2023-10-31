@@ -1,0 +1,22 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  Guid:
+    type: string
+    description: Identificador unico para o CPF informado
+    default: ''
+description: Request do step
+xml:
+  name: AfinzClinicalCredReenvioSmsRequestData

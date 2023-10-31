@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./ResumoFaturaCartaoCreditoRequestData.yaml
+description: Resumo da Fatura
+xml:
+  name: ResumoFaturaCartaoCreditoSingleRequest

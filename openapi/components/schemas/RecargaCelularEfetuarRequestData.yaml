@@ -1,0 +1,71 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - CodigoGrupo
+  - CodigoOpcaoProduto
+  - CodigoProduto
+  - CodigoProvedor
+  - CodigoRamo
+  - CodigoVFP
+  - CodigoVGP
+  - CodigoValorRecarga
+  - CodigoVendedor
+  - NumeroRecarga
+  - TokenRecargaCelular
+  - Valor
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  TokenRecargaCelular:
+    type: string
+    description: "Token de autenticação da recarga de celular\r\n<br />"
+  CodigoProvedor:
+    type: string
+    description: "Código do provedor\r\n<br />"
+  CodigoProduto:
+    type: string
+    description: "Código do produto\r\n<br />"
+  CodigoGrupo:
+    type: string
+    description: "Código do grupo\r\n<br />"
+  CodigoVendedor:
+    type: string
+    description: "Codigo do vendedor\r\n<br />"
+  NumeroRecarga:
+    maxLength: 11
+    type: string
+    description: "DDD + Número do celular recarga\r\nEX: 00999999999\r\n<br />"
+  CodigoOpcaoProduto:
+    type: string
+    description: "Código de opção do produto\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  CodigoRamo:
+    type: string
+    description: "Código do ramo\r\n<br />"
+  CodigoVFP:
+    type: string
+    description: "Código VFP\r\n<br />"
+  CodigoVGP:
+    type: string
+    description: "Código VGP\r\n<br />"
+  ChaveValorRecarga:
+    type: string
+    description: "Chave de valor da recarga\r\n<br />"
+  CodigoValorRecarga:
+    type: string
+    description: "Código de valor da recarga\r\n<br />"
+xml:
+  name: RecargaCelularEfetuarRequestData

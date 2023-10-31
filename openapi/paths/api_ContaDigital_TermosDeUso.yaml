@@ -1,0 +1,62 @@
+post:
+  tags:
+    - ContaDigital
+  summary: "Consulta termos de uso pelo código\r\ncódigos:\r\n\r\n  CONSCRED, \r\n  TRANSF_REC,\r\n  USO_CONTA"
+  operationId: ContaDigital_TermosDeUso
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/TermosDeUsoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/TermosDeUsoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/TermosDeUsoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/TermosDeUsoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/TermosDeUsoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/TermosDeUsoSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/TermosDeUsoSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/TermosDeUsoSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/TermosDeUsoSingleResponseData.yaml
+  x-codegen-request-body-name: request

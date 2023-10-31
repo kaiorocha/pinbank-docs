@@ -1,0 +1,14 @@
+type: object
+properties:
+  IdTedProgramada:
+    type: integer
+    description: "Id TED programada\r\n<br />"
+    format: int32
+  SucessoEnvio:
+    type: boolean
+    description: "Sucesso ao enviar TED        \r\n<br />"
+  DescricaoSucessoEnvio:
+    type: string
+    description: "Descrição sucesso envio        \r\n<br />"
+xml:
+  name: AprovarTedResponseData

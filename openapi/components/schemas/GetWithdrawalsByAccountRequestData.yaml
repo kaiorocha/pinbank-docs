@@ -1,0 +1,35 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - Page
+  - Records
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  Page:
+    type: integer
+    description: "Número da página de busca\r\n<br />"
+    format: int32
+    default: 0
+  Records:
+    type: integer
+    description: "Número de registros por página\r\n<br />"
+    format: int32
+    default: 0
+  WithdrawalType:
+    type: string
+    description: "Tipo de saque (QR Code ou Token) - Se não for enviado, uma lista com os dois tipos será retornada\r\n<br />"
+    enum:
+      - QRCode
+      - Token
+xml:
+  name: GetWithdrawalsByAccountRequestData

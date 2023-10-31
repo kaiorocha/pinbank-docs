@@ -1,0 +1,30 @@
+type: object
+properties:
+  NsuTransferencia:
+    type: string
+    description: "NSU Transferencia\r\n<br />"
+  DataTransacaoInicial:
+    type: string
+    description: "Data transferencia original\r\n<br />"
+    format: date-time
+  DataTransacaoConciliada:
+    type: string
+    description: "Data conciliação transferencia\r\n<br />"
+    format: date-time
+  IdentificadorOrigem:
+    type: string
+    description: "Identificador origem \r\n<br />"
+  CpfCnpj:
+    type: integer
+    description: "CPF ou CNPJ \r\n<br />"
+    format: int64
+  ValorOriginal:
+    type: number
+    description: "Valor original\r\n<br />"
+    format: double
+  ValorRecebido:
+    type: number
+    description: "Valor recebido\r\n<br />"
+    format: double
+xml:
+  name: CheckoutTransferencia

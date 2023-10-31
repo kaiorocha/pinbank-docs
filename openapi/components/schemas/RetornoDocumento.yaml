@@ -1,0 +1,10 @@
+type: object
+properties:
+  TipoDocumento:
+    type: string
+    description: Tipo do documento
+  Status:
+    type: string
+    description: "Status do documento\r\n<br />"
+xml:
+  name: RetornoDocumento

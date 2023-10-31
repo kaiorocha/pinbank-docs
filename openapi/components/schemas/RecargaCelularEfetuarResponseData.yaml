@@ -1,0 +1,8 @@
+type: object
+properties:
+  NsuRecarga:
+    type: integer
+    description: "Nsu da recarga\r\n<br />"
+    format: int64
+xml:
+  name: RecargaCelularEfetuarResponseData

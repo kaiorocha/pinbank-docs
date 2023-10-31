@@ -1,0 +1,12 @@
+type: object
+properties:
+  Id:
+    type: integer
+    description: Identificador do dado, id informado no response do campo
+    format: int32
+  Value:
+    type: string
+    description: Valor do dado , valor preenchido no formulário
+description: Campo com o dado do formulário
+xml:
+  name: field

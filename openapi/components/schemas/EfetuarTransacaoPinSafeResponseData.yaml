@@ -1,0 +1,10 @@
+type: object
+properties:
+  CodigoAutorizacao:
+    type: string
+    description: "Código de autorização\r\n<br />"
+  NsuOperacao:
+    type: string
+    description: "NSU operação\r\n<br />"
+xml:
+  name: EfetuarTransacaoPinSafeResponseData

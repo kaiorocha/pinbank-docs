@@ -1,0 +1,12 @@
+type: object
+properties:
+  ListaContratos:
+    type: array
+    description: "Lista de contratos\r\n<br />"
+    xml:
+      name: Contrato
+      wrapped: true
+    items:
+      $ref: ./Contrato.yaml
+xml:
+  name: ConsultarContratosResponseData

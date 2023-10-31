@@ -1,0 +1,28 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - PagarSomenteContaDigital
+  - Valor
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  Valor:
+    type: integer
+    description: "Valor do boleto\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  PagarSomenteContaDigital:
+    type: boolean
+    description: "Pagamento somente conta digital        \r\n<br />"
+    default: false
+xml:
+  name: GerarQrCodePinSafeRequestData

@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ConsultarCepRequestData.yaml
+xml:
+  name: ConsultarCepSingleRequest

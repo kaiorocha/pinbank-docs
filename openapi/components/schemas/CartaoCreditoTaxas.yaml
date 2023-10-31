@@ -1,0 +1,17 @@
+type: object
+properties:
+  VlTxCETRotativoMensal:
+    type: integer
+    description: "Taxa Rotativo Mensal\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlTxCETRotativoAnual:
+    type: integer
+    description: "Taxa Rotativo Anual\r\n Ex: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlTxRotativoProx:
+    type: integer
+    description: "Proxima Taxa no Rotativo\r\n Ex: R$1,00 = 100\r\n<br />"
+    format: int64
+description: "Taxas cartão de crédito\r\nEx: R$1,00 = 100\r\n<br />"
+xml:
+  name: CartaoCreditoTaxas

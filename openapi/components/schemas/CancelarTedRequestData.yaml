@@ -1,0 +1,30 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - IdsCancelar
+  - UsuarioAlteracao
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  IdsCancelar:
+    type: array
+    description: "Lista de TEDs para cancelar\r\n<br />"
+    xml:
+      name: TedCancelar
+      wrapped: true
+    items:
+      $ref: ./TedCancelar.yaml
+  UsuarioAlteracao:
+    type: string
+    description: "Usuário alteração\r\n<br />"
+xml:
+  name: CancelarTedRequestData

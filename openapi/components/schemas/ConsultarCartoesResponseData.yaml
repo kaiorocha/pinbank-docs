@@ -1,0 +1,25 @@
+type: object
+properties:
+  Apelido:
+    type: string
+    description: "Apelido\r\n<br />"
+  DataValidade:
+    type: string
+    description: "Data de Validade \r\nFormato: \"yyyyMM\"\r\n<br />"
+  Bandeira:
+    type: string
+    description: "Bandeira\r\n<br />"
+  Status:
+    type: string
+    description: "Status\r\n<br />"
+  CartaoId:
+    type: string
+    description: "Id do cartão\r\n<br />"
+  NomeImpresso:
+    type: string
+    description: "Nome impresso no cartão\r\n<br />"
+  NumeroCartao:
+    type: string
+    description: "Número do cartão\r\n<br />"
+xml:
+  name: ConsultarCartoesResponseData

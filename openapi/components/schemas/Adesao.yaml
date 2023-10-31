@@ -1,0 +1,14 @@
+type: object
+properties:
+  IdAdesao:
+    type: integer
+    description: "Id da adesão\r\n<br />"
+    format: int32
+  DataGeracao:
+    type: string
+    description: "Data de geração\r\n<br />"
+  IpOrigem:
+    type: string
+    description: "Ip de origem\r\n<br />"
+xml:
+  name: Adesao

@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./IdFaturaPdfCartaoCreditoRequestData.yaml
+description: ''
+xml:
+  name: IdFaturaPdfCartaoCreditoSingleRequest

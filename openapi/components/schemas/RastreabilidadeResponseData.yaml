@@ -1,0 +1,38 @@
+type: object
+properties:
+  DataLogRequest:
+    type: string
+  Hora:
+    type: string
+  Por:
+    type: string
+  Canal:
+    type: string
+  Codigo:
+    type: string
+  Estabelecimento:
+    type: string
+  SistemaEntrada:
+    type: string
+  DescricaoTipoOperacao:
+    type: string
+  De:
+    type: string
+  Para:
+    type: string
+  RequestIpAddress:
+    type: string
+  Method:
+    type: string
+  JsonRequest:
+    type: string
+  Cpf:
+    type: string
+  Cnpj:
+    type: string
+  Status:
+    type: string
+  Obervacao:
+    type: string
+xml:
+  name: RastreabilidadeResponseData

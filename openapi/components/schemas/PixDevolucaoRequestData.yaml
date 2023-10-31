@@ -1,0 +1,30 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - Valor
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  End2End:
+    type: string
+  Valor:
+    type: integer
+    description: "Valor a ser devolvido\r\nEx: 100 =&gt; R$ 1,00\r\n<br />"
+    format: int64
+    default: 0
+  Descricao:
+    maxLength: 140
+    type: string
+    description: "Descricao da devolução\r\n<br />"
+description: ''
+xml:
+  name: PixDevolucaoRequestData

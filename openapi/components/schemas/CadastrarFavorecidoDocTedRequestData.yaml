@@ -1,0 +1,64 @@
+required:
+  - Agencia
+  - Apelido
+  - CodigoBanco
+  - CodigoCanal
+  - CodigoCliente
+  - ContaCorrente
+  - CpfCnpjFavorecido
+  - DigitoContaCorrente
+  - NomeFavorecido
+  - TipoConta
+  - TipoPessoa
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  Apelido:
+    type: string
+    description: "Apelido do favorecido\r\n<br />"
+  CodigoBanco:
+    type: string
+    description: "Código do banco\r\n<br />"
+  Agencia:
+    type: string
+    description: "Número da agência\r\n<br />"
+  DigitoAgencia:
+    type: string
+    description: "Dígito do número da agência\r\n<br />"
+  ContaCorrente:
+    type: string
+    description: "Número da conta corrente\r\n<br />"
+  DigitoContaCorrente:
+    type: string
+    description: "Dígito do número da conta corrente\r\n<br />"
+  TipoConta:
+    type: string
+    description: "Tipo de conta\r\n<br />"
+    enum:
+      - Corrente
+      - Poupanca
+  TipoPessoa:
+    type: string
+    description: "Tipo de pessoa\r\n<br />"
+    enum:
+      - Fisica
+      - Juridica
+  NomeFavorecido:
+    type: string
+    description: "Nome do favorecido\r\n<br />"
+  CpfCnpjFavorecido:
+    maxLength: 14
+    minLength: 11
+    type: string
+    description: "CPF ou CNPJ do favorecido\r\n<br />"
+xml:
+  name: CadastrarFavorecidoDocTedRequestData

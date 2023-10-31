@@ -1,0 +1,19 @@
+type: object
+properties:
+  IdAprovadorCliente:
+    type: integer
+    description: "Id aprovador\r\n<br />"
+    format: int64
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  NomeRazaoSocial:
+    type: string
+    description: "Nome/Rãzão Social\r\n<br />"
+xml:
+  name: ListarContasAvaliadasAprovadorResponseData

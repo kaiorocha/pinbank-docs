@@ -1,0 +1,13 @@
+type: object
+properties:
+  NossoNumero:
+    type: string
+    description: "Número do boleto\r\n<br />"
+  LinhaDigitavel:
+    type: string
+    description: "Linha digitável do boleto\r\n<br />"
+  Base64:
+    type: string
+    description: "Base64 do boleto\r\n<br />"
+xml:
+  name: GerarBoletoResponseData

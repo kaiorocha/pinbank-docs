@@ -1,0 +1,23 @@
+type: object
+properties:
+  NomeOpcao:
+    type: string
+    description: "Nome da opção\r\n<br />"
+  CodigoOpcaoProduto:
+    type: string
+    description: "Código de opção do produto\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor\r\n<br />"
+    format: int64
+  CodigoRamo:
+    type: string
+    description: "Código do ramo\r\n<br />"
+  ChaveValorRecarga:
+    type: string
+    description: "Chave de valor da recarga\r\n<br />"
+  CodigoValorRecarga:
+    type: string
+    description: "Código de valor da recarga\r\n<br />"
+xml:
+  name: OperadoraValor

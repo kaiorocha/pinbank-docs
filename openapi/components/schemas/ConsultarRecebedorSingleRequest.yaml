@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ConsultarRecebedorRequestData.yaml
+xml:
+  name: ConsultarRecebedorSingleRequest

@@ -1,0 +1,27 @@
+required:
+  - Ddd
+  - Ddi
+  - Mensagem
+  - NumeroCelular
+type: object
+properties:
+  Ddi:
+    type: integer
+    description: "DDI Celular\r\n<br />"
+    format: int32
+    default: 0
+  Ddd:
+    type: integer
+    description: "DDD Celular\r\n<br />"
+    format: int32
+    default: 0
+  NumeroCelular:
+    type: integer
+    description: "Número do celular\r\n<br />"
+    format: int64
+    default: 0
+  Mensagem:
+    type: string
+    description: "Mensagem\r\n<br />"
+xml:
+  name: EnviarSmsRequestData

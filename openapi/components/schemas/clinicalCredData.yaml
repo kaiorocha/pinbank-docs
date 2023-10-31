@@ -1,0 +1,33 @@
+type: object
+properties:
+  Guid:
+    type: string
+    description: Identificador unico da proposta
+  StepId:
+    type: integer
+    description: Identificador unico do step da proposta
+    format: int32
+  Type:
+    type: string
+    description: "Tipo de renderização do formulário\r\nForm        - itens do tipo formulário\r\nSelect      - formulario com lista de itens\r\nCapture     - item do tipo captura documentos ou imagens\r\nToken       - formulario que indica o uso de token de confirmação\r\nConclusao   - item que indica a conclusão dos steps"
+  Header:
+    type: array
+    description: Array para apresentação de textos no cabeçalho
+    items:
+      type: string
+  Fields:
+    type: array
+    description: Lista com os itens a serem renderizados no formulário
+    xml:
+      name: item
+      wrapped: true
+    items:
+      $ref: ./item.yaml
+  Footer:
+    type: array
+    description: Array para apresentação de textos no rodapé
+    items:
+      type: string
+description: ''
+xml:
+  name: clinicalCredData

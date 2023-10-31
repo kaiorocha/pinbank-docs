@@ -1,0 +1,21 @@
+required:
+  - CodigoCanal
+  - CodigoClienteEmail
+  - Senha
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoClienteEmail:
+    type: string
+    description: "Código do cliente ou email\r\n<br />"
+  Senha:
+    type: string
+    description: "Senha de acesso\r\n<br />"
+  DadosMobile:
+    $ref: ./DadosMobile.yaml
+xml:
+  name: LoginRequestData

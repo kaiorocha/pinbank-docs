@@ -1,0 +1,10 @@
+type: object
+properties:
+  IdQrCode:
+    type: string
+    description: "QR Code ID\r\n<br />"
+  QrCode:
+    type: string
+    description: "Base64 QR Code\r\n<br />"
+xml:
+  name: GerarQrCodePinSafeResponseData

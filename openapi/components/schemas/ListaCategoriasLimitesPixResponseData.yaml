@@ -1,0 +1,8 @@
+type: object
+properties:
+  PixCategoriaId:
+    type: string
+  DescricaoPixCategoria:
+    type: string
+xml:
+  name: ListaCategoriasLimitesPixResponseData

@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./PixDevolucaoConsultaRequestData.yaml
+description: ''
+xml:
+  name: PixDevolucaoConsultaSingleRequest

@@ -1,0 +1,7 @@
+type: object
+properties:
+  HashDispositivo:
+    type: string
+    description: "Hash do dispositivo       \r\n<br />"
+xml:
+  name: ConfirmarRegistroDispositivoResponseData

@@ -1,0 +1,28 @@
+required:
+  - FormaEnvioToken
+type: object
+properties:
+  FormaEnvioToken:
+    type: string
+    description: "Forma de envio do token\r\n1 - SMS\r\n2 - Email"
+    enum:
+      - SMS
+      - Email
+  DdiCelular:
+    type: integer
+    description: "DDI celular\r\nObrigatório se forma de envio for 1- SMS\r\n<br />"
+    format: int32
+  DddCelular:
+    type: integer
+    description: "DDD celular\r\nObrigatório se forma de envio for 1- SMS\r\n<br />"
+    format: int32
+  NumeroCelular:
+    type: integer
+    description: "Número celular\r\nObrigatório se forma de envio for 1- SMS\r\n<br />"
+    format: int64
+  Email:
+    type: string
+    description: "Email\r\nObrigatório se forma de envio for 2 - Email\r\n<br />"
+description: ''
+xml:
+  name: TokenRequestData

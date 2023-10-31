@@ -1,0 +1,19 @@
+type: object
+properties:
+  NomeOperadora:
+    type: string
+    description: "Nome da operadora\r\n<br />"
+  CodigoProvedor:
+    type: string
+    description: "Código do provedor\r\n<br />"
+  CodigoProduto:
+    type: string
+    description: "Código do produto\r\n<br />"
+  CodigoGrupo:
+    type: string
+    description: "Código do grupo\r\n<br />"
+  CodigoVendedor:
+    type: string
+    description: "Codigo do vendedor\r\n<br />"
+xml:
+  name: Operadora

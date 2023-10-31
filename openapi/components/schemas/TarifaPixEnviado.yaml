@@ -1,0 +1,20 @@
+type: object
+properties:
+  TarifaVarMinimaEnvioPix:
+    type: number
+    description: "Tarifa variavel minima de envio de Pix\r\n<br />"
+    format: double
+  TarifaVarPercentualEnvioPix:
+    type: number
+    description: "Tarifa variavel percentual de envio de Pix\r\n<br />"
+    format: double
+  TarifaVarMaximaEnvioPix:
+    type: number
+    description: "Tarifa variavel maxima de envio de Pix\r\n<br />"
+    format: double
+  TarifaPercentualRepasseEnvioPix:
+    type: number
+    description: "Percentual de repasse sobre o Pix enviado\r\n<br />"
+    format: double
+xml:
+  name: TarifaPixEnviado

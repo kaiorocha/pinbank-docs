@@ -1,0 +1,31 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - KeyLoja
+  - Valor
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  KeyLoja:
+    type: string
+    description: "Key Loja\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor\r\nEx: R$ 1,00 =&gt; 100\r\n<br />"
+    format: int64
+    default: 0
+  WebHookPagamento:
+    type: boolean
+    description: "Webhook - Notificação de Recebimento PIX\r\nNo ato do cadastramento da adesão às notificações de recebimento PIX o cliente deve informar a url que deseja receber as notificações.\r\nDeve ser desenvolvida pelo cliente API que será responsável por efetuar a recepção da notificação de pagamento, seguindo a documentação disponibilizada no portal https://dev.pinbank.com.br/manualintegracao\r\n<br />"
+    default: false
+xml:
+  name: SolicitarEcommerceQrCodeRequestData

@@ -1,0 +1,19 @@
+type: object
+properties:
+  Data:
+    type: array
+    xml:
+      name: ConsultarTerminaisClienteResponseData
+      wrapped: true
+    items:
+      $ref: ./ConsultarTerminaisClienteResponseData.yaml
+  ResultCode:
+    type: integer
+    format: int32
+  Message:
+    type: string
+  ValidationData:
+    $ref: ./ValidationData.yaml
+description: ''
+xml:
+  name: ConsultarTerminaisClienteListResponseData

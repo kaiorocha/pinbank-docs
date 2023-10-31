@@ -1,0 +1,62 @@
+post:
+  tags:
+    - Transacoes
+  summary: Ativar cartão de crédito.
+  operationId: Transacoes_AtivarCartao
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/AtivarCartaoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/AtivarCartaoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/AtivarCartaoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/AtivarCartaoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/AtivarCartaoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/AtivarCartaoSingleResponse.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/AtivarCartaoSingleResponse.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/AtivarCartaoSingleResponse.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/AtivarCartaoSingleResponse.yaml
+  x-codegen-request-body-name: request

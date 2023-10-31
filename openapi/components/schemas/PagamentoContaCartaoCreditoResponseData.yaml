@@ -1,0 +1,64 @@
+type: object
+properties:
+  TipoTransacao:
+    type: string
+    description: "Tipo de transação.\r\n    C - Pagamento de contas\r\n    J - Pagamento de contas com juros\r\n<br />"
+  VlTransacao:
+    type: integer
+    description: "Valor da transação.\r\n<br />"
+    format: int64
+  ValidadeCartao:
+    type: string
+    description: "Validade do cartão (AAMM)\r\n<br />"
+  NumEstabelecimento:
+    type: string
+    description: "Número do estabelecimento\r\n<br />"
+  Moeda:
+    type: string
+    description: "Código da moeda\r\n    986 - Real\r\n    840 - Dolar\r\n<br />"
+  SicCode:
+    type: string
+    description: "MCC estabelecimento (Enviar sempre 6531)\r\n<br />"
+  CodigoPais:
+    type: string
+    description: "Código do país (Se não souber enviar 076)\r\n<br />"
+  AuditNumber:
+    type: string
+    description: "NSU - Número sequencial - Controle Emissor\r\n<br />"
+  DtTransacao:
+    type: string
+    description: "Data da transação\r\n<br />"
+  NomeEstabelecimento:
+    type: string
+    description: "Nome do estabelecimento\r\n<br />"
+  CidadeEstabelecimento:
+    type: string
+    description: "Cidade do estabelecimento\r\n<br />"
+  PaisEstabelecimento:
+    type: string
+    description: "País do estabelecimento (Se não utilizar, enviar sempre BR)\r\n<br />"
+  QtdParcelas:
+    type: integer
+    description: "Quantidade parcelas (Obrigatório se parcelado)\r\n<br />"
+    format: int32
+  VlParcela:
+    type: integer
+    description: "Valor da Parcela\r\n<br />"
+    format: int64
+  ResponseCode:
+    type: string
+    description: "Response code. \r\n    00 – Aprovada \r\n    Diferente de 00 – Negada\r\n<br />"
+  MotivoNegativa:
+    type: string
+    description: "O campo Motivo da Negativa apresenta todos os motivos, tanto das transações aprovadas quanto às negadas. \r\nA Tabela abaixo indica o motivo sempre associado a um Response Code especifico.\r\n<br />"
+  AutNumber:
+    type: string
+    description: "Número da autorização\r\n<br />"
+  DescResposta:
+    type: string
+    description: "Descritivo da resposta\r\n<br />"
+  DadosCET:
+    $ref: ./PagamentoContaDadosCET.yaml
+description: Pagamento Conts
+xml:
+  name: PagamentoContaCartaoCreditoResponseData

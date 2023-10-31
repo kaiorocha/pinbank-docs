@@ -1,0 +1,66 @@
+post:
+  tags:
+    - ContaDigital
+  summary: Bloqueia um cartão da conta digital
+  operationId: ContaDigital_BloquearCartaoContaDigital
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/BloquearCartaoContaDigitalSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/BloquearCartaoContaDigitalSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/BloquearCartaoContaDigitalSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/BloquearCartaoContaDigitalSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/BloquearCartaoContaDigitalSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/BloquearCartaoContaDigitalSingleResponse.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/BloquearCartaoContaDigitalSingleResponse.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/BloquearCartaoContaDigitalSingleResponse.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/BloquearCartaoContaDigitalSingleResponse.yaml
+  x-codegen-request-body-name: request

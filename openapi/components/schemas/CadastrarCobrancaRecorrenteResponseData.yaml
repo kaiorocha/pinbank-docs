@@ -1,0 +1,22 @@
+type: object
+properties:
+  ResultCode:
+    type: integer
+    description: "Código de retorno      \r\n<br />"
+    format: int32
+  Message:
+    type: string
+    description: "Mensagem de retorno      \r\n<br />"
+  IdCobrancaRecorrente:
+    type: integer
+    description: "Identificador da cobrança caso o cadastro seja realizado com sucesso. Caso contrário, será enviado como 0.      \r\n<br />"
+    format: int64
+  CpfCnpjCliente:
+    type: integer
+    description: "CPF/CNPJ do cliente        \r\n<br />"
+    format: int64
+  UrlInformacoesCartao:
+    type: string
+    description: "URL informações cartão de pagamento        \r\n<br />"
+xml:
+  name: CadastrarCobrancaRecorrenteResponseData

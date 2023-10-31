@@ -1,0 +1,62 @@
+post:
+  tags:
+    - ContaDigital
+  summary: Busca de canais cadastrados por número de celular, email ou código cliente.
+  operationId: ContaDigital_ConsultarConta
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ConsultarContaSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/ConsultarContaSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarContaSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarContaSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/ConsultarContaSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ConsultarContaListResponse.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/ConsultarContaListResponse.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/ConsultarContaListResponse.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/ConsultarContaListResponse.yaml
+  x-codegen-request-body-name: request

@@ -1,0 +1,22 @@
+type: object
+properties:
+  HorarioNoturnoInicio:
+    type: string
+    description: "Horário noturno inicial\r\n<br />"
+    enum:
+      - H06_00
+      - H20_00
+      - H22_00
+  HorarioNoturnoFim:
+    type: string
+    description: "Horário noturno final\r\n<br />"
+    enum:
+      - H06_00
+      - H20_00
+      - H22_00
+  DataSolicitacao:
+    type: string
+    description: "Data de solicitação\r\n<br />"
+    format: date-time
+xml:
+  name: HorarioNoturnoSolicitado

@@ -1,0 +1,54 @@
+type: object
+properties:
+  NsuGiftCard:
+    type: integer
+    description: "NSU Gift Card\r\n<br />"
+    format: int64
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  Valor:
+    type: integer
+    description: "Valor do boleto\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+  Quantidade:
+    type: integer
+    description: "Quantidade\r\n<br />"
+    format: int32
+  CodigoAtivacao:
+    type: string
+    description: "Código de ativação\r\n<br />"
+  IdProvedorTransacao:
+    type: integer
+    description: "ID provedor transação\r\n<br />"
+    format: int32
+  IdTransacao:
+    type: integer
+    description: "ID transação\r\n<br />"
+    format: int32
+  CodigoProduto:
+    type: string
+    description: "Código do produto\r\n<br />"
+  DescricaoProduto:
+    type: string
+    description: "Descrição do produto\r\n<br />"
+  CodigoProvedor:
+    type: string
+    description: "Código do provedor\r\n<br />"
+  SerialNumber:
+    type: string
+    description: "Serial Number\r\n<br />"
+  DataCompra:
+    type: string
+    description: "Data da compra\r\n<br />"
+    format: date-time
+  Observations:
+    type: string
+    description: "Campo observações devolve a senha do giftcard, quando pertinente\r\n<br />"
+xml:
+  name: GiftCardCompras

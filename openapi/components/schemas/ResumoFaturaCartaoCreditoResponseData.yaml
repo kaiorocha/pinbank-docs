@@ -1,0 +1,59 @@
+type: object
+properties:
+  Limites:
+    $ref: ./CartaoCreditoLimiteCompra.yaml
+  Taxas:
+    $ref: ./CartaoCreditoTaxas.yaml
+  VlSaldoFaturaAnteriorReal:
+    type: integer
+    description: "Saldo Fatura Anterior\r\n<br />"
+    format: int64
+  VlTotalPagamento:
+    type: integer
+    description: "Total Pagamento\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlTotalOutrosCreditos:
+    type: integer
+    description: "Total Outros Créditos\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlTotalOutrosDebitos:
+    type: integer
+    description: "Total Outros Débitos\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlTotalEncargos:
+    type: integer
+    description: "Total Encargos\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlTotalCompraReal:
+    type: integer
+    description: "Total Compra Real\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlTotalDolarConvertidoReal:
+    type: integer
+    description: "Total Dolar Convertido\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlSaldoTotalFatura:
+    type: integer
+    description: "Saldo Total Fatura\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlPagamentoMinimo:
+    type: integer
+    description: "Valor pagamento mínimo\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlCotacaoDolar:
+    type: integer
+    description: "Valor cotação dólar\r\nEx: U$1,00 = 100\r\n<br />"
+    format: int64
+  DtMelhorCompra:
+    type: string
+    description: "Data melhor compra\r\n<br />"
+  VlTotalCreditoPagamento:
+    type: integer
+    description: "Total Credito Pagamento\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  StatusFatura:
+    type: string
+    description: "Retorna o Status da Fatura\r\nAberta, Fechada ou Paga"
+description: "Resumo Fatura\r\n<br />"
+xml:
+  name: ResumoFaturaCartaoCreditoResponseData

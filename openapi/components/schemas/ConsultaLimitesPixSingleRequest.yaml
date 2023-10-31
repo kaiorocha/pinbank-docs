@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./ConsultaLimitesPixRequestData.yaml
+description: ''
+xml:
+  name: ConsultaLimitesPixSingleRequest

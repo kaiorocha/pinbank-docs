@@ -1,0 +1,55 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - CpfCnpjPagador
+  - EmailPagador
+  - NomePagador
+  - NumeroParcelas
+  - Valor
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do Canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do Cliente\r\n<br />"
+    format: int32
+    default: 0
+  NomePagador:
+    type: string
+    description: "Nome ou Razão Social do pagador\r\n<br />"
+  CpfCnpjPagador:
+    type: integer
+    description: "CPF ou CNPJ do pagador    \r\n<br />"
+    format: int64
+    default: 0
+  EmailPagador:
+    type: string
+    description: "Email do pagador. O link de pagamento será enviado para o email informado neste campo.\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor da cobrança, que será debitado no cartão do cliente no dia especificado no parâmetro DiaDebito\r\nEx: R$ 1,00 =&gt; 100\r\n<br />"
+    format: int64
+    default: 0
+  NumeroParcelas:
+    type: integer
+    description: "Número de parcelas disponíveis para pagamento   \r\n<br />"
+    format: int32
+    default: 0
+  IdentificadorOrigem:
+    maxLength: 30
+    type: string
+    description: "Identificador origem  \r\n<br />"
+  Split:
+    type: array
+    description: Split
+    xml:
+      name: DadosSplit
+      wrapped: true
+    items:
+      $ref: ./DadosSplit.yaml
+xml:
+  name: GerarCobrancaCartaoRequestData

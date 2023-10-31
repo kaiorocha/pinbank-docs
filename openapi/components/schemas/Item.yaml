@@ -1,0 +1,21 @@
+type: object
+properties:
+  Id:
+    type: integer
+    description: Identificador unico do item na lista
+    format: int32
+  Title:
+    type: string
+    description: Titulo do item
+  Value:
+    type: string
+    description: Valor do item
+  Description:
+    type: string
+    description: Descrição do item
+  Selected:
+    type: boolean
+    description: Indica se este item está selecionado
+description: Item a ser utilizado na lista
+xml:
+  name: Item

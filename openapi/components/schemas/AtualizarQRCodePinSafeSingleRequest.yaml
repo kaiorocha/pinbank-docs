@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./AtualizarQRCodePinSafeRequestData.yaml
+xml:
+  name: AtualizarQRCodePinSafeSingleRequest

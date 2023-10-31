@@ -1,0 +1,11 @@
+type: object
+properties:
+  IdTedProgramada:
+    type: integer
+    description: "Id TED programada\r\n<br />"
+    format: int32
+  CodigoReferencia:
+    type: string
+    description: "Código de referencia\r\n<br />"
+xml:
+  name: CadastrarTedResponseData

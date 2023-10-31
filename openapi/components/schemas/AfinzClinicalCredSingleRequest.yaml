@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./AfinzClinicalCredRequestData.yaml
+description: ''
+xml:
+  name: AfinzClinicalCredSingleRequest

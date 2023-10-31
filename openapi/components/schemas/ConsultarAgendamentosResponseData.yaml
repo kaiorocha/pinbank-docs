@@ -1,0 +1,30 @@
+type: object
+properties:
+  IdAgendamento:
+    type: integer
+    description: "ID do agendamento\r\n<br />"
+    format: int64
+  IdComprovante:
+    type: integer
+    description: "ID do comprovante\r\n<br />"
+    format: int64
+  Valor:
+    type: string
+    description: "Valor\r\n<br />"
+  DataAgendada:
+    type: string
+    description: "Data da transação \r\n<br />"
+  DataSolicitacao:
+    type: string
+    description: "Data do solicitação\r\n<br />"
+  Status:
+    type: string
+    description: "Status\r\n<br />"
+  MsgStatus:
+    type: string
+    description: "Mensagem de status\r\n<br />"
+  Descricao:
+    type: string
+    description: "Dados\r\n<br />"
+xml:
+  name: ConsultarAgendamentosResponseData

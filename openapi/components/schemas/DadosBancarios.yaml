@@ -1,0 +1,32 @@
+type: object
+properties:
+  CodBanco:
+    maxLength: 4
+    type: string
+    description: "Código do banco\r\n<br />"
+  Agencia:
+    maxLength: 9
+    type: string
+    description: "Agência\r\n<br />"
+  Conta:
+    maxLength: 9
+    type: string
+    description: "Conta\r\n<br />"
+  TipoConta:
+    type: string
+    description: "Tipo de conta\r\n<br />"
+    enum:
+      - Corrente
+      - Poupanca
+  NomeContaCorrente:
+    maxLength: 100
+    type: string
+    description: "Nome da conta corrente\r\n<br />"
+  CpfCnpjContaCorrente:
+    type: integer
+    description: "CNPJ\r\n<br />"
+    format: int64
+    default: 0
+description: "Dados bancários  \r\n<br />"
+xml:
+  name: DadosBancarios

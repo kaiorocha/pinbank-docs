@@ -1,0 +1,31 @@
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  DataInicial:
+    maxLength: 8
+    type: string
+    description: "Data inicial\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataFinal:
+    maxLength: 8
+    type: string
+    description: "Data final  \r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  NsuGiftCard:
+    type: integer
+    description: "NSU Gift Card\r\n<br />"
+    format: int64
+    default: 0
+  TipoConsulta:
+    type: string
+    description: "GIFTCARDS   - Lista compras de GiftCards (Default)\r\nRECARGAS    - Lista compras de Recargas\r\nTODOS       - Lista Todas as compras\r\n<br />"
+    default: GIFTCARDS
+xml:
+  name: GiftCardBuscarComprasRequestData

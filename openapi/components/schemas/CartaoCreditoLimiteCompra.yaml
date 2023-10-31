@@ -1,0 +1,9 @@
+type: object
+properties:
+  VlLimiteCompra:
+    type: integer
+    description: "Valor Limite de Compra\r\nEx: R$1,00 = 100"
+    format: int64
+description: Cartão Crédito Limite Compra
+xml:
+  name: CartaoCreditoLimiteCompra

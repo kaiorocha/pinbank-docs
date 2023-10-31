@@ -1,0 +1,31 @@
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  IdProposta:
+    type: integer
+    description: "Id da Proposta\r\n<br />"
+    format: int64
+  BodyProposta:
+    type: array
+    description: "Body da Proposta\r\n<br />"
+    xml:
+      name: ItemBodyProposta
+      wrapped: true
+    items:
+      $ref: ./ItemBodyProposta.yaml
+  DataCadastro:
+    type: string
+    description: "Data do Cadastro\r\n<br />"
+    format: date-time
+  StatusProposta:
+    type: string
+    description: "Indica o Status da proposta\r\n<br />"
+xml:
+  name: ConsultarPropostaResponseData

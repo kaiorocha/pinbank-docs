@@ -1,0 +1,71 @@
+post:
+  tags:
+    - CartaoCredito
+  summary: Histórico da Fatura do Cartão de crédito.
+  operationId: CartaoCredito_HistoricoFaturaFechadaCartaoCredito
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: >-
+            ../components/schemas/HistoricoFaturaFechadaCartaoCreditoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: >-
+            ../components/schemas/HistoricoFaturaFechadaCartaoCreditoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/HistoricoFaturaFechadaCartaoCreditoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/HistoricoFaturaFechadaCartaoCreditoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: >-
+            ../components/schemas/HistoricoFaturaFechadaCartaoCreditoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/HistoricoFaturaFechadaCartaoCreditoListResponse.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/HistoricoFaturaFechadaCartaoCreditoListResponse.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/HistoricoFaturaFechadaCartaoCreditoListResponse.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/HistoricoFaturaFechadaCartaoCreditoListResponse.yaml
+  x-codegen-request-body-name: request

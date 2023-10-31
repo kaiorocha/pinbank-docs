@@ -1,0 +1,8 @@
+type: object
+properties:
+  ErrorMessage:
+    type: string
+  FieldName:
+    type: string
+xml:
+  name: FieldErrorData

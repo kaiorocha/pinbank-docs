@@ -1,0 +1,42 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - CodigoGrupo
+  - CodigoProduto
+  - CodigoProvedor
+  - CodigoVendedor
+  - NumeroRecarga
+  - TokenRecargaCelular
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  TokenRecargaCelular:
+    type: string
+    description: "Token de autenticação da recarga de celular\r\n<br />"
+  CodigoProvedor:
+    type: string
+    description: "Código do provedor\r\n<br />"
+  CodigoProduto:
+    type: string
+    description: "Código do produto\r\n<br />"
+  CodigoGrupo:
+    type: string
+    description: "Código do grupo\r\n<br />"
+  CodigoVendedor:
+    type: string
+    description: "Codigo do vendedor\r\n<br />"
+  NumeroRecarga:
+    maxLength: 11
+    type: string
+    description: "DDD + Número do celular recarga\r\nEX: 00999999999\r\n<br />"
+xml:
+  name: RecargaCelularBuscarValoresRequestData

@@ -1,0 +1,12 @@
+type: object
+properties:
+  ListaPinSafeLancamentosCartao:
+    type: array
+    description: "Lista de trasações PinSafe do cartão\r\n<br />"
+    xml:
+      name: PinSafeLancamentosCartao
+      wrapped: true
+    items:
+      $ref: ./PinSafeLancamentosCartao.yaml
+xml:
+  name: BuscaLancamentosPinSafeCartaoResponseData

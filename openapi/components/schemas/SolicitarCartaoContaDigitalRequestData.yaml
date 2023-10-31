@@ -1,0 +1,85 @@
+required:
+  - ApelidoCartao
+  - CartaoEvento
+  - CodigoCanal
+  - CodigoCliente
+  - CpfPortador
+  - DataNascimentoPortador
+  - DddCelularPortador
+  - DdiCelularPortador
+  - EmailPortador
+  - Endereco
+  - NomeMaePortador
+  - NomePortador
+  - NumeroCelularPortador
+  - RgDataEmissaoPortador
+  - RgPortador
+  - UfRgPortador
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  NomePortador:
+    type: string
+    description: "Nome do portador\r\n<br />"
+  DataNascimentoPortador:
+    maxLength: 8
+    type: string
+    description: "Data de nascimento do portador\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  CpfPortador:
+    type: integer
+    description: "CPF do portador\r\n<br />"
+    format: int64
+    default: 0
+  RgPortador:
+    maxLength: 14
+    type: string
+    description: "RG do portador\r\n<br />"
+  RgDataEmissaoPortador:
+    maxLength: 8
+    type: string
+    description: "Data de emissão do RG do portador\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  UfRgPortador:
+    maxLength: 2
+    type: string
+    description: "UF do RG do portador        \r\n<br />"
+  NomeMaePortador:
+    type: string
+    description: "Nome da mão do portador       \r\n<br />"
+  Endereco:
+    $ref: ./EnderecoPortador.yaml
+  ApelidoCartao:
+    type: string
+    description: "Apelido do cartão    \r\n<br />"
+  DdiCelularPortador:
+    type: integer
+    description: "DDI celular portador\r\n<br />"
+    format: int32
+    default: 0
+  DddCelularPortador:
+    type: integer
+    description: "DDD celular portador\r\n<br />"
+    format: int32
+    default: 0
+  NumeroCelularPortador:
+    type: integer
+    description: "Número celular portador\r\n<br />"
+    format: int64
+    default: 0
+  EmailPortador:
+    type: string
+    description: "Email do portador    \r\n<br />"
+  CartaoEvento:
+    type: boolean
+    description: "Cartão evento    \r\n<br />"
+    default: false
+xml:
+  name: SolicitarCartaoContaDigitalRequestData

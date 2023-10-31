@@ -1,0 +1,27 @@
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Id codigo cliente\r\n<br />"
+    format: int32
+  CodigoCanal:
+    type: integer
+    description: "Id canal cliente\r\n<br />"
+    format: int32
+  PixValor:
+    type: integer
+    description: "Valor PIX Diurno (Seg a Sab)\r\n<br />"
+    format: int64
+  PixValorN:
+    type: integer
+    description: "Valor PIX Noturno\r\n<br />"
+    format: int64
+  PixValorDf:
+    type: integer
+    description: "Valor PIX Domingos e feriados\r\n<br />"
+    format: int64
+  PixCategoria:
+    type: string
+description: Retorna os dados de limite de PIX do Cliente
+xml:
+  name: ConsultaLimitesPixResponseData

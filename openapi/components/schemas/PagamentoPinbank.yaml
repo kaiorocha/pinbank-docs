@@ -1,0 +1,64 @@
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  IdQrCode:
+    type: string
+    description: " Iddo Qr Code\r\n<br />"
+  IdEmpresa:
+    type: string
+    description: "Id da empresa\r\n<br />"
+  NomeEmpresa:
+    type: string
+    description: "Nome da empresa\r\n<br />"
+  NomePagador:
+    type: string
+    description: "Nomedo pagador\r\n<br />"
+  CpfCnpjPagador:
+    type: string
+    description: "Cpf / Cnpj do pagador\r\n<br />"
+  ContaPagador:
+    type: string
+    description: "Conta do pagador\r\n<br />"
+  AgenciaPagador:
+    type: string
+    description: "Agência do pagador\r\n<br />"
+  TipoContaPagador:
+    type: string
+    description: "Tipo conta pagador\r\n<br />"
+  IspbPspPagador:
+    type: string
+    description: "Ispb PSP Pagador\r\n<br />"
+  IspbPspRecebedor:
+    type: string
+    description: "Ispb PSP Recebedor\r\n<br />"
+  ContaRecebedor:
+    type: string
+    description: "Conta do recebedor\r\n<br />"
+  AgenciaRecebedor:
+    type: string
+    description: "Agência do recebedor \r\n<br />"
+  TipoContaRecebedor:
+    type: string
+    description: "Tipo conta do recebedor\r\n<br />"
+  KeyRecebedor:
+    type: string
+    description: "Key do Recebedor\r\n<br />"
+  DataHora:
+    type: string
+    description: "Data / Horário\r\n<br />"
+  Valor:
+    type: number
+    description: "Valor\r\n<br />"
+    format: double
+  DescStatusQrCode:
+    type: string
+    description: "Descrição do status do QrCode \r\nNull em caso de Pix sem qrcode\r\n<br />"
+xml:
+  name: PagamentoPinbank

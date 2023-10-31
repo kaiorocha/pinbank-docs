@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./TransferenciaEntreContasRequestData.yaml
+xml:
+  name: TransferenciaEntreContasSingleRequest

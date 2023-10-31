@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./GerarContratoRequestData.yaml
+xml:
+  name: GerarContratoSingleRequest

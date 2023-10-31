@@ -1,0 +1,66 @@
+post:
+  tags:
+    - Pix
+  summary: Consulta o status e dados de um QR Code dinâmico
+  operationId: Pix_ConsultarDynamicQrCode
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ConsultarDynamicQrCodeSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/ConsultarDynamicQrCodeSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarDynamicQrCodeSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarDynamicQrCodeSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/ConsultarDynamicQrCodeSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarDynamicQrCodeSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarDynamicQrCodeSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarDynamicQrCodeSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarDynamicQrCodeSingleResponseData.yaml
+  x-codegen-request-body-name: request

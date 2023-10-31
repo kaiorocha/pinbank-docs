@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./GiftCardEfetuarCompraRequestData.yaml
+xml:
+  name: GiftCardEfetuarCompraSingleRequest

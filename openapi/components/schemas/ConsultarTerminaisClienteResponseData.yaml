@@ -1,0 +1,21 @@
+type: object
+properties:
+  IdTerminal:
+    type: string
+    description: "Id Terminal\r\n<br />"
+  SerialNumber:
+    type: string
+    description: "Serial Number\r\n<br />"
+  IdStatus:
+    type: string
+    description: "Id Status\r\n<br />"
+  DescStatus:
+    type: string
+    description: "Descrição do Status\r\n<br />"
+  DataAlteracao:
+    type: string
+    description: "Data Alteracao\r\n<br />"
+    format: date-time
+description: Retorna o dado de permissão de cadastro pelo app
+xml:
+  name: ConsultarTerminaisClienteResponseData

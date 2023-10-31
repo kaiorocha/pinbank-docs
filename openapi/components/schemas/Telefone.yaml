@@ -1,0 +1,15 @@
+type: object
+properties:
+  DDD:
+    maxLength: 3
+    type: string
+    description: "Número do DDD do telefone\r\nexample: 11\r\n<br />"
+    default: ''
+  Numero:
+    maxLength: 9
+    type: string
+    description: "Número do telefone\r\nexample: 991533088"
+    default: ''
+description: Telefone
+xml:
+  name: Telefone

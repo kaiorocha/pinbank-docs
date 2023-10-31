@@ -1,0 +1,12 @@
+type: object
+properties:
+  ListaSubProdutosDisponiveis:
+    type: array
+    description: "Lista de sub produtos disponíveis\r\n<br />"
+    xml:
+      name: SubProdutoDisponivel
+      wrapped: true
+    items:
+      $ref: ./SubProdutoDisponivel.yaml
+xml:
+  name: GiftCardBuscarSubProdutosResponseData

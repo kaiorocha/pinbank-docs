@@ -1,0 +1,16 @@
+type: object
+properties:
+  ResultCode:
+    type: integer
+    format: int32
+  Message:
+    type: string
+  Errors:
+    type: array
+    xml:
+      name: FieldErrorData
+      wrapped: true
+    items:
+      $ref: ./FieldErrorData.yaml
+xml:
+  name: ValidationData

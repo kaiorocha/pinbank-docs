@@ -1,0 +1,30 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - StatusCartao
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  StatusCartao:
+    type: string
+    description: "Status do cartão\r\n<br />"
+    enum:
+      - Todos
+      - Ativos
+      - Inativos
+      - Bloqueados
+  NumeroTruncado:
+    maxLength: 16
+    type: string
+    description: "Número Truncado\r\nEx: 000000******0000\r\n<br />"
+xml:
+  name: ConsultarCartoesRequestData

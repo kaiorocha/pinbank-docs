@@ -1,0 +1,44 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  ValorQrCode:
+    type: integer
+    description: "Valor\r\n<br />"
+    format: int64
+    default: 0
+  NsuOrigem:
+    type: integer
+    description: "NSU origem\r\n<br />"
+    format: int64
+    default: 0
+  DataVencimento:
+    type: string
+    description: "Data de vencimento\r\n<br />"
+    format: date-time
+  SegundosExpiracao:
+    type: integer
+    description: "Segundos para expiração do QRCode. O pagamento não será aceito após o prazo de validade.\r\n<br />"
+    format: int32
+    default: 0
+  PermitirPagamentoAposExpiracao:
+    type: boolean
+    description: "Permitir o pagamento após expiração\r\n<br />"
+    default: false
+  PermitirAlterarValorPagamento:
+    type: boolean
+    description: "Permitir o alterar valor do pagamento\r\n<br />"
+    default: false
+xml:
+  name: SolicitarDynamicQrCodeRequestData

@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ConsultarBoletoRequestData.yaml
+xml:
+  name: ConsultarBoletoSingleRequest

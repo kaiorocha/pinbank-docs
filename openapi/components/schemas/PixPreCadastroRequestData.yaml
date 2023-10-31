@@ -1,0 +1,44 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - CpfCnpj
+  - TipoKey
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CpfCnpj:
+    type: integer
+    description: "CPF ou CNPJ      \r\n<br />"
+    format: int64
+    default: 0
+  Key:
+    maxLength: 77
+    type: string
+    description: "Identificação da chave de endereçamento\r\n<br />"
+  TipoKey:
+    type: string
+    description: "Tipo da Key\r\n<br />"
+    enum:
+      - CPF
+      - CNPJ
+      - EMAIL
+      - PHONE
+      - EVP
+  IdTermo:
+    type: integer
+    description: "ID do termo\r\n<br />"
+    format: int32
+  IpAceiteTermo:
+    type: string
+    description: "IP utilizado pelo cliente no ato do aceite do termo\r\n<br />"
+xml:
+  name: PixPreCadastroRequestData

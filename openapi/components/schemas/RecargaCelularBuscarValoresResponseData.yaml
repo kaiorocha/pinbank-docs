@@ -1,0 +1,36 @@
+type: object
+properties:
+  TokenRecargaCelular:
+    type: string
+    description: "Token de autenticação da recarga de celular\r\n<br />"
+  NomeOperadora:
+    type: string
+    description: "Nome da operadora\r\n<br />"
+  CodigoProvedor:
+    type: string
+    description: "Código do provedor\r\n<br />"
+  CodigoProduto:
+    type: string
+    description: "Código do produto\r\n<br />"
+  CodigoGrupo:
+    type: string
+    description: "Código do grupo\r\n<br />"
+  CodigoVendedor:
+    type: string
+    description: "Codigo do vendedor\r\n<br />"
+  CodigoVFP:
+    type: string
+    description: "Código VFP\r\n<br />"
+  CodigoVGP:
+    type: string
+    description: "Código VGP\r\n<br />"
+  ListaOperadoraValor:
+    type: array
+    description: "Lista de opções da operadora\r\n<br />"
+    xml:
+      name: OperadoraValor
+      wrapped: true
+    items:
+      $ref: ./OperadoraValor.yaml
+xml:
+  name: RecargaCelularBuscarValoresResponseData

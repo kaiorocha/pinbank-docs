@@ -1,0 +1,41 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - TipoTransacao
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  Situacao:
+    type: string
+    description: "Situacão\r\n<br />"
+  TipoPeriodo:
+    type: integer
+    description: "Tipo Periodo\r\n<br />"
+    format: int32
+  DataInicial:
+    maxLength: 8
+    type: string
+    description: "Data inicial\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataFinal:
+    maxLength: 8
+    type: string
+    description: "Data final  \r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  IdContrato:
+    type: integer
+    description: "Id Contrato\r\n<br />"
+    format: int32
+  TipoTransacao:
+    type: string
+    description: "Tipo de transação (Recebidas ou Enviadas)\r\n<br />"
+    enum:
+      - RECEBIDAS
+      - ENVIADAS
+xml:
+  name: ConsultarContratosRequestData

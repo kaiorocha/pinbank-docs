@@ -1,0 +1,9 @@
+type: object
+properties:
+  IdTedProgramada:
+    type: integer
+    description: "Id TED programada\r\n<br />"
+    format: int32
+    default: 0
+xml:
+  name: TedCancelar

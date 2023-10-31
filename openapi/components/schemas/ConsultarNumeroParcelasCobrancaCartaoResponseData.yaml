@@ -1,0 +1,12 @@
+type: object
+properties:
+  ListaParcelaCobrancaCartao:
+    type: array
+    description: "Lista de parcelas\r\n<br />"
+    xml:
+      name: ParcelaCobrancaCartao
+      wrapped: true
+    items:
+      $ref: ./ParcelaCobrancaCartao.yaml
+xml:
+  name: ConsultarNumeroParcelasCobrancaCartaoResponseData

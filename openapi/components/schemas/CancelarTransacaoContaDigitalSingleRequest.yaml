@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./CancelarTransacaoContaDigitalRequestData.yaml
+xml:
+  name: CancelarTransacaoContaDigitalSingleRequest

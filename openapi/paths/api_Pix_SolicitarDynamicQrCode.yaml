@@ -1,0 +1,66 @@
+post:
+  tags:
+    - Pix
+  summary: Solicita a geração de um QR Code dinâmico
+  operationId: Pix_SolicitarDynamicQrCode
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/SolicitarDynamicQrCodeSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/SolicitarDynamicQrCodeSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/SolicitarDynamicQrCodeSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/SolicitarDynamicQrCodeSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/SolicitarDynamicQrCodeSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/SolicitarDynamicQrCodeSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/SolicitarDynamicQrCodeSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/SolicitarDynamicQrCodeSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/SolicitarDynamicQrCodeSingleResponseData.yaml
+  x-codegen-request-body-name: request

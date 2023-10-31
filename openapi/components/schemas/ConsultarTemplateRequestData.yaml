@@ -1,0 +1,22 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - QrCodeId
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  QrCodeId:
+    maxLength: 20
+    type: string
+    description: "Código do QrCode\r\n<br />"
+xml:
+  name: ConsultarTemplateRequestData

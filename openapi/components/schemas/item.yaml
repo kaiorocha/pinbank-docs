@@ -1,0 +1,64 @@
+type: object
+properties:
+  Id:
+    type: integer
+    description: Identificador unico do item
+    format: int32
+  Name:
+    type: string
+    description: descrição do item
+  Value:
+    type: string
+    description: Valor a ser exibido quando o campo for do tipo ReadOnly
+  Required:
+    type: boolean
+    description: "Indica se o item é obrigatório\r\nse - true é obrigatório\r\nse - false não é obrigatório"
+  ReadOnly:
+    type: boolean
+    description: "Indicador que o item é somente de leitura\r\nse true somente leitura\r\nse false editável"
+  Type:
+    type: string
+    description: "Indica os tipos de renderizações dos itens\r\ntext    - item do tipo texto\r\nselect  - item do tipo select/dropdown\r\nlist    - item do tipo lista"
+  Mask:
+    type: string
+    description: Mascara de formatação do item no formuário
+  RegEx:
+    type: string
+    description: Expressão regular para validação do dado no formulário
+  Order:
+    type: integer
+    description: Ordem que deve ser renderizado o item no formulário
+    format: int32
+  AnyOf:
+    type: array
+    description: Array de elementos quando o item for select/dropdown
+    items:
+      type: string
+  Selected:
+    type: string
+    description: Item selecionado do Array(AnyOf)
+  ListItens:
+    type: array
+    description: Lista de elementos quando o item for do tipo lista
+    xml:
+      name: Item
+      wrapped: true
+    items:
+      $ref: ./Item.yaml
+  URL:
+    type: string
+    description: URL da imagem a ser exibida quando o tipo(type) for Image
+  Icon:
+    $ref: ./Icon.yaml
+  Image:
+    type: string
+    description: Contem a string com ao base64 da imagem
+  KeyboardType:
+    type: string
+    description: Tipo de teclado a ser exibido
+    enum:
+      - Numeric
+      - AlphaNumeric
+description: Item para a lista de itens
+xml:
+  name: item

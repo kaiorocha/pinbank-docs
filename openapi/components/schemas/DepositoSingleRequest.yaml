@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./DepositoRequestData.yaml
+xml:
+  name: DepositoSingleRequest

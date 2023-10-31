@@ -1,0 +1,20 @@
+required:
+  - CodigoTermo
+type: object
+properties:
+  CodigoTermo:
+    maxLength: 10
+    type: string
+    description: "Código em texto do termo desejado\r\n<br />"
+  retonaBase64:
+    type: boolean
+    description: Usado para retornar ou não o Base64 do pdf do termo
+  retornaArqHeader:
+    type: boolean
+    description: Usado para retornar ou não o txt do header
+  retonaConteudoArquivo:
+    type: boolean
+    description: Usado para retornar o conteudo do arquivo
+description: Termos de Uso
+xml:
+  name: TermosDeUsoRequestData

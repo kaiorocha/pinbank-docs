@@ -1,0 +1,24 @@
+type: object
+properties:
+  TarifaVarMinimaRecebPix:
+    type: number
+    description: "Tarifa variavel minima de recebimento de Pix\r\n<br />"
+    format: double
+  TarifaVarPercentualRecebPix:
+    type: number
+    description: "Tarifa variavel percentual de recebimento de Pix\r\n<br />"
+    format: double
+  TarifaVarMaximaRecebPix:
+    type: number
+    description: "Tarifa variavel maxima de recebimento de Pix\r\n<br />"
+    format: double
+  TarifaVarMaximaRecebPixVenda:
+    type: number
+    description: "Tarifa variavel maxima de recebimento de Pix para vendas\r\n<br />"
+    format: double
+  TarifaPercentualRetRecebPix:
+    type: number
+    description: "Percentual de retencao sobre o Pix recebido\r\n<br />"
+    format: double
+xml:
+  name: TarifaPixRecebido

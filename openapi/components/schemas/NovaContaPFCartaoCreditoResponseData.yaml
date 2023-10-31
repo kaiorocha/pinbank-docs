@@ -1,0 +1,10 @@
+type: object
+properties:
+  Cartao:
+    $ref: ./DadosCartao.yaml
+  NrConta:
+    type: string
+    description: "Número da conta cartão\r\n<br />"
+description: "Nova Conta PF\r\n<br />"
+xml:
+  name: NovaContaPFCartaoCreditoResponseData

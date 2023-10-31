@@ -1,0 +1,41 @@
+type: object
+properties:
+  Status:
+    type: string
+    description: "Status do boleto\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor do boleto\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+  ValorPago:
+    type: integer
+    description: "Valor pago\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+  DataGeracao:
+    type: string
+    description: "Data de geração do boleto\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataVencimento:
+    type: string
+    description: "Data de vencimento do boleto\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataPagamento:
+    type: string
+    description: "Data de pagamento do boleto\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  OrigemBoleto:
+    type: string
+    description: "Origem da geração do boleto        \r\n<br />"
+  NossoNumero:
+    type: string
+    description: "Número do boleto\r\n<br />"
+  LinhaDigitavel:
+    type: string
+    description: "Linha digitável do boleto\r\n<br />"
+  CodigoBarras:
+    type: string
+    description: "Código de barras\r\n<br />"
+  IdentificadorCliente:
+    type: string
+    description: "Identificador Cliente\r\n<br />"
+  DadosPagador:
+    $ref: ./PagadorLote.yaml
+xml:
+  name: ConsultarBoletoLoteResponseData

@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./NovaContaPFCartaoCreditoRequestData.yaml
+description: Nova Conta PF para Cartão de Crédito
+xml:
+  name: NovaContaPFCartaoCreditoSingleRequest

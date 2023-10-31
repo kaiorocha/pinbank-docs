@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./GetWithdrawalsByAccountRequestData.yaml
+xml:
+  name: GetWithdrawalsByAccountSingleRequest

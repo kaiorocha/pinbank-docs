@@ -1,0 +1,15 @@
+type: object
+properties:
+  TokenRecargaCelular:
+    type: string
+    description: "Token de autenticação da recarga de celular\r\n<br />"
+  ListaOperadoras:
+    type: array
+    description: "Lista de operadoras disponíveis para recarga\r\n<br />"
+    xml:
+      name: Operadora
+      wrapped: true
+    items:
+      $ref: ./Operadora.yaml
+xml:
+  name: RecargaCelularBuscarOperadorasResponseData

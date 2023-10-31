@@ -1,0 +1,44 @@
+required:
+  - Bairro
+  - Cep
+  - Cidade
+  - Logradouro
+  - Numero
+  - Uf
+type: object
+properties:
+  Uf:
+    maxLength: 3
+    type: string
+    description: "UF\r\n <br />"
+  Cidade:
+    maxLength: 30
+    type: string
+    description: "Cidade\r\n<br />"
+  Complemento:
+    maxLength: 15
+    type: string
+    description: "Complemento\r\n <br />"
+  Logradouro:
+    maxLength: 40
+    type: string
+    description: "Logadouro\r\n <br />"
+  Numero:
+    maxLength: 30
+    type: string
+    description: "Número do logadouro\r\n <br />"
+  Bairro:
+    maxLength: 30
+    type: string
+    description: "Bairro\r\n <br />"
+  Cep:
+    maxLength: 9
+    type: string
+    description: "CEP\r\n <br />"
+  Tipo:
+    maxLength: 1
+    type: string
+    description: "Tipo de endereço\r\nR - Residencial  \r\nC - Comercial\r\n <br />"
+description: Endereço
+xml:
+  name: EnderecoCadastroContaPFCartaoCredito

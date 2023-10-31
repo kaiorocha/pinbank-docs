@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ConsultarContratosRequestData.yaml
+xml:
+  name: ConsultarContratosSingleRequest

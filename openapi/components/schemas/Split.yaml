@@ -1,0 +1,22 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - Valor
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal split\r\n<br />"
+    format: int32
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente split\r\n<br />"
+    format: int32
+  Valor:
+    type: number
+    description: "Valor do split\r\nEx: R$ 1,00 =&gt; 100\r\n<br />"
+    format: double
+    default: 0
+description: Split
+xml:
+  name: Split

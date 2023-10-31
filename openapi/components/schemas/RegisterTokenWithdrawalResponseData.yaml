@@ -1,0 +1,15 @@
+type: object
+properties:
+  WithdrawalRequestDateTime:
+    type: string
+    description: "Data e hora da solicitação do saque\r\n<br />"
+    format: date-time
+  WithdrawalRequestId:
+    type: integer
+    description: "Id da solicitação do saque\r\n<br />"
+    format: int32
+  WithdrawalTransactionToken:
+    type: string
+    description: "Token (o mesmo que foi enviado para o celular do terceiro via SMS)\r\n<br />"
+xml:
+  name: RegisterTokenWithdrawalResponseData

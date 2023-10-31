@@ -1,0 +1,36 @@
+type: object
+properties:
+  IdComprovante:
+    type: integer
+    description: "Id do comprovante\r\n<br />"
+    format: int64
+  IdLancamento:
+    type: integer
+    description: "Id lançamento\r\n<br />"
+    format: int64
+  IdTipoOperacao:
+    type: string
+    description: "Id tipo operacao\r\n<br />"
+  DescTipoOperacao:
+    type: string
+    description: "Descrição tipo operacao\r\n<br />"
+  IdOperacao:
+    type: string
+    description: "Id operacao\r\n<br />"
+  Descricao:
+    type: string
+    description: "Descrição\r\n<br />"
+  VersaoLayout:
+    type: integer
+    description: "Versao layout json\r\n<br />"
+    format: int32
+  DadosComprovante:
+    type: string
+    description: "Dados do comprovante\r\n<br />"
+  DataOperacao:
+    type: string
+    description: "Data da operação\r\n<br />"
+    format: date-time
+description: ''
+xml:
+  name: PixDevolucaoResponseData

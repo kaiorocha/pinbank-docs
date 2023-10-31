@@ -1,0 +1,10 @@
+type: object
+properties:
+  PagamentoPinbank:
+    $ref: ./PagamentoPinbank.yaml
+  PagamentoItau:
+    $ref: ./PagamentoItau.yaml
+  PagamentoItauDevolucao:
+    $ref: ./PagamentoItauDevolucao.yaml
+xml:
+  name: ConsultarNuOPPixResponseData

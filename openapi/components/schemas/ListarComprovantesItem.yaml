@@ -1,0 +1,42 @@
+type: object
+properties:
+  IdComprovante:
+    type: integer
+    description: "Id do comprovante\r\n<br />"
+    format: int64
+  IdLancamento:
+    type: integer
+    description: "Id lançamento\r\n<br />"
+    format: int64
+  IdTipoOperacao:
+    type: string
+    description: "Id tipo operacao\r\n<br />"
+  DescTipoOperacao:
+    type: string
+    description: "Descrição tipo operacao\r\n<br />"
+  IdOperacao:
+    type: string
+    description: "Id operacao\r\n<br />"
+  Descricao:
+    type: string
+    description: "Descrição\r\n<br />"
+  VersaoLayout:
+    type: integer
+    description: "Versao layout json\r\n<br />"
+    format: int32
+  DataOperacao:
+    type: string
+    description: "Data da operação\r\n<br />"
+    format: date-time
+  DescricaoExtrato:
+    type: string
+    description: "Descrição do extrato\r\n<br />"
+  Valor:
+    type: number
+    description: "Valor\r\n<br />"
+    format: double
+  Mensagem:
+    type: string
+    description: "Mensagem\r\n<br />"
+xml:
+  name: ListarComprovantesItem

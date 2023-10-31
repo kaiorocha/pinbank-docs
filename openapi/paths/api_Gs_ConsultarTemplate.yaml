@@ -1,0 +1,62 @@
+post:
+  tags:
+    - Gs
+  summary: Retorna o template referente ao QrCode ID
+  operationId: Gs_ConsultarTemplate
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ConsultarTemplateSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/ConsultarTemplateSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarTemplateSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarTemplateSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/ConsultarTemplateSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ConsultarTemplateSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/ConsultarTemplateSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/ConsultarTemplateSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/ConsultarTemplateSingleResponseData.yaml
+  x-codegen-request-body-name: request

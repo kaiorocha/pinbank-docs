@@ -1,0 +1,10 @@
+type: object
+properties:
+  Nome:
+    type: string
+    description: "Nome do produto\r\n<br />"
+  CodigoTipoProduto:
+    type: string
+    description: "Código do tipo do produto\r\n<br />"
+xml:
+  name: ProdutoDisponivel

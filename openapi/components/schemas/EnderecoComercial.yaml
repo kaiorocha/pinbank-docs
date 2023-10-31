@@ -1,0 +1,39 @@
+required:
+  - EndeComBairro
+  - EndeComCep
+  - EndeComCidade
+  - EndeComEstado
+  - EndeComLogradouro
+  - EndeComNumero
+type: object
+properties:
+  EndeComCep:
+    type: string
+    description: "CEP comercial\r\n<br />"
+  EndeComLogradouro:
+    maxLength: 100
+    type: string
+    description: "Logradouro comercial\r\n<br />"
+  EndeComNumero:
+    maxLength: 5
+    type: string
+    description: "Número comercial\r\n<br />"
+  EndeComComplemento:
+    maxLength: 100
+    type: string
+    description: "Complemento comercial\r\n<br />"
+  EndeComEstado:
+    maxLength: 2
+    type: string
+    description: "Sigla do estado comercial\r\n<br />"
+  EndeComCidade:
+    maxLength: 100
+    type: string
+    description: "Cidade comercial\r\n<br />"
+  EndeComBairro:
+    maxLength: 100
+    type: string
+    description: "Bairro comercial\r\n<br />"
+description: "Endereço comercial\r\n<br />"
+xml:
+  name: EnderecoComercial

@@ -1,0 +1,19 @@
+type: object
+properties:
+  Data:
+    type: array
+    xml:
+      name: HistoricoTransacoesCartaoCreditoResponseData
+      wrapped: true
+    items:
+      $ref: ./HistoricoTransacoesCartaoCreditoResponseData.yaml
+  ResultCode:
+    type: integer
+    format: int32
+  Message:
+    type: string
+  ValidationData:
+    $ref: ./ValidationData.yaml
+description: ''
+xml:
+  name: HistoricoTransacoesCartaoCreditoListResponse

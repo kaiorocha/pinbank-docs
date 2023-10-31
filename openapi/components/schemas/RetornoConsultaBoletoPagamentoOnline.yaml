@@ -1,0 +1,76 @@
+type: object
+properties:
+  CpfCnpjBeneficiario:
+    type: string
+    description: CPF/CNPJ beneficiário
+  NomeFantasiaBeneficiario:
+    type: string
+    description: Nome fantasia beneficiário
+  RazaoSocialBeneficiario:
+    type: string
+    description: Razão social benecidiário
+  TipoPessoaBeneficiario:
+    type: string
+    description: Tipo de pessoa beneficiário
+  CodigoBarras:
+    type: string
+    description: Código de barras
+  LinhaDigitavel:
+    type: string
+    description: Linha digitável
+  DataVencimento:
+    type: string
+    description: Data vencimento
+  ValorTotal:
+    type: string
+    description: Valor total
+  ValorDesconto:
+    type: integer
+    description: "Valor desconto\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  ValorCalculado:
+    type: integer
+    description: "Valor calculado (considera juros e multa)\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  ValorEncargos:
+    type: integer
+    description: "Valor encargos\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  ValorJuros:
+    type: integer
+    description: "Valor juros\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  ValorMulta:
+    type: integer
+    description: "Valor multa\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  NomePagador:
+    type: string
+    description: "Nome pagador\r\n<br />"
+  CpfCnpjPagador:
+    type: string
+    description: "CPF/CNPJ pagador\r\n<br />"
+  TipoPessoaPagador:
+    type: string
+    description: "Tipo pessoa pagador\r\n<br />"
+  CodigoInstituicaoEmissora:
+    type: string
+    description: "Código instituição emissora\r\n<br />"
+  NomeInstituicaoEmissora:
+    type: string
+    description: "Nome instituição emissora\r\n<br />"
+  PagamentoParcial:
+    type: boolean
+    description: "Pagamento parcial\r\n<br />"
+  ValorPagamentoMinimo:
+    type: integer
+    description: "Valor pagamento mínimo\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  ValorPagamentoMaximo:
+    type: integer
+    description: "Valor pagamento máximo\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  DadosArrecadacao:
+    $ref: ./DadosConsultaArrecadacao.yaml
+xml:
+  name: RetornoConsultaBoletoPagamentoOnline

@@ -1,0 +1,77 @@
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  IdentificadorAdicionalOrigem:
+    type: string
+    description: "Identificador adicional da origem\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor\r\n<br />"
+    format: int64
+    default: 0
+  IndicadorConveniencia:
+    type: string
+    description: "Indicador que informa como a gorjeta ou taxa de conveniência será cobrada ao cliente - Informar nulo caso a compra não tenha essa cobrança\r\n<br />"
+    enum:
+      - GorjetaInseridaPeloConsumidor
+      - ValorConvenienciaFixo
+      - ValorConvenienciaPorcentagem
+  CodigoMoeda:
+    type: integer
+    description: "Código da moeda, conforme a ISO 4217 (utilizar “986” para Real)\r\n<br />"
+    format: int32
+    default: 0
+  NumeroParcelas:
+    type: integer
+    description: "Número de parcelas\r\n<br />"
+    format: int32
+    default: 0
+  NsuQRCodeOriginal:
+    type: string
+    description: "Usado apenas para cancelamentos, onde irá conter a NSU do QR Code da transação original de compra.\r\n<br />"
+  TipoOrigem:
+    type: string
+    description: "Tipo de origem que está gerando o QR code\r\n<br />"
+    enum:
+      - POSPinbank
+      - Pinsafe
+      - TEFPinbank
+      - Outro
+  MetodoPagamento:
+    type: string
+    description: "Método de pagamento\r\n<br />"
+    enum:
+      - CreditoAVista
+      - CreditoSemJuros
+      - CreditoComJuros
+      - Debito
+  TipoTransacao:
+    type: string
+    description: "Tipo da transação\r\n<br />"
+    enum:
+      - Venda
+      - Cancelamento
+  ValorFixoConveniencia:
+    type: integer
+    description: "Valor fixo para a taxa/gorjeta se o “IndicadorConveniencia” for “ValorConvenienciaFixo”\r\n<br />"
+    format: int64
+  ValueOfConvenienceFeePercentage:
+    type: number
+    description: "Porcentagem do valor da compra à ser pago como taxa/gorjeta se o “IndicadorConveniencia” for “ValorConvenienciaPorcentagem”\r\n<br />"
+    format: double
+  TempoExpiracao:
+    type: integer
+    description: "Tempo de expiração do QR Code. Utilizar apenas quando o QR Code for enviado por email.\r\n<br />"
+    format: int32
+    default: 0
+xml:
+  name: GenerateQRCodeRequestData

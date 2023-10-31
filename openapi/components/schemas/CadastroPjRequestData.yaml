@@ -1,0 +1,197 @@
+required:
+  - CNPJ
+  - CodigoCanal
+  - Cpf
+  - DataConstituicao
+  - DataNascimento
+  - DddCelular
+  - DdiCelular
+  - Email
+  - EnderecoComercial
+  - EnderecoResidencial
+  - EnviarEmailPrimAcesso
+  - EstadoCivil
+  - GrauEscolar
+  - Nome
+  - NomeFantasia
+  - NomeMae
+  - NomePai
+  - NumeroCelular
+  - Operadora
+  - RamoAtividade
+  - RazaoSocial
+  - Rg
+  - RgDataEmissao
+  - RgEmissor
+  - Sexo
+  - TelefoneComercial
+  - TelefoneResidencial
+  - TipoSO
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  Nome:
+    maxLength: 100
+    type: string
+    description: "Nome        \r\n<br />"
+  DataNascimento:
+    type: string
+    description: "Data de nascimento\r\n<br />"
+    format: date-time
+  Sexo:
+    maxLength: 1
+    type: string
+    description: "Sexo\r\nValores aceitos: {\"M\",\"F\"}\r\n<br />"
+  Cpf:
+    type: integer
+    description: "CPF\r\n<br />"
+    format: int64
+    default: 0
+  Rg:
+    maxLength: 20
+    type: string
+    description: "RG\r\n<br />"
+  RgEmissor:
+    maxLength: 10
+    type: string
+    description: "Orgão emissor do RG\r\n<br />"
+  RgDataEmissao:
+    type: string
+    description: "Data de emissão do RG\r\n<br />"
+    format: date-time
+  Email:
+    maxLength: 100
+    type: string
+    description: "Email\r\n<br />"
+  EstadoCivil:
+    type: string
+    description: "Estado Civil\r\n<br />"
+    enum:
+      - Solteiro
+      - Casado
+      - Divorciado
+      - Viuvo
+  GrauEscolar:
+    type: string
+    description: "Grau escolar\r\n<br />"
+    enum:
+      - PrimeiroGrauIncompleto
+      - PrimeiroGrauCompleto
+      - SegundoGrauIncompleto
+      - SegundoGrauCompleto
+      - TerceiroGrauIncompleto
+      - TerceiroGrauCompleto
+  NomeMae:
+    maxLength: 100
+    type: string
+    description: "Nome da mãe\r\n<br />"
+  NomePai:
+    maxLength: 100
+    type: string
+    description: "Nome do Pai\r\n<br />"
+  PaisOrigem:
+    type: string
+    description: "Pais origem\r\n<br />"
+    enum:
+      - Brasil
+  DdiCelular:
+    type: integer
+    description: "DDI celular\r\n<br />"
+    format: int32
+    default: 0
+  DddCelular:
+    type: integer
+    description: "DDD celular\r\n<br />"
+    format: int32
+    default: 0
+  NumeroCelular:
+    type: integer
+    description: "Número celular\r\n<br />"
+    format: int64
+    default: 0
+  Operadora:
+    type: string
+    description: "Operadora celular\r\n<br />"
+    default: '0'
+    enum:
+      - Claro
+      - Vivo
+      - Tim
+      - Nextel
+      - BrTelecon
+      - Oi
+      - Outra
+  TipoSO:
+    type: string
+    description: "Tipo SO \r\n<br />"
+    default: '0'
+    enum:
+      - Android
+      - IOS
+      - Outra
+  EnderecoResidencial:
+    $ref: ./EnderecoResidencial.yaml
+  TelefoneResidencial:
+    $ref: ./TelefoneResidencial.yaml
+  EnderecoComercial:
+    $ref: ./EnderecoComercial.yaml
+  TelefoneComercial:
+    $ref: ./TelefoneComercial.yaml
+  DadosBancarios:
+    $ref: ./DadosBancarios.yaml
+  RazaoSocial:
+    maxLength: 100
+    type: string
+    description: "Razão social\r\n<br />"
+  NomeFantasia:
+    maxLength: 100
+    type: string
+    description: "Nome fantasia\r\n<br />"
+  CNPJ:
+    type: integer
+    description: "CNPJ\r\n<br />"
+    format: int64
+    default: 0
+  DataConstituicao:
+    type: string
+    description: "Data de constituição\r\n<br />"
+    format: date-time
+  NomeComprovante:
+    maxLength: 100
+    type: string
+    description: "Nome que será exibido nos comprovantes. Caso não informado será utilizada a Razão Social do estabelecimento\r\n<br />"
+  ListaSocios:
+    type: array
+    description: "Sócios\r\n<br />"
+    xml:
+      name: SocioPj
+      wrapped: true
+    items:
+      $ref: ./SocioPj.yaml
+  RamoAtividade:
+    type: integer
+    description: "Ramo de atividade\r\n<br />"
+    format: int32
+    default: 0
+  Senha:
+    maxLength: 8
+    type: string
+    description: "Senha de acesso a conta digital. Caso não seja informado uma senha, o sitema criará uma senha randômica.\r\n<br />"
+  EnviarEmailPrimAcesso:
+    type: boolean
+    description: "Envia email com dados para o primeiro acesso. \r\n<br />"
+    default: false
+  Pep:
+    type: boolean
+    description: Pessoa exposta publicamente
+    default: false
+  IdTermo:
+    type: integer
+    description: Id do termo de aceite
+    format: int32
+xml:
+  name: CadastroPjRequestData

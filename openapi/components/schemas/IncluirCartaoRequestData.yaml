@@ -1,0 +1,47 @@
+required:
+  - Apelido
+  - CodigoCanal
+  - CodigoCliente
+  - CodigoSeguranca
+  - DataValidade
+  - NomeImpresso
+  - NumeroCartao
+  - ValidarCartao
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  Apelido:
+    maxLength: 50
+    type: string
+    description: "Apelido\r\n<br />"
+  NomeImpresso:
+    maxLength: 22
+    type: string
+    description: "Nome impresso no cartão\r\n<br />"
+  NumeroCartao:
+    maxLength: 16
+    type: string
+    description: "Número do cartão\r\n<br />"
+  DataValidade:
+    maxLength: 6
+    type: string
+    description: "Data de Validade \r\nFormato: \"yyyyMM\"\r\n<br />"
+  CodigoSeguranca:
+    maxLength: 4
+    type: string
+    description: "Código de segurança (CVV)\r\n<br />"
+  ValidarCartao:
+    type: boolean
+    description: "Validar cartão\r\nTrue: \r\nSerá efetuado uma transação de até R$ 2,00 no cartão. O endpoint /api/Transacoes/AtivarCartao deve ser executado com o valor que consta na fatura do cartão. Após retorno de sucesso no endpoint de ativação, o valor será extornado automaticamente.\r\n<br />\r\nFalse:\r\nO cartão não será validado, aumentando o risco de negativa das transações.\r\n<br />"
+    default: true
+xml:
+  name: IncluirCartaoRequestData

@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./PagamentoContaCartaoCreditoRequestData.yaml
+description: ''
+xml:
+  name: PagamentoContaCartaoCreditoSingleRequest

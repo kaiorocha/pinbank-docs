@@ -1,0 +1,8 @@
+type: object
+properties:
+  TipoPagto:
+    type: string
+  Corban:
+    type: string
+xml:
+  name: PagtoCanalCorban

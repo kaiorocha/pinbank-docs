@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ListarTransacoesSolicitanteRequestData.yaml
+xml:
+  name: ListarTransacoesSolicitanteSingleRequest

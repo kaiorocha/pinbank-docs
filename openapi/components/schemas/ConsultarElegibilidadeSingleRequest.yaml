@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ConsultarElegibilidadeRequestData.yaml
+xml:
+  name: ConsultarElegibilidadeSingleRequest

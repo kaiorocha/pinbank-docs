@@ -1,0 +1,66 @@
+post:
+  tags:
+    - ContaDigital
+  summary: Retorna terminais do cliente
+  operationId: ContaDigital_ConsultarTerminaisCliente
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ConsultarTerminaisClienteSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/ConsultarTerminaisClienteSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarTerminaisClienteSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarTerminaisClienteSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/ConsultarTerminaisClienteSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarTerminaisClienteListResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarTerminaisClienteListResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarTerminaisClienteListResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarTerminaisClienteListResponseData.yaml
+  x-codegen-request-body-name: request

@@ -1,0 +1,12 @@
+type: object
+properties:
+  Transacoes:
+    type: array
+    description: "Lista de tansações\r\n<br />"
+    xml:
+      name: RetornoTransacaoRecorrente
+      wrapped: true
+    items:
+      $ref: ./RetornoTransacaoRecorrente.yaml
+xml:
+  name: ConsultarTransacoesCobrancaRecorrenteResponseData

@@ -1,0 +1,62 @@
+post:
+  tags:
+    - CartaoCredito
+  summary: Solicitação de cartão adicional.
+  operationId: CartaoCredito_AdicionalCartaoCredito
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/AdicionalCartaoCreditoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/AdicionalCartaoCreditoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/AdicionalCartaoCreditoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/AdicionalCartaoCreditoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/AdicionalCartaoCreditoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/AdicionalCartaoCreditoSingleResponse.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/AdicionalCartaoCreditoSingleResponse.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/AdicionalCartaoCreditoSingleResponse.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/AdicionalCartaoCreditoSingleResponse.yaml
+  x-codegen-request-body-name: request

@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ListaCategoriasLimitesPixRequestData.yaml
+xml:
+  name: ListaCategoriasLimitesPixSingleRequest

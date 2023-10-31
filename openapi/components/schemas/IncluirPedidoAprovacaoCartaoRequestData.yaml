@@ -1,0 +1,56 @@
+required:
+  - CodigoCanal
+  - CpfCNPJ
+  - DataPedido
+  - MensagemEmissor
+  - NumeroPedido
+  - QuantidadeVcn
+  - ValorTotalCarga
+  - ValorTotalEmissao
+  - ValorTotalPedido
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CpfCNPJ:
+    type: integer
+    description: "CPF / CNPJ\r\n<br />"
+    format: int64
+    default: 0
+  NumeroPedido:
+    type: integer
+    description: "Número do pedido\r\n<br />"
+    format: int32
+    default: 0
+  DataPedido:
+    maxLength: 8
+    type: string
+    description: "Data do pedido\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  QuantidadeVcn:
+    type: integer
+    description: "Quantidade de VCNs emitidos        \r\n<br />"
+    format: int32
+    default: 0
+  ValorTotalPedido:
+    type: integer
+    description: "Valor total pedido\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  ValorTotalEmissao:
+    type: integer
+    description: "Valor total emissão\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  ValorTotalCarga:
+    type: integer
+    description: "Valor total carga\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  MensagemEmissor:
+    type: string
+    description: "Mensagem emissor      \r\n<br />"
+xml:
+  name: IncluirPedidoAprovacaoCartaoRequestData

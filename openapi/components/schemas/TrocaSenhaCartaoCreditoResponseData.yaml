@@ -1,0 +1,8 @@
+type: object
+properties:
+  Mensagem:
+    type: string
+    description: Mensagem de retorno
+description: ''
+xml:
+  name: TrocaSenhaCartaoCreditoResponseData

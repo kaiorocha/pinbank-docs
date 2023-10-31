@@ -1,0 +1,19 @@
+type: object
+properties:
+  NomeEmpresa:
+    type: string
+    description: "Nome da empresa da arrecadacao\r\n<br />"
+  CodigoSegmento:
+    type: string
+    description: "Código do segmento da arrecadacao\r\n<br />"
+  DescricaoSegmento:
+    type: string
+    description: "Descricao do segmento da arrecadacao\r\n<br />"
+  AceitaPagamentoDivergente:
+    type: boolean
+    description: "Deve ou não aceitar pagamento divergente\r\n<br />"
+  AceitaPagamentoAposVencimento:
+    type: boolean
+    description: "Deve ou não aceitar pagamento após vencimento\r\n<br />"
+xml:
+  name: DadosConsultaArrecadacao

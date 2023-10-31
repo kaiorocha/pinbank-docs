@@ -1,0 +1,33 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - IdComprovante
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  IdComprovante:
+    type: integer
+    description: "ID do comprovante \r\n<br />"
+    format: int64
+    default: 0
+  TipoComprovante:
+    type: string
+    description: "Tipo de comprovante no retorno\r\nJson - sempre retorna"
+    default: '0'
+    enum:
+      - NENHUM
+      - HTML
+      - PDF
+      - JPG
+description: Consultar comprovantes
+xml:
+  name: ConsultarComprovanteRequestData

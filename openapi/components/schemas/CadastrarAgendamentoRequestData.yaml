@@ -1,0 +1,61 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - DataAgendada
+  - Valor
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  Valor:
+    type: number
+    description: "Valor\r\n<br />"
+    format: double
+  DataAgendada:
+    type: string
+    description: "Data Agendada\r\nEx:\"yyyyMMdd\"\r\n<br />"
+  TipoPessoa:
+    type: string
+    description: "Tipo de pessoa\r\n<br />"
+    enum:
+      - Fisica
+      - Juridica
+  TipoPagamento:
+    type: string
+    description: "Tipo pagamento\r\n<br />"
+    default: '0'
+    enum:
+      - NENHUM
+      - EMV
+      - KEY
+      - BANCO
+  PagamentoBanco:
+    $ref: ./PagamentoBanco.yaml
+  Tipokey:
+    type: string
+    description: "Tipo de chave pix do Recebedor\r\n<br />"
+    enum:
+      - CPF
+      - CNPJ
+      - PHONE
+      - EMAIL
+      - EVP
+  Key:
+    type: string
+    description: "Chave pix do Recebedor\r\n<br />"
+  TextoQrCode:
+    type: string
+    description: "Texto do QR Code\r\n<br />"
+  InfoEntreUsuarios:
+    type: string
+    description: "Info descritivo do usuario para o pagamento PIX\r\n<br />"
+xml:
+  name: CadastrarAgendamentoRequestData

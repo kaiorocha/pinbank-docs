@@ -1,0 +1,10 @@
+type: object
+properties:
+  Status:
+    type: string
+    description: "Status\r\n<br />"
+  Info:
+    type: string
+    description: "Info\r\n<br />"
+xml:
+  name: FinalizarPropostaResponseData

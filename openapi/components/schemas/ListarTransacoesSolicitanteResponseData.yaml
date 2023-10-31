@@ -1,0 +1,48 @@
+type: object
+properties:
+  ValorTotalPendente:
+    type: integer
+    description: "Valor total pendente de aprovação\r\n<br />"
+    format: int64
+  ListaTransacoesSolicitante:
+    type: array
+    description: "Lista de transações do solicitante \r\n<br />"
+    xml:
+      name: ListarTransacoesSolicitanteItem
+      wrapped: true
+    items:
+      $ref: ./ListarTransacoesSolicitanteItem.yaml
+  TotalItemsCount:
+    type: integer
+    description: "Quantidade total de itens \r\n<br />"
+    format: int32
+  PageCount:
+    type: integer
+    description: "Número total de páginas com base no total de itens\r\n<br />"
+    format: int32
+    readOnly: true
+  NextPage:
+    type: boolean
+    description: "Next page\r\n<br />"
+    readOnly: true
+  NextOffset:
+    type: integer
+    description: "Next offset\r\n<br />"
+    format: int32
+    readOnly: true
+  Skip:
+    type: integer
+    description: "Página atual (Utilize o skip + take ou offset + take)\r\n<br />"
+    format: int32
+  Take:
+    maximum: 50
+    minimum: 0
+    type: integer
+    description: "Quantidade de itens por página, o máximo é 50\r\n<br />"
+    format: int32
+  Offset:
+    type: integer
+    description: "Índice inicial dos próximos registros do result set (Utilize o skip + take ou offset + take)\r\n<br />"
+    format: int32
+xml:
+  name: ListarTransacoesSolicitanteResponseData

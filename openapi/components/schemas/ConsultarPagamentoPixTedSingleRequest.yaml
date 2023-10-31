@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ConsultarPagamentoPixTedRequestData.yaml
+xml:
+  name: ConsultarPagamentoPixTedSingleRequest

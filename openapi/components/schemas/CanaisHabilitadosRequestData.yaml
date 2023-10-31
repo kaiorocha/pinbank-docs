@@ -1,0 +1,11 @@
+type: object
+properties:
+  CodigoClienteEmail:
+    type: string
+    description: "Código do cliente ou email]\r\nse enviado este paramentro não dve ser enviado o CpfCnpj\r\n<br />"
+  CpfCnpj:
+    type: integer
+    description: "CPF ou CNPJ do cliente\r\nse enviado este paramentro não deve ser enviado CodigoClienteEmail\r\n<br />"
+    format: int64
+xml:
+  name: CanaisHabilitadosRequestData

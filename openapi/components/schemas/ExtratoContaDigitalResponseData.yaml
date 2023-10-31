@@ -1,0 +1,34 @@
+type: object
+properties:
+  DataInicial:
+    type: string
+    description: "Data inicial\r\n<br />"
+  DataFinal:
+    type: string
+    description: "Data final\r\n<br />"
+  ValorTotalDebito:
+    type: number
+    description: "Valor total de débitos\r\n<br />"
+    format: double
+  ValorTotalCredito:
+    type: number
+    description: "Valor total de créditos\r\n<br />"
+    format: double
+  Saldo:
+    type: number
+    description: "Saldo disponível\r\n<br />"
+    format: double
+  TotalAgendado:
+    type: number
+    description: "Total agendado\r\n<br />"
+    format: double
+  ListaTransacoes:
+    type: array
+    description: "Lista de transações\r\n<br />"
+    xml:
+      name: Transacao
+      wrapped: true
+    items:
+      $ref: ./Transacao.yaml
+xml:
+  name: ExtratoContaDigitalResponseData

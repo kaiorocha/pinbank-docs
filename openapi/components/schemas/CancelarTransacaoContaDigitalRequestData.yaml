@@ -1,0 +1,29 @@
+required:
+  - CodigoCanalLoja
+  - CodigoClienteLoja
+  - NsuOperacao
+  - Valor
+type: object
+properties:
+  NsuOperacao:
+    type: integer
+    description: "NSU da transação.\r\n<br />"
+    format: int64
+    default: 0
+  CodigoClienteLoja:
+    type: integer
+    description: "Código do cliente da loja\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanalLoja:
+    type: integer
+    description: "Código do canal da loja\r\n<br />"
+    format: int32
+    default: 0
+  Valor:
+    type: integer
+    description: "Valor da transação \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+xml:
+  name: CancelarTransacaoContaDigitalRequestData

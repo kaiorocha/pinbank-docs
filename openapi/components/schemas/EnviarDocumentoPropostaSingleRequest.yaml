@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./EnviarDocumentoPropostaRequestData.yaml
+xml:
+  name: EnviarDocumentoPropostaSingleRequest

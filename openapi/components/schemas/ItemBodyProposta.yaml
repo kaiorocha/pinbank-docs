@@ -1,0 +1,9 @@
+type: object
+properties:
+  Id:
+    type: integer
+    format: int32
+  Value:
+    type: string
+xml:
+  name: ItemBodyProposta

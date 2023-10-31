@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ExcluirPagadorRequestData.yaml
+xml:
+  name: ExcluirPagadorSingleRequest

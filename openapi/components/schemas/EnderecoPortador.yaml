@@ -1,0 +1,39 @@
+required:
+  - EndeResBairro
+  - EndeResCep
+  - EndeResCidade
+  - EndeResLogradouro
+  - EndeResNumero
+  - EndeResUF
+type: object
+properties:
+  EndeResCep:
+    maxLength: 8
+    type: string
+    description: "CEP residencial\r\n<br />"
+  EndeResLogradouro:
+    maxLength: 100
+    type: string
+    description: "Logradouro residencial\r\n<br />"
+  EndeResNumero:
+    maxLength: 6
+    type: string
+    description: "Número residencial\r\n<br />"
+  EndeResComplemento:
+    maxLength: 50
+    type: string
+    description: "Complemento residencial\r\n<br />"
+  EndeResUF:
+    maxLength: 2
+    type: string
+    description: "Sigla do estado residencial\r\n<br />"
+  EndeResCidade:
+    maxLength: 70
+    type: string
+    description: "Cidade residencial\r\n<br />"
+  EndeResBairro:
+    maxLength: 50
+    type: string
+    description: "Bairro residencial\r\n<br />"
+xml:
+  name: EnderecoPortador

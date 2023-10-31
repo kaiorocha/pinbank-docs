@@ -1,0 +1,62 @@
+post:
+  tags:
+    - Transacoes
+  summary: Cancelar transação.
+  operationId: Transacoes_CancelarTransacao
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/CancelarTransacaoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/CancelarTransacaoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/CancelarTransacaoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/CancelarTransacaoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/CancelarTransacaoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CancelarTransacaoSingleResponse.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/CancelarTransacaoSingleResponse.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/CancelarTransacaoSingleResponse.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/CancelarTransacaoSingleResponse.yaml
+  x-codegen-request-body-name: request

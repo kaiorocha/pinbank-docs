@@ -1,0 +1,62 @@
+post:
+  tags:
+    - ContaDigital
+  summary: Remover um dispositivo
+  operationId: ContaDigital_RemoverDispositivo
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/RemoverDispositivoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/RemoverDispositivoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/RemoverDispositivoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/RemoverDispositivoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/RemoverDispositivoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/RemoverDispositivoSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/RemoverDispositivoSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/RemoverDispositivoSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/RemoverDispositivoSingleResponseData.yaml
+  x-codegen-request-body-name: request

@@ -1,0 +1,44 @@
+required:
+  - CodigoBanco
+  - CodigoCanal
+  - CodigoCliente
+  - CpfCnpj
+  - IdentificadorOrigem
+  - Valor
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  Valor:
+    type: integer
+    description: "Valor da transferência\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  CpfCnpj:
+    type: integer
+    description: "CPF ou CNPJ \r\n<br />"
+    format: int64
+    default: 0
+  CodigoBanco:
+    type: integer
+    description: "Código do banco\r\n\"1\" - Banco do Brasil \r\n\"33\" - Santander\r\n\"104\" - Caixa\r\n\"237\" - Bradesco\r\n\"341\" - Itaú\r\n<br />"
+    format: int32
+    default: 0
+  IdentificadorOrigem:
+    maxLength: 100
+    type: string
+    description: "Identificador origem \r\n<br />"
+  RetornarQrCode:
+    type: boolean
+    description: "Retornar QR Code\r\n<br />"
+    default: false
+xml:
+  name: CheckoutTransferenciaRequestData

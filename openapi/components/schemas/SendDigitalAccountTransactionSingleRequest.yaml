@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./SendDigitalAccountTransactionRequestData.yaml
+xml:
+  name: SendDigitalAccountTransactionSingleRequest

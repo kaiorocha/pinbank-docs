@@ -1,0 +1,62 @@
+post:
+  tags:
+    - PixDictOperacoes
+  summary: Pre cadastro DICT
+  operationId: PixDictOperacoes_PixPreCadastro
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/PixPreCadastroSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/PixPreCadastroSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/PixPreCadastroSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/PixPreCadastroSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/PixPreCadastroSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/PixPreCadastroSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/PixPreCadastroSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/PixPreCadastroSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/PixPreCadastroSingleResponseData.yaml
+  x-codegen-request-body-name: request

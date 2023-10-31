@@ -1,0 +1,44 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - CodigoOpcaoProduto
+  - CodigoProduto
+  - CodigoProvedor
+  - CodigoTipoProduto
+  - TokenGiftCard
+  - Valor
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  TokenGiftCard:
+    type: string
+    description: "Token de autenticação GiftCard\r\n<br />"
+  CodigoTipoProduto:
+    type: string
+    description: "Código do tipo do produto\r\n<br />"
+  CodigoProvedor:
+    type: string
+    description: "Código do provedor\r\n<br />"
+  CodigoProduto:
+    maxLength: 6
+    type: string
+    description: "Código do produto\r\n<br />"
+  CodigoOpcaoProduto:
+    type: string
+    description: "Código da opção\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+xml:
+  name: GiftCardEfetuarCompraRequestData

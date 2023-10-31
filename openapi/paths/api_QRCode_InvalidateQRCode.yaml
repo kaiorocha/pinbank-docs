@@ -1,0 +1,62 @@
+post:
+  tags:
+    - QRCode
+  summary: Invalida um QR Code padrão EMV
+  operationId: QRCode_InvalidateQRCode
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/InvalidateQRCodeSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/InvalidateQRCodeSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/InvalidateQRCodeSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/InvalidateQRCodeSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/InvalidateQRCodeSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/InvalidateQRCodeSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/InvalidateQRCodeSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/InvalidateQRCodeSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/InvalidateQRCodeSingleResponseData.yaml
+  x-codegen-request-body-name: request

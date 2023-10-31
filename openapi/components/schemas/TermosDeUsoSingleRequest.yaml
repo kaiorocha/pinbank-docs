@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./TermosDeUsoRequestData.yaml
+xml:
+  name: TermosDeUsoSingleRequest

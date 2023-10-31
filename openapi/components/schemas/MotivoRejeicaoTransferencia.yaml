@@ -1,0 +1,7 @@
+type: object
+properties:
+  Motivo:
+    type: string
+    description: "Motivo da rejeição\r\n<br />"
+xml:
+  name: MotivoRejeicaoTransferencia

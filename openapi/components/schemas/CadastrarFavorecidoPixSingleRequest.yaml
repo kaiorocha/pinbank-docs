@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./CadastrarFavorecidoPixRequestData.yaml
+xml:
+  name: CadastrarFavorecidoPixSingleRequest

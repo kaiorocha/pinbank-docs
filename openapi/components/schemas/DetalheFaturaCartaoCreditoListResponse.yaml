@@ -1,0 +1,19 @@
+type: object
+properties:
+  Data:
+    type: array
+    xml:
+      name: DetalheFaturaCartaoCreditoResponseData
+      wrapped: true
+    items:
+      $ref: ./DetalheFaturaCartaoCreditoResponseData.yaml
+  ResultCode:
+    type: integer
+    format: int32
+  Message:
+    type: string
+  ValidationData:
+    $ref: ./ValidationData.yaml
+description: Detalhe da Fatura
+xml:
+  name: DetalheFaturaCartaoCreditoListResponse

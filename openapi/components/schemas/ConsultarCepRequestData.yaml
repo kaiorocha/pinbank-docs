@@ -1,0 +1,10 @@
+required:
+  - Cep
+type: object
+properties:
+  Cep:
+    maxLength: 8
+    type: string
+    description: "CEP\r\n<br />"
+xml:
+  name: ConsultarCepRequestData

@@ -1,0 +1,13 @@
+type: object
+properties:
+  CodigoAutorizacaoAcquirer:
+    type: string
+    description: "Código de autorização acquirer\r\n<br />"
+  NsuPinbank:
+    type: string
+    description: "NSU Pinbank\r\n<br />"
+  NsuQRCode:
+    type: string
+    description: "NSU QR Code\r\n<br />"
+xml:
+  name: SendDigitalAccountTransactionResponseData

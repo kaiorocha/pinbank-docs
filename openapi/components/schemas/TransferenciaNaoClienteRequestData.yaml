@@ -1,0 +1,53 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - DddCreditado
+  - DdiCreditado
+  - NumeroCelularCreditado
+  - Token
+  - Valor
+type: object
+properties:
+  Valor:
+    type: integer
+    description: "Valor da transferência\r\nEx: R$ 1,00 =&gt; 100\r\n<br />"
+    format: int64
+    default: 0
+  CodigoCanal:
+    type: integer
+    description: "Código do canal conta de débito\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente conta de débito\r\n<br />"
+    format: int32
+    default: 0
+  DdiCreditado:
+    type: integer
+    description: "DDI celular creditado\r\n<br />"
+    format: int32
+    default: 0
+  DddCreditado:
+    type: integer
+    description: "DDD celular creditado\r\n<br />"
+    format: int32
+    default: 0
+  NumeroCelularCreditado:
+    type: integer
+    description: "Número do celular creditado\r\n<br />"
+    format: int64
+    default: 0
+  EnviarSmsCreditado:
+    type: boolean
+    description: "Enviar mensagem SMS creditado\r\n<br />"
+    default: false
+  UrlSms:
+    maxLength: 30
+    type: string
+    description: "URL mensagem do SMS\r\n<br />"
+  Token:
+    type: string
+    description: "Token de seguranca do cliente. Gerado a partir do APP do cliente (CodigoCanal e CodigoCliente)\r\n<br />"
+xml:
+  name: TransferenciaNaoClienteRequestData

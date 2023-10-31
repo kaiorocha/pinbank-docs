@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./DesbloquearCartaoCreditoRequestData.yaml
+description: Desbloquear Cartão de Crédito
+xml:
+  name: DesbloquearCartaoCreditoSingleRequest

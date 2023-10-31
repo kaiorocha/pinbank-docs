@@ -1,0 +1,34 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - FlagBlockReclass
+  - JwtCartao
+  - Token
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  Token:
+    type: string
+    description: "Token de seguranca do cliente. Gerado a partir do APP do cliente (CodigoCanal e CodigoCliente)\r\n<br />"
+  JwtCartao:
+    type: string
+    description: "JWT que representa o número do cartão\r\n<br />"
+  CVV:
+    type: string
+    description: Codigo CVV do cartão para validar a troca de senha
+  FlagBlockReclass:
+    $ref: ./FlagBlockReclass.yaml
+  TrocaSenha:
+    $ref: ./TrocarSenhaDesbloqueio.yaml
+description: Desbloquear Cartão de Crédito
+xml:
+  name: DesbloquearCartaoCreditoRequestData

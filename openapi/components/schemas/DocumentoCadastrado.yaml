@@ -1,0 +1,33 @@
+type: object
+properties:
+  CodigoDocumento:
+    type: integer
+    description: "Código identificador do documento\r\n<br />"
+    format: int64
+  TipoDocumento:
+    type: integer
+    description: "Pessoas Físicas:\r\n1 – CPF \r\n2 – RG ou CNH\r\n3 – Comprovante de residência\r\n<br />\r\nPessoas Jurídicas\r\n4 – CNPJ \r\n5 – Contrato Social\r\n6 – RG ou CNH(Sócio)\r\n7 – CPF(Sócio)\r\n8 – Comprovante de Endereço Comercial\r\n<br />"
+    format: int32
+  DescricaoDocumento:
+    type: string
+    description: "Descrição do documento\r\n<br />"
+  StatusDocumento:
+    type: string
+    description: "Status do documento\r\n<br />"
+  TipoPessoa:
+    type: string
+    description: "Tipo de pessoa\r\n<br />"
+    enum:
+      - Fisica
+      - Juridica
+  NomeArquivo:
+    type: string
+    description: "Nome do arquivo\r\n<br />"
+  ArquivoBase64:
+    type: string
+    description: Arquivo com o documento em base 64
+  MotivoDevolucao:
+    type: string
+    description: "Motivo da devolução\r\n<br />"
+xml:
+  name: DocumentoCadastrado

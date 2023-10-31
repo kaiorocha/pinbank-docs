@@ -1,0 +1,40 @@
+type: object
+properties:
+  IdQrCode:
+    type: integer
+    format: int64
+  CpfCnpj:
+    type: string
+  CodigoCanal:
+    type: integer
+    format: int32
+  CodigoCliente:
+    type: integer
+    format: int32
+  IdSistemaOrigem:
+    type: integer
+    format: int32
+  NsuSistemaOrigem:
+    type: integer
+    format: int64
+  DataHoraVencimento:
+    type: string
+    format: date-time
+  SegundosExpiracao:
+    type: integer
+    format: int32
+  DataCriacao:
+    type: string
+    format: date-time
+  PermitirPagamentoAposExpiracao:
+    type: boolean
+  PermitirAlterarValorPagamento:
+    type: boolean
+  Valor:
+    type: number
+    format: double
+  IdEmpresa:
+    type: integer
+    format: int32
+xml:
+  name: QrCodeDinamico

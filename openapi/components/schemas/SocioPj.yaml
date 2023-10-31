@@ -1,0 +1,21 @@
+required:
+  - CpfSocio
+  - NomeSocio
+type: object
+properties:
+  NomeSocio:
+    maxLength: 50
+    type: string
+    description: "Nome do sócio\r\n<br />"
+  CpfSocio:
+    type: integer
+    description: "CPF do sócio\r\n<br />"
+    format: int64
+    default: 0
+  PepSocio:
+    type: boolean
+    description: Pessoa exposta publicamente
+    default: false
+description: "Sócio\r\n<br />"
+xml:
+  name: SocioPj

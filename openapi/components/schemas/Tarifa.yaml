@@ -1,0 +1,32 @@
+type: object
+properties:
+  TarifaDocTeD:
+    type: number
+    description: "Tarifa DOC / TED\r\n<br />"
+    format: double
+  PercentualRetencaoDocTed:
+    type: number
+    description: "Percentual de retenção sobre DOC / TED\r\n<br />"
+    format: double
+  PercentualRepasseRecCel:
+    type: number
+    description: "Percentual de repasse sobre recarga de celular\r\n<br />"
+    format: double
+  TarifaPagamentoBoleto:
+    type: number
+    description: "Tarifa pagamento de boletos\r\n<br />"
+    format: double
+  TarifaPagamentoContas:
+    type: number
+    description: "Tarifa pagamento de contas\r\n<br />"
+    format: double
+  TarifaTransfEntreClientes:
+    type: number
+    description: "Tarifa de transferencia entre clientes\r\n<br />"
+    format: double
+  TarifaSaquePos:
+    type: number
+    description: "Tarifa de saque em POS credenciado\r\n<br />"
+    format: double
+xml:
+  name: Tarifa

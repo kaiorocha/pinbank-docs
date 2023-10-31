@@ -1,0 +1,15 @@
+type: object
+properties:
+  NsuPagamento:
+    type: string
+    description: "NSU do pagamento\r\n<br />"
+  LinhaDigitavel:
+    type: string
+    description: "Linha digitável\r\n<br />"
+  Status:
+    type: string
+    description: "Status do pagamento\r\n<br />"
+  CanalCorban:
+    $ref: ./PagtoCanalCorban.yaml
+xml:
+  name: PagamentoContaResponseData

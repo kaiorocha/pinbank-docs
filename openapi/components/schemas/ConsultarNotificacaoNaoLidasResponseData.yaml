@@ -1,0 +1,7 @@
+type: object
+properties:
+  ExisteNotificacoesNaoLidas:
+    type: boolean
+    description: "Existe notificações não lidas\r\n<br />"
+xml:
+  name: ConsultarNotificacaoNaoLidasResponseData

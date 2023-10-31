@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./AlteraLimitesPixRequestData.yaml
+description: ''
+xml:
+  name: AlteraLimitesPixSingleRequest

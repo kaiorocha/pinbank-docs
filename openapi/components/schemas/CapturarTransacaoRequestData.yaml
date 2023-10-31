@@ -1,0 +1,32 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - KeyLoja
+  - NsuOperacao
+  - Valor
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do Canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do Cliente\r\n<br />"
+    format: int32
+    default: 0
+  KeyLoja:
+    type: string
+    description: "Key Loja\r\n<br />"
+  Valor:
+    type: number
+    description: "Valor da transação\r\nEx: R$ 1,00 =&gt; 100\r\n<br />"
+    format: double
+    default: 0
+  NsuOperacao:
+    maxLength: 10
+    type: string
+    description: "Nsu Operação  \r\n<br />"
+xml:
+  name: CapturarTransacaoRequestData

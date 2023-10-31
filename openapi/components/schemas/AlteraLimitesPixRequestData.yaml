@@ -1,0 +1,30 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - PixValorMaxEnviado
+  - PixValorMaxEnviadoN
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  PixValorMaxEnviado:
+    type: integer
+    description: "Valor maximo do pix a ser permitido para dias uteis e sabados (diurno)\r\nEx: R$1,00 = 100"
+    format: int64
+  PixValorMaxEnviadoN:
+    type: integer
+    description: "Valor maximo do pix a ser permitido para periodo noturno\r\nEx: R$1,00 = 100"
+    format: int64
+    default: 0
+  IdCategoria:
+    type: string
+description: ''
+xml:
+  name: AlteraLimitesPixRequestData

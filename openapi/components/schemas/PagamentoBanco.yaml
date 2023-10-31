@@ -1,0 +1,30 @@
+type: object
+properties:
+  NomeRazaoSocial:
+    type: string
+    description: "Nome / Razão Social\r\n<br />"
+  CpfCnpj:
+    type: integer
+    description: "Cpf/Cnpj\r\n<br />"
+    format: int64
+  Banco:
+    type: integer
+    description: "Banco\r\n<br />"
+    format: int32
+  Agencia:
+    maxLength: 4
+    type: string
+    description: "Agência\r\n<br />"
+  NumeroConta:
+    type: string
+    description: "Número conta\r\n<br />"
+  TipoConta:
+    type: string
+    description: "Tipo da conta\r\nCACC - Conta Corrente\r\nSLRY - Conta Salário\r\nSVGS - Conta Poupança\r\n<br />"
+    default: '0'
+    enum:
+      - CACC
+      - SLRY
+      - SVGS
+xml:
+  name: PagamentoBanco

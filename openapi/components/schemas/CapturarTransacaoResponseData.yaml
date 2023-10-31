@@ -1,0 +1,7 @@
+type: object
+properties:
+  CodigoAutorizacaoCaptura:
+    type: string
+    description: "Código de autorização da captura\r\n<br />"
+xml:
+  name: CapturarTransacaoResponseData

@@ -1,0 +1,61 @@
+type: object
+properties:
+  PermiteCancelar:
+    type: boolean
+    description: "Permite cancelamento\r\n<br />"
+  PermitePortabilidade:
+    type: boolean
+    description: "Permite portabilidade\r\n<br />"
+  PermiteAlterarCampo:
+    type: boolean
+    description: "Permite alterar campo\r\n<br />"
+  CpfCnpj:
+    type: integer
+    description: "Cpf ou Cnpj\r\n<br />"
+    format: int64
+  KeyType:
+    type: string
+    description: "Tipo de chave\r\n<br />"
+  KeyValue:
+    type: string
+    description: "Valor da chave\r\n<br />"
+  DataSolicitacao:
+    type: string
+    description: "Data da solicitação\r\nFormato: \"dd/MM/yyyy\"\r\n<br />"
+  HoraSolicitacao:
+    type: string
+    description: "Hora da solicitação\r\nFormato: \"HH:mm:ss\"\r\n<br />"
+  DataStatus:
+    type: string
+    description: "Data do status\r\nFormato: \"dd/MM/yyyy\"\r\n<br />"
+  HoraStatus:
+    type: string
+    description: "Hora do status\r\nFormato: \"HH:mm:ss\"\r\n<br />"
+  IdTermo:
+    type: integer
+    description: "Id do termo\r\n<br />"
+    format: int32
+  Status:
+    type: string
+    description: "Status\r\n<br />"
+  Operacao:
+    type: string
+    description: "Operação realizada\r\n<br />"
+  DataAlteracao:
+    type: string
+    description: "Data da alteração\r\nFormato: \"dd/MM/yyyy\"\r\n<br />"
+  HoraAlteracao:
+    type: string
+    description: "Hora da alteração\r\nFormato: \"HH:mm:ss\"\r\n<br />"
+  UsuarioAlteracao:
+    type: string
+    description: "Usuário responsável pela alteração\r\n<br />"
+  IdentificadorTransacaoId:
+    type: string
+    description: "Identificador da transação\r\n<br />"
+  IdEmpresa:
+    type: integer
+    description: "Identificador da empresa chave pix\r\n<br />"
+    format: int32
+xml:
+  name: PixConsultarChavesResponseData

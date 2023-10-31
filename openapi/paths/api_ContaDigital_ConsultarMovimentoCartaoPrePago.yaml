@@ -1,0 +1,71 @@
+post:
+  tags:
+    - ContaDigital
+  summary: Retorna a lista de movimentos do cartão
+  operationId: ContaDigital_ConsultarMovimentoCartaoPrePago
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: >-
+            ../components/schemas/ConsultarMovimentoCartaoPrePagoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: >-
+            ../components/schemas/ConsultarMovimentoCartaoPrePagoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/ConsultarMovimentoCartaoPrePagoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/ConsultarMovimentoCartaoPrePagoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: >-
+            ../components/schemas/ConsultarMovimentoCartaoPrePagoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarMovimentoCartaoPrePagoListResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarMovimentoCartaoPrePagoListResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarMovimentoCartaoPrePagoListResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarMovimentoCartaoPrePagoListResponseData.yaml
+  x-codegen-request-body-name: request

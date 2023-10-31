@@ -1,0 +1,62 @@
+post:
+  tags:
+    - CashIn
+  summary: Informa a confirmação ou cancelamento da liquidação
+  operationId: CashIn_InformaLiquidacao
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/InformaLiquidacaoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/InformaLiquidacaoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/InformaLiquidacaoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/InformaLiquidacaoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/InformaLiquidacaoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/InformaLiquidacaoSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/InformaLiquidacaoSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/InformaLiquidacaoSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/InformaLiquidacaoSingleResponseData.yaml
+  x-codegen-request-body-name: request

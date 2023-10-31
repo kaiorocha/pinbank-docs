@@ -1,0 +1,77 @@
+required:
+  - Agencia
+  - CodigoBanco
+  - CodigoCanal
+  - CodigoCliente
+  - ContaCorrente
+  - CpfCnpjFavorecido
+  - DataAgendamento
+  - DigitoContaCorrente
+  - NomeFavorecido
+  - TipoConta
+  - TipoPessoa
+  - Valor
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CpfCnpj:
+    type: string
+    description: "CPF ou CNPJ da conta origem\r\n<br />"
+  CodigoBanco:
+    type: string
+    description: "Código do banco\r\n<br />"
+  Agencia:
+    maxLength: 5
+    type: string
+    description: "Número da agência\r\n<br />"
+  DigitoAgencia:
+    type: string
+    description: "Dígito do número da agência\r\n<br />"
+  ContaCorrente:
+    maxLength: 13
+    pattern: ([0-9]+)
+    type: string
+    description: "Número da conta corrente\r\n<br />"
+  DigitoContaCorrente:
+    type: string
+    description: "Dígito do número da conta corrente\r\n<br />"
+  TipoConta:
+    type: string
+    description: "Tipo de conta\r\n<br />"
+    enum:
+      - Corrente
+      - Poupanca
+  TipoPessoa:
+    type: string
+    description: "Tipo de pessoa\r\n<br />"
+    enum:
+      - Fisica
+      - Juridica
+  NomeFavorecido:
+    type: string
+    description: "Nome do favorecido\r\n<br />"
+  CpfCnpjFavorecido:
+    maxLength: 14
+    minLength: 11
+    type: string
+    description: "CPF ou CNPJ do favorecido\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor da transferência \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  DataAgendamento:
+    maxLength: 8
+    type: string
+    description: "Data de agendamento da transferência \r\nFormato: \"yyyyMMdd\"\r\n<br />"
+xml:
+  name: TransferenciaDocTedRequestData

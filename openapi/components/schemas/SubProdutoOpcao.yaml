@@ -1,0 +1,19 @@
+type: object
+properties:
+  NomeOpcao:
+    type: string
+    description: "Nome da opção\r\n<br />"
+  DescricaoOpcao:
+    type: string
+    description: "Descrição da opção\r\n<br />"
+  CodigoOpcaoProduto:
+    type: string
+    description: "Código da opção\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+  RangeValorMinMax:
+    $ref: ./RangeValorMinMax.yaml
+xml:
+  name: SubProdutoOpcao

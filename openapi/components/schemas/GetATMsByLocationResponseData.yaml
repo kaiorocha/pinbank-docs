@@ -1,0 +1,36 @@
+type: object
+properties:
+  Acessible:
+    type: boolean
+    description: "Indica se a busca deve retornar apenas as ATMs que possuem acessibilidade\r\n<br />"
+  Address:
+    type: string
+    description: "Logradouro\r\n<br />"
+  City:
+    type: string
+    description: "Cidade\r\n<br />"
+  Name:
+    type: string
+    description: "Descrição do ATM\r\n<br />"
+  Neighborhood:
+    type: string
+    description: "Bairro\r\n<br />"
+  Number:
+    type: string
+    description: "Número do ATM\r\n<br />"
+  OperatingHours:
+    type: array
+    description: "Dados com horários de funcionamento do ATM (informação não retornada para todos os ATMs)\r\n<br />"
+    xml:
+      name: OperationHoursItemResponseData
+      wrapped: true
+    items:
+      $ref: ./OperationHoursItemResponseData.yaml
+  State:
+    type: string
+    description: "Estado\r\n<br />"
+  ZipCode:
+    type: string
+    description: "CEP\r\n<br />"
+xml:
+  name: GetATMsByLocationResponseData

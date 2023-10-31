@@ -1,0 +1,17 @@
+type: object
+properties:
+  CodigoFuncionalidade:
+    type: integer
+    description: "Código da funcionalidade\r\n<br />"
+    format: int32
+  DescricaoFuncionalidade:
+    type: string
+    description: "Descrição da funcionalidade\r\n<br />"
+  FuncionalidadeTipoCadastro:
+    type: string
+    description: "Tipo de cadastro da funcionalidade\r\n<br />"
+  DadosAdicionais:
+    type: string
+    description: "Dados adicionais sobre a funcionalidade\r\nPara outros serviços: Url externa de outros serviços\r\n<br />"
+xml:
+  name: ListaFuncionalidadesResponseData

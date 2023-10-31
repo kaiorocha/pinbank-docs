@@ -1,0 +1,12 @@
+type: object
+properties:
+  ListaGiftCardCompras:
+    type: array
+    description: "Lista de Gift Card comprados\r\n<br />"
+    xml:
+      name: GiftCardCompras
+      wrapped: true
+    items:
+      $ref: ./GiftCardCompras.yaml
+xml:
+  name: GiftCardBuscarComprasResponseData

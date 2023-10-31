@@ -1,0 +1,14 @@
+required:
+  - Chave
+  - Token
+type: object
+properties:
+  Chave:
+    type: string
+    description: Chave para a validação do token
+  Token:
+    type: string
+    description: Token a ser validado
+description: ''
+xml:
+  name: ValidaTokenRequestData

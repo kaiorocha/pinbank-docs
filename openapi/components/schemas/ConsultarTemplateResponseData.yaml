@@ -1,0 +1,7 @@
+type: object
+properties:
+  Template:
+    type: string
+    description: "Template\r\n<br />"
+xml:
+  name: ConsultarTemplateResponseData

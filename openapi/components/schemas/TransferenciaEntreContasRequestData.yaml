@@ -1,0 +1,35 @@
+required:
+  - CodigoCanal
+  - CodigoCanalCredito
+  - CodigoCliente
+  - CodigoClienteCredito
+  - Valor
+type: object
+properties:
+  Valor:
+    type: number
+    description: "Valor da transferência\r\nEx: R$ 1,00 =&gt; 100\r\n<br />"
+    format: double
+    default: 0
+  CodigoCanal:
+    type: integer
+    description: "Código do canal conta de débito\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente conta de débito\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanalCredito:
+    type: integer
+    description: "Código do Canal conta de crédito\r\n<br />"
+    format: int32
+    default: 0
+  CodigoClienteCredito:
+    type: integer
+    description: "Código do Cliente conta de crédito\r\n<br />"
+    format: int32
+    default: 0
+xml:
+  name: TransferenciaEntreContasRequestData

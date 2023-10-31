@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./IncluirPinSafePushRequestData.yaml
+xml:
+  name: IncluirPinSafePushSingleRequest

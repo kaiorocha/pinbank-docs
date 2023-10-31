@@ -1,0 +1,8 @@
+type: object
+properties:
+  ReverseBlockReclass:
+    type: string
+    description: Flag para desbloqueio do portador - utilizar 0
+description: ''
+xml:
+  name: FlagBlockReclass

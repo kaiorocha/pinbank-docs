@@ -1,0 +1,26 @@
+required:
+  - Base64Arquivo
+  - FormatoArquivo
+  - NomeArquivo
+  - TipoDocumento
+type: object
+properties:
+  TipoDocumento:
+    type: integer
+    description: "Pessoas Físicas:\r\n1 – CPF \r\n2 – RG ou CNH\r\n3 – Comprovante de residência\r\n<br />\r\nPessoas Jurídicas\r\n4 – CNPJ \r\n5 – Contrato Social\r\n6 – RG ou CNH(Sócio)\r\n7 – CPF(Sócio)\r\n8 – Comprovante de Endereço Comercial\r\n<br />"
+    format: int32
+  NomeArquivo:
+    type: string
+    description: "Nome do arquivo\r\n<br />"
+  FormatoArquivo:
+    type: string
+    description: "Formato do arquivo.\r\n<br />\r\nFormatos permitidos:\r\nJpeg, Gif, png, pdf, html\r\n<br />\r\nExemplos:\r\n“image/jpeg”, “image/png”, “application/pdf”\r\n<br />"
+  Base64Arquivo:
+    type: string
+    description: "Base64 arquivo\r\n<br />"
+  GrauParentescoTitular:
+    type: string
+    description: "Grau de parentesco. Para cadastros PF, quando o comprovante de endereço não for em nome do usuário.\r\n<br />"
+description: "Documento\r\n<br />"
+xml:
+  name: Documento

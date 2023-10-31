@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./HistoricoFaturaFechadaCartaoCreditoRequestData.yaml
+description: Historico Fatura Fechada
+xml:
+  name: HistoricoFaturaFechadaCartaoCreditoSingleRequest

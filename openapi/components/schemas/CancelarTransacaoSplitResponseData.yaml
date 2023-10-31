@@ -1,0 +1,7 @@
+type: object
+properties:
+  CodigoAutorizacaoCancelamento:
+    type: string
+    description: "Código de autorização do cancelamento\r\n<br />"
+xml:
+  name: CancelarTransacaoSplitResponseData

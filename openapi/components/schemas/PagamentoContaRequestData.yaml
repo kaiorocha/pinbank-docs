@@ -1,0 +1,73 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - DataAgendamento
+  - DataVencimento
+  - LinhaDigitavel
+  - Valor
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CpfCnpj:
+    type: string
+    description: "CPF ou CNPJ da conta origem\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor do pagamento \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  Juros:
+    type: integer
+    description: "Valor de juros \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  Multa:
+    type: integer
+    description: "Valor de multa \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  Desconto:
+    type: integer
+    description: "Valor de desconto \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  LinhaDigitavel:
+    type: string
+    description: "Linha digitável da conta\r\n<br />"
+  CpfCnpjBeneficiario:
+    type: string
+    description: "CPF ou CNPJ do beneficiário\r\n<br />"
+  NomeBeneficiario:
+    type: string
+    description: "Nome do beneficiário\r\n<br />"
+  DataAgendamento:
+    maxLength: 8
+    type: string
+    description: "Data de agendamento do pagamento\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataVencimento:
+    maxLength: 8
+    type: string
+    description: "Data de vencimento\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  XmlBoletoPagamentoOnlineBase64:
+    type: string
+    description: "Xml com dados do boleto em base64\r\n<br />"
+  TipoPagamento:
+    type: string
+    description: "Tipo de pagamento\r\n1   TITULO\r\n2\tARRECADACAO\r\n3\tTRIBUTO"
+    default: '1'
+    enum:
+      - EMPTY
+      - TITULO
+      - ARRECADACAO
+      - TRIBUTO
+xml:
+  name: PagamentoContaRequestData

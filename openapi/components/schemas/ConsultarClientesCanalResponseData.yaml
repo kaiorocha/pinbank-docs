@@ -1,0 +1,16 @@
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  NumeroDocumento:
+    type: integer
+    description: "Número do documento\r\n<br />"
+    format: int64
+  DataCadastro:
+    type: string
+    description: "Data do cadastro\r\n<br />"
+    format: date-time
+xml:
+  name: ConsultarClientesCanalResponseData

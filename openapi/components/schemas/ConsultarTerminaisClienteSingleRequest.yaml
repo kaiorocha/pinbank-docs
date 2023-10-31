@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./ConsultarTerminaisClienteRequestData.yaml
+description: ''
+xml:
+  name: ConsultarTerminaisClienteSingleRequest

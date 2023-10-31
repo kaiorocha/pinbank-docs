@@ -1,0 +1,78 @@
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+  CodigoReferencia:
+    type: string
+    description: "Código de referencia\r\n<br />"
+  IdTedProgramada:
+    type: integer
+    description: "Id TED programada\r\n<br />"
+    format: int32
+  Status:
+    type: string
+    description: "Status\r\n<br />"
+  ValorPrevisto:
+    type: integer
+    description: "Valor previsto \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  ValorAprovado:
+    type: integer
+    description: "Valor aprovado \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  DataCadastro:
+    type: string
+    description: "Data de cadastro da TED\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataAprovacao:
+    type: string
+    description: "Data de aprovação da TED\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  CodigoAprovacao:
+    type: string
+    description: "Codigo de aprovação        \r\n<br />"
+  NomeFavorecido:
+    type: string
+    description: "Nome do favorecido\r\n<br />"
+  CpfCnpjFavorecido:
+    type: string
+    description: "CPF ou CNPJ do favorecido\r\n<br />"
+  TipoPessoa:
+    type: string
+    description: "Tipo de pessoa\r\n<br />"
+    enum:
+      - Fisica
+      - Juridica
+  TipoConta:
+    type: string
+    description: "Tipo de conta\r\n<br />"
+    enum:
+      - Corrente
+      - Poupanca
+  CodigoBanco:
+    type: string
+    description: "Código do banco\r\n<br />"
+  NomeBanco:
+    type: string
+    description: "Nome do banco\r\n<br />"
+  Agencia:
+    type: string
+    description: "Número da agência\r\n<br />"
+  DigitoAgencia:
+    type: string
+    description: "Dígito do número da agência\r\n<br />"
+  Conta:
+    type: string
+    description: "Número da conta\r\n<br />"
+  DigitoConta:
+    type: string
+    description: "Dígito do número da conta corrente\r\n<br />"
+  Observacao:
+    type: string
+    description: "Observação\r\n<br />"
+xml:
+  name: ConsultarTedResponseData

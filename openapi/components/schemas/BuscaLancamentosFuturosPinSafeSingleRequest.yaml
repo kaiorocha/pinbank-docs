@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./BuscaLancamentosFuturosPinSafeRequestData.yaml
+xml:
+  name: BuscaLancamentosFuturosPinSafeSingleRequest

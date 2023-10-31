@@ -1,0 +1,40 @@
+required:
+  - DataFimVigencia
+  - DataInicioVigencia
+  - DiaDebito
+  - Valor
+type: object
+properties:
+  Valor:
+    type: integer
+    description: "Valor da cobrança, que será debitado no cartão do cliente no dia especificado no parâmetro DiaDebito\r\nEx: R$ 1,00 =&gt; 100\r\n<br />"
+    format: int32
+    default: 0
+  DiaDebito:
+    type: integer
+    description: "Dia que deve ocorrer o débito no cartão do cliente\r\n<br />"
+    format: int32
+    default: 0
+  DataInicioVigencia:
+    maxLength: 6
+    type: string
+    description: "Mês em que a cobrança recorrente deve começar a ocorrer\r\nFormato: \"yyyyMM\""
+  DataFimVigencia:
+    maxLength: 6
+    type: string
+    description: "Mês em que a cobrança recorrente deve ser finalizada\r\nFormato: \"yyyyMM\""
+  CpfCnpjCliente:
+    type: integer
+    description: "CPF/CNPJ do cliente        \r\n<br />"
+    format: int64
+    default: 0
+  EmailCliente:
+    maxLength: 40
+    type: string
+    description: "Email do cliente\r\n<br />"
+  NomeCliente:
+    maxLength: 150
+    type: string
+    description: "Nome do cliente\r\n<br />"
+xml:
+  name: CadastroCobranca

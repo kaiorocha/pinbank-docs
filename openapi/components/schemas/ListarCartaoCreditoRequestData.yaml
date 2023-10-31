@@ -1,0 +1,29 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - IdContaAtiva
+  - NrCPF
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  NrCPF:
+    type: string
+    description: "Número do CPF\r\n<br />"
+  IdContaAtiva:
+    type: string
+    description: "Status da Conta\r\nS - Somente Contas Ativa\r\nN - Todos as Contas\r\n<br />"
+  ChaveRestart:
+    type: string
+    description: "Chave de restart da consulta. Caso no response da sua consulta este campo vir preenchido, isso significa que existem mais ocorrências para a consulta realizada. \r\nExecute novamente a operação utilizando o conteúdo deste campo na próxima requisição.\r\n<br />"
+description: ''
+xml:
+  name: ListarCartaoCreditoRequestData

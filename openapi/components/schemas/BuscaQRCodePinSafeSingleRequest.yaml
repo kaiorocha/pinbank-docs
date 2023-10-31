@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./BuscaQRCodePinSafeRequestData.yaml
+xml:
+  name: BuscaQRCodePinSafeSingleRequest

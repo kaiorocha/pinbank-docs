@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ValidarCodigoAlteracaoSenhaRequestData.yaml
+xml:
+  name: ValidarCodigoAlteracaoSenhaSingleRequest

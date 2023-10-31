@@ -1,0 +1,25 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - CodigoTipoProduto
+  - TokenGiftCard
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  TokenGiftCard:
+    type: string
+    description: "Token de autenticação GiftCard\r\n<br />"
+  CodigoTipoProduto:
+    type: string
+    description: "Código do tipo do produto\r\n<br />"
+xml:
+  name: GiftCardBuscarSubProdutosRequestData

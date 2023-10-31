@@ -1,0 +1,21 @@
+type: object
+properties:
+  DayOfWeek:
+    type: string
+    description: "Dia da semana\r\n<br />"
+    enum:
+      - Sunday
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+      - Saturday
+  From:
+    type: string
+    description: "De\r\n<br />"
+  To:
+    type: string
+    description: "Até\r\n<br />"
+xml:
+  name: OperationHoursItemResponseData

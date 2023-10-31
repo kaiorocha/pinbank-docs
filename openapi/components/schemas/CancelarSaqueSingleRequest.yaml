@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./CancelarSaqueRequestData.yaml
+xml:
+  name: CancelarSaqueSingleRequest

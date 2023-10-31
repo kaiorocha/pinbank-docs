@@ -1,0 +1,25 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - NrConta
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  NrConta:
+    type: string
+    description: "Número de conta\r\n <br />"
+  DtVencimentoFatura:
+    type: string
+    description: "Data de Vencimento da Fatura\r\nFormato Padrão: yyyyMMdd\r\n <br />"
+description: "Resumo da fatura\r\n• Consulta os dados de fatura aberta e também faturas fechadas dos últimos 12 meses.\r\n• Para Fatura Aberta não enviar o campo dtVencimentoFatura no request."
+xml:
+  name: ResumoFaturaCartaoCreditoRequestData

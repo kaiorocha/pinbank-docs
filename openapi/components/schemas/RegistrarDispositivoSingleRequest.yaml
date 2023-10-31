@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./RegistrarDispositivoRequestData.yaml
+xml:
+  name: RegistrarDispositivoSingleRequest

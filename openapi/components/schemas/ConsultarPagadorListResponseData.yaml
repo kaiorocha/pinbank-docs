@@ -1,0 +1,18 @@
+type: object
+properties:
+  Data:
+    type: array
+    xml:
+      name: ConsultarPagadorResponseData
+      wrapped: true
+    items:
+      $ref: ./ConsultarPagadorResponseData.yaml
+  ResultCode:
+    type: integer
+    format: int32
+  Message:
+    type: string
+  ValidationData:
+    $ref: ./ValidationData.yaml
+xml:
+  name: ConsultarPagadorListResponseData

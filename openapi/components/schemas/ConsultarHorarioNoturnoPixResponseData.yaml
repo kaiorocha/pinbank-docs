@@ -1,0 +1,21 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  HorarioNoturnoAtual:
+    $ref: ./HorarioNoturnoAtual.yaml
+  HorarioNoturnoSolicitado:
+    $ref: ./HorarioNoturnoSolicitado.yaml
+xml:
+  name: ConsultarHorarioNoturnoPixResponseData

@@ -1,0 +1,15 @@
+type: object
+properties:
+  QtdeRegistros:
+    type: integer
+    description: "Qtde. de registros\r\n<br />"
+    format: int64
+  Status:
+    type: string
+    description: "Status\r\n<br />"
+  ValorTotal:
+    type: integer
+    description: "Valor Total\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+xml:
+  name: ConsultarResumoBoletosResponseData

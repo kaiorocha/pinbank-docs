@@ -1,0 +1,23 @@
+type: object
+properties:
+  PinbankQrCodeId:
+    type: integer
+    description: "Pinbank QrCode id\r\n<br />"
+    format: int64
+  TextoQrCode:
+    type: string
+    description: "Texto do QR Code\r\n<br />"
+  QrCodePixLink:
+    type: string
+    description: "Link do QrCode PIX\r\n<br />"
+  Referencia:
+    type: string
+    description: "Referencia\r\n<br />"
+  QrCodeURL:
+    type: string
+    description: "Url do QR Code\r\n<br />"
+  TxId:
+    type: string
+    description: "TxId\r\n<br />"
+xml:
+  name: SolicitarDynamicQrCodeResponseData&

@@ -1,0 +1,19 @@
+type: object
+properties:
+  IdCartao:
+    type: integer
+    description: "ID do cartão\r\n<br />"
+    format: int32
+  AnoMes:
+    type: string
+    description: "Mês e ano do movimento\r\nEx: \"00-0000\"\r\n<br />"
+  ValorTotalCreditos:
+    type: integer
+    description: "Valor total de créditos\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+  ValorTotalDebitos:
+    type: integer
+    description: "Valor total de débitos\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+xml:
+  name: ConsultarMovimentoCartaoPrePagoResponseData

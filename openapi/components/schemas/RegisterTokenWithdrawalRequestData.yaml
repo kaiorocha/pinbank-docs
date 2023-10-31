@@ -1,0 +1,33 @@
+required:
+  - Amount
+  - BeneficiaryCpfCnpj
+  - BeneficiaryMobilePhoneNumber
+  - CodigoCanal
+  - CodigoCliente
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  Amount:
+    type: integer
+    description: "Valor do saque\r\n<br />"
+    format: int64
+    default: 0
+  BeneficiaryCpfCnpj:
+    maxLength: 14
+    minLength: 11
+    type: string
+    description: "CPF ou CNPJ do terceiro\r\n<br />"
+  BeneficiaryMobilePhoneNumber:
+    type: string
+    description: "Celular do terceiro\r\n<br />"
+xml:
+  name: RegisterTokenWithdrawalRequestData

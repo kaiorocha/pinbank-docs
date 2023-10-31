@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./CheckoutTransferenciaRequestData.yaml
+xml:
+  name: CheckoutTransferenciaSingleRequest

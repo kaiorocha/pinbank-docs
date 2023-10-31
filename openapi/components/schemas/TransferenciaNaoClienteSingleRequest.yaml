@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./TransferenciaNaoClienteRequestData.yaml
+xml:
+  name: TransferenciaNaoClienteSingleRequest

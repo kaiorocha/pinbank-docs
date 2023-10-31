@@ -1,0 +1,14 @@
+type: object
+properties:
+  Expiracao:
+    type: integer
+    description: "Expiração do QR Code em minutos\r\n<br />"
+    format: int32
+  IdentificadorQRCode:
+    type: string
+    description: "Identificador do QR Code\r\n<br />"
+  ConteudoQRCode:
+    type: string
+    description: "Conteúdo do QR Code gerado\r\n<br />"
+xml:
+  name: GenerateQRCodeResponseData

@@ -1,0 +1,59 @@
+type: object
+properties:
+  CodAutorizacao:
+    type: integer
+    description: "Codigo da Autorização - Se for diferente de '' indica que atransação aprovada.\r\n<br />"
+    format: int64
+  Cartao:
+    $ref: ./DadosCartao.yaml
+  NmEmbosso:
+    type: string
+    description: "Nome do Plastico do Card Hiolder - Portador\r\n<br />"
+  TpTransacao:
+    type: string
+    description: "Tipo da Transação\r\n<br />"
+  DtTransacao:
+    type: string
+    description: "Data da Transação\r\n<br />"
+  HrTransacao:
+    type: string
+    description: "Hora da Transação\r\n<br />"
+  MCC:
+    type: string
+    description: "Codigo Ramo de Atividade - Padrão Bandeira\r\n<br />"
+  CdEstabelecimento:
+    type: string
+    description: "Codigo do Estabelecimento\r\n<br />"
+  NmEstabelecimento:
+    type: string
+    description: "Nome do Estabelecimento\r\n<br />"
+  IndDebitoCredito:
+    type: string
+    description: "Indicador de Débito/Crédito\r\n<br />"
+  CodMoedaOrigem:
+    type: string
+    description: "Codigo da Moeda de Origem\r\n<br />"
+  VlTransacaoMoedaOrigem:
+    type: integer
+    description: "Valor da Transação na moeda original\r\n<br />"
+    format: int64
+  CodMoedaFaturamento:
+    type: string
+    description: "Codigo da Moeda Faturamento - \"986\" Reais\r\n<br />"
+  VlTransacaoFaturamento:
+    type: integer
+    description: "Valor da Transação para Faturamento - Valor em Reais.\r\n<br />"
+    format: int64
+  CodTransactionMode:
+    type: string
+    description: "Verifica documentação bandeira\r\n<br />"
+  CodPOSEntryMode:
+    type: string
+    description: "Verifica documentação bandeira.\r\n<br />"
+  NrParcelas:
+    type: integer
+    description: "Quantidade de Parcelas\r\n<br />"
+    format: int32
+description: ''
+xml:
+  name: HistoricoTransacoesCartaoCreditoResponseData

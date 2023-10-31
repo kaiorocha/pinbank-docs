@@ -1,0 +1,62 @@
+post:
+  tags:
+    - ContaDigital
+  summary: Parar de exibir oferta de Opt In para um usuario
+  operationId: ContaDigital_NaoVerMaisOfertaOptIn
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/NaoVerMaisOfertaOptInSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/NaoVerMaisOfertaOptInSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/NaoVerMaisOfertaOptInSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/NaoVerMaisOfertaOptInSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/NaoVerMaisOfertaOptInSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/NaoVerMaisOfertaOptInSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/NaoVerMaisOfertaOptInSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/NaoVerMaisOfertaOptInSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/NaoVerMaisOfertaOptInSingleResponseData.yaml
+  x-codegen-request-body-name: request

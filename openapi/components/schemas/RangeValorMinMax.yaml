@@ -1,0 +1,12 @@
+type: object
+properties:
+  ValorMin:
+    type: integer
+    description: "Valor minimo\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+  ValorMax:
+    type: integer
+    description: "Valor máximo\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+xml:
+  name: RangeValorMinMax

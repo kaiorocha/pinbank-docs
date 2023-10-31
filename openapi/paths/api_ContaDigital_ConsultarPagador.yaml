@@ -1,0 +1,62 @@
+post:
+  tags:
+    - ContaDigital
+  summary: Consulta a lista de pagadores para emissao cobranca.
+  operationId: ContaDigital_ConsultarPagador
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ConsultarPagadorSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/ConsultarPagadorSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarPagadorSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarPagadorSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/ConsultarPagadorSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ConsultarPagadorListResponseData.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/ConsultarPagadorListResponseData.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/ConsultarPagadorListResponseData.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/ConsultarPagadorListResponseData.yaml
+  x-codegen-request-body-name: request

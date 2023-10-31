@@ -1,0 +1,8 @@
+type: object
+properties:
+  ValorMaximoLimite:
+    type: integer
+    description: "Valor máximo do limite para os cartões pré-pagos\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+xml:
+  name: ConsultarLimitePadraoCartaoResponseData

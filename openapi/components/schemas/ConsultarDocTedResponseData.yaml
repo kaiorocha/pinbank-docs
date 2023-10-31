@@ -1,0 +1,44 @@
+type: object
+properties:
+  NossoNumero:
+    type: string
+    description: "Nosso Número\r\n<br />"
+  CpfCnpj:
+    type: string
+    description: "CPF ou CNPJ\r\n<br />"
+  NomeFavorecido:
+    type: string
+    description: "Nome do favorecido\r\n<br />"
+  NomeBanco:
+    type: string
+    description: "Nome do banco\r\n<br />"
+  CodigoBanco:
+    type: integer
+    description: "Código do banco\r\n<br />"
+    format: int32
+  Agencia:
+    type: string
+    description: "Número da agência\r\n<br />"
+  Conta:
+    type: string
+    description: "Número da conta\r\n<br />"
+  TipoPessoa:
+    type: string
+    description: "Tipo de pessoa\r\n<br />"
+    enum:
+      - Fisica
+      - Juridica
+  TipoConta:
+    type: string
+    description: "Tipo de conta\r\n<br />"
+    enum:
+      - Corrente
+      - Poupanca
+  Data:
+    type: string
+    description: "Data da TED\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  Status:
+    type: string
+    description: "Status\r\n<br />"
+xml:
+  name: ConsultarDocTedResponseData

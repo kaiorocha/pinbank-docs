@@ -1,0 +1,8 @@
+type: object
+properties:
+  traceNum:
+    type: string
+    description: "Trace num\r\n<br />"
+description: ''
+xml:
+  name: AfinzDadosReversaoCartaoCreditoRequest

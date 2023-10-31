@@ -1,0 +1,17 @@
+required:
+  - IdTedProgramada
+  - Valor
+type: object
+properties:
+  IdTedProgramada:
+    type: integer
+    description: "Id TED programada\r\n<br />"
+    format: int32
+    default: 0
+  Valor:
+    type: integer
+    description: "Valor da transferência \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+xml:
+  name: TedAprovar

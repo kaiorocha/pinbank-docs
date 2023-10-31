@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./BloquearCartaoContaDigitalRequestData.yaml
+xml:
+  name: BloquearCartaoContaDigitalSingleRequest

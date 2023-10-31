@@ -1,0 +1,19 @@
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Codigo cliente do lojista\r\n<br />"
+    format: int32
+  CodigoCanal:
+    type: integer
+    description: "Código canal do lojista\r\n<br />"
+    format: int32
+  ValorLiquidoTotal:
+    type: number
+    description: "Valor liquído total\r\n<br />"
+    format: double
+  ExistemTransacoes:
+    type: boolean
+    description: "Existem transações?\r\n<br />"
+xml:
+  name: Lojista

@@ -1,0 +1,27 @@
+type: object
+properties:
+  PinbankQrCodeId:
+    type: integer
+    description: "Pinbank QrCode id\r\n<br />"
+    format: int64
+  NsuPinbank:
+    type: integer
+    description: "NSU Pinbank\r\n<br />"
+    format: int64
+  EndToEnd:
+    type: string
+    description: "End to End\r\n<br />"
+  ValorOriginal:
+    type: integer
+    description: "Valor original\r\n<br />"
+    format: int64
+  ValorPago:
+    type: integer
+    description: "Valor pago\r\n<br />"
+    format: int64
+  DataPagamento:
+    type: string
+    description: "Valor pago\r\n<br />"
+    format: date-time
+xml:
+  name: WebhookNotificacaoRecebimentoPix

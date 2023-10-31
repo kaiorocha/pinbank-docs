@@ -1,0 +1,71 @@
+post:
+  tags:
+    - ContaDigital
+  summary: Busca os lancamentos PinSafe por cartão
+  operationId: ContaDigital_BuscaLancamentosPinSafeCartao
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: >-
+            ../components/schemas/BuscaLancamentosPinSafeCartaoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: >-
+            ../components/schemas/BuscaLancamentosPinSafeCartaoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/BuscaLancamentosPinSafeCartaoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/BuscaLancamentosPinSafeCartaoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: >-
+            ../components/schemas/BuscaLancamentosPinSafeCartaoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/BuscaLancamentosPinSafeCartaoSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/BuscaLancamentosPinSafeCartaoSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/BuscaLancamentosPinSafeCartaoSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/BuscaLancamentosPinSafeCartaoSingleResponseData.yaml
+  x-codegen-request-body-name: request

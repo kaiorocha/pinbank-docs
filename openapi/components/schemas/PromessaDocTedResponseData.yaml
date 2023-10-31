@@ -1,0 +1,7 @@
+type: object
+properties:
+  NossoNumero:
+    type: string
+    description: "Nosso número\r\n<br />"
+xml:
+  name: PromessaDocTedResponseData

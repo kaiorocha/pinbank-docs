@@ -1,0 +1,7 @@
+type: object
+properties:
+  UrlPagamento:
+    type: string
+    description: "URL de pagamento\r\n<br />"
+xml:
+  name: GerarCobrancaCartaoResponseData

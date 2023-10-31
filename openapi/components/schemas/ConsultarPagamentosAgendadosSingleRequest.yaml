@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ConsultarPagamentosAgendadosRequestData.yaml
+xml:
+  name: ConsultarPagamentosAgendadosSingleRequest

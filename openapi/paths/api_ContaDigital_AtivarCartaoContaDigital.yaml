@@ -1,0 +1,62 @@
+post:
+  tags:
+    - ContaDigital
+  summary: Ativar cartão conta digital
+  operationId: ContaDigital_AtivarCartaoContaDigital
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/AtivarCartaoContaDigitalSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/AtivarCartaoContaDigitalSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/AtivarCartaoContaDigitalSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/AtivarCartaoContaDigitalSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/AtivarCartaoContaDigitalSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/AtivarCartaoContaDigitalSingleResponse.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/AtivarCartaoContaDigitalSingleResponse.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/AtivarCartaoContaDigitalSingleResponse.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/AtivarCartaoContaDigitalSingleResponse.yaml
+  x-codegen-request-body-name: request

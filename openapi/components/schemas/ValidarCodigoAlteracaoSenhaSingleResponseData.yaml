@@ -1,0 +1,13 @@
+type: object
+properties:
+  Data:
+    $ref: ./ValidarCodigoAlteracaoSenhaResponseData.yaml
+  ResultCode:
+    type: integer
+    format: int32
+  Message:
+    type: string
+  ValidationData:
+    $ref: ./ValidationData.yaml
+xml:
+  name: ValidarCodigoAlteracaoSenhaSingleResponseData

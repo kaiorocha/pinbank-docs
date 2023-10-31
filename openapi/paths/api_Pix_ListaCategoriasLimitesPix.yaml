@@ -1,0 +1,66 @@
+post:
+  tags:
+    - Pix
+  summary: Lista categorias de limites Pix
+  operationId: Pix_ListaCategoriasLimitesPix
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ListaCategoriasLimitesPixSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/ListaCategoriasLimitesPixSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/ListaCategoriasLimitesPixSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/ListaCategoriasLimitesPixSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/ListaCategoriasLimitesPixSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ListaCategoriasLimitesPixListResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ListaCategoriasLimitesPixListResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ListaCategoriasLimitesPixListResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ListaCategoriasLimitesPixListResponseData.yaml
+  x-codegen-request-body-name: request

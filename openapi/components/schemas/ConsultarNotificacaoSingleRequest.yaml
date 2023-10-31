@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ConsultarNotificacaoRequestData.yaml
+xml:
+  name: ConsultarNotificacaoSingleRequest

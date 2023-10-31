@@ -1,0 +1,46 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - DataFinal
+  - DataInicial
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  DataInicial:
+    type: string
+    description: "Data inicial      \r\n<br />"
+    format: date-time
+  DataFinal:
+    type: string
+    description: "Data final       \r\n<br />"
+    format: date-time
+  PropostaStatus:
+    type: string
+    description: "Proposta status\r\nindica a fase que está a proposta\r\n<br />\r\n    P00 - Todas\r\n    P01 - Proposta iniciada\r\n    P02 - Proposta dados basicos\r\n    P03 - Proposta oferta\r\n    P04 - Proposta captura foto\r\n    P05 - Proposta captura documento\r\n    P06 - Proposta finalizada\r\n    P07 - Proposta confirma SMS\r\n    P08 - Proposta efetivada\r\n    P09 - Proposta erro dados\r\n    P10 - Proposta erro ao registrar dados\r\n    P11 - Proposta erro ao obter passo\r\n    P12 - Proposta reenvio de sms\r\n    P13 - Proposta cancelada"
+    default: P08
+    enum:
+      - P00
+      - P01
+      - P02
+      - P03
+      - P04
+      - P05
+      - P06
+      - P07
+      - P08
+      - P09
+      - P10
+      - P11
+      - P12
+      - P13
+xml:
+  name: ConsultarPropostaRequestData

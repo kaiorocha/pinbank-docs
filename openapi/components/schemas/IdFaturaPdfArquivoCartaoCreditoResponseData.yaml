@@ -1,0 +1,8 @@
+type: object
+properties:
+  Arquivo:
+    type: string
+    description: Retorna string com o arquivo PDF Fatura
+description: "Retorno do PDF Fatura\r\n<br />"
+xml:
+  name: IdFaturaPdfArquivoCartaoCreditoResponseData

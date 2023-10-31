@@ -1,0 +1,14 @@
+type: object
+properties:
+  NsuGiftCard:
+    type: integer
+    description: "NSU Gift Card\r\n<br />"
+    format: int64
+  CodigoAtivacao:
+    type: string
+    description: "Código de ativação\r\n<br />"
+  Observations:
+    type: string
+    description: "Observations\r\n<br />"
+xml:
+  name: GiftCardEfetuarCompraResponseData

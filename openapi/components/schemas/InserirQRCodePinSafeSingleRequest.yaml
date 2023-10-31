@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./InserirQRCodePinSafeRequestData.yaml
+xml:
+  name: InserirQRCodePinSafeSingleRequest

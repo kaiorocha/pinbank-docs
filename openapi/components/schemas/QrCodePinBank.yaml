@@ -1,0 +1,32 @@
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal gerador QR Code\r\n<br />"
+    format: int32
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente gerador QR Code\r\n<br />"
+    format: int32
+  IdentificadorAdicionalOrigem:
+    type: string
+    description: "Identificador adicional da origem\r\n<br />"
+  MetodoPagamento:
+    type: string
+    description: "Método de pagamento\r\n<br />"
+    enum:
+      - CreditoAVista
+      - CreditoSemJuros
+      - CreditoComJuros
+      - Debito
+  NumeroParcelas:
+    type: string
+    description: "Número de parcelas\r\n<br />"
+  TipoTransacao:
+    type: string
+    description: "Tipo da transação\r\n<br />"
+    enum:
+      - Venda
+      - Cancelamento
+xml:
+  name: QrCodePinBank

@@ -1,0 +1,25 @@
+type: object
+properties:
+  EnquadraOferta:
+    type: boolean
+    description: "Cliente se enquadra na oferta\r\n<br />"
+  ExibirOferta:
+    type: boolean
+    description: "Exibir \"PopUp\" da oferta\r\n<br />"
+  OfertaAceita:
+    type: boolean
+    description: "Cliente já aceitou a oferta\r\n<br />"
+  JaPossui:
+    type: boolean
+    description: "Cliente já possui o que é ofertado\r\n<br />"
+  TratamentoExibicaoOferta:
+    type: string
+    description: "Como a oferta deve ser exibida\r\n0 - EXIBIR_OFERTA_LOGIN_E_LINK \r\n1 - EXIBIR_OFERTA_SOMENTE_LINK\r\n2 - EXIBIR_MENSAGEM_AGUARDE\r\n3 - ACESSAR_FUNCIONALIDADE\r\n4 - FUNCIONALIDADE_NAO_PERMITIDA\r\n<br />"
+    enum:
+      - EXIBIR_OFERTA_LOGIN_E_LINK
+      - EXIBIR_OFERTA_SOMENTE_LINK
+      - EXIBIR_MENSAGEM_AGUARDE
+      - ACESSAR_FUNCIONALIDADE
+      - FUNCIONALIDADE_NAO_PERMITIDA
+xml:
+  name: OfertaOptInResponseData

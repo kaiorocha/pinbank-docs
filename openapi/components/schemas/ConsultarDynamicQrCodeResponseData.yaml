@@ -1,0 +1,47 @@
+type: object
+properties:
+  PinbankQrCodeId:
+    type: integer
+    description: "Pinbank QrCode id\r\n<br />"
+    format: int64
+  StatusQrCodeRc:
+    type: string
+    description: "Status do QR Code\r\n<br />"
+    enum:
+      - QRCODE_PENDENTE
+      - QRCODE_ERRO
+      - QRCODE_GERADO
+      - QRCODE_PAGO
+      - QRCODE_PROCESSANDO
+      - DESFAZIMENTO_PENDENTE
+      - DESFEITO
+      - CANCELADO_TIMEOUT
+  StatusQrCode:
+    type: string
+    description: "Status do QR Code\r\n<br />"
+    enum:
+      - QRCODE_PENDENTE
+      - QRCODE_ERRO
+      - QRCODE_GERADO
+      - QRCODE_PAGO
+      - QRCODE_PROCESSANDO
+      - DESFAZIMENTO_PENDENTE
+      - DESFEITO
+      - CANCELADO_TIMEOUT
+  TextoQrCode:
+    type: string
+    description: "Texto do QR Code\r\n<br />"
+  QrCodePixLink:
+    type: string
+    description: "Link do QrCode PIX\r\n<br />"
+  Referencia:
+    type: string
+    description: "Referencia\r\n<br />"
+  QrCodeURL:
+    type: string
+    description: "Url do QR Code\r\n<br />"
+  TxId:
+    type: string
+    description: "TxId\r\n<br />"
+xml:
+  name: ConsultarDynamicQrCodeResponseData

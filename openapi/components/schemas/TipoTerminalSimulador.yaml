@@ -1,0 +1,11 @@
+type: object
+properties:
+  IdTipoTerminal:
+    type: integer
+    description: "Tipo de terminal\r\n<br />"
+    format: int32
+  DescTipoTerminal:
+    type: string
+    description: "Descrição do terminal\r\n<br />"
+xml:
+  name: TipoTerminalSimulador

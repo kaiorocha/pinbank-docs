@@ -1,0 +1,13 @@
+type: object
+properties:
+  QrCode:
+    type: string
+    description: "QR Code\r\n<br />"
+  Status:
+    type: string
+    description: "QR Code\r\n<br />"
+  Valor:
+    type: string
+    description: "Valor\r\n<br />"
+xml:
+  name: ConsultarPinSafePushResponseData

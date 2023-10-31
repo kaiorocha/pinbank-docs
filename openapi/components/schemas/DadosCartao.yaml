@@ -1,0 +1,20 @@
+type: object
+properties:
+  NrCartao:
+    type: string
+    description: "Número do DDD do telefone.\r\n<br />"
+  CvvCartao:
+    type: string
+    description: "Cvv do Cartão\r\n<br />"
+  Validade:
+    type: string
+    description: "Validade do Cartão\r\n<br />"
+  JwtCartao:
+    type: string
+    description: "JWT que representa o número do cartão\r\n<br />"
+  BandeiraCartao:
+    type: string
+    description: "Bandeira que representa o cartão\r\n<br />"
+description: Número telefone Outros
+xml:
+  name: DadosCartao

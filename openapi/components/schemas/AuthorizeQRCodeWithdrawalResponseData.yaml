@@ -1,0 +1,12 @@
+type: object
+properties:
+  WithdrawalRequestDateTime:
+    type: string
+    description: "Data e hora da solicitação do saque\r\n<br />"
+    format: date-time
+  WithdrawalRequestId:
+    type: integer
+    description: "Id da solicitação do saque\r\n<br />"
+    format: int32
+xml:
+  name: AuthorizeQRCodeWithdrawalResponseData

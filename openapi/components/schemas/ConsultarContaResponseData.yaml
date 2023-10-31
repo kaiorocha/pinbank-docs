@@ -1,0 +1,27 @@
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  NomeCliente:
+    type: string
+    description: "Nome do cliente\r\n<br />"
+  RazaoSocial:
+    type: string
+    description: "Razão Social\r\n<br />"
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+  NomeCanal:
+    type: string
+    description: "Nome do canal\r\n<br />"
+  NumeroBanco:
+    type: string
+    description: "Numero do Banco\r\nEx: 259 - Pinbank, 093 - Polocred\r\n<br />"
+  NomeBanco:
+    type: string
+    description: "Nome do Banco\r\nEx: Pinbank, Polocred\r\n<br />"
+xml:
+  name: ConsultarContaResponseData

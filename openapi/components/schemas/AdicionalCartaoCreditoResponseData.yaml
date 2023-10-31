@@ -1,0 +1,10 @@
+type: object
+properties:
+  NrConta:
+    type: string
+    description: "Número da conta\r\n <br />"
+  Cartao:
+    $ref: ./DadosCartao.yaml
+description: Dados Cadastrais
+xml:
+  name: AdicionalCartaoCreditoResponseData

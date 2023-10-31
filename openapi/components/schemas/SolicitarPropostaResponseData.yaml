@@ -1,0 +1,7 @@
+type: object
+properties:
+  Proposta:
+    type: string
+    description: "Proposta\r\n<br />"
+xml:
+  name: SolicitarPropostaResponseData

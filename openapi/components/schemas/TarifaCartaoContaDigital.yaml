@@ -1,0 +1,16 @@
+type: object
+properties:
+  TarifaCartaoNominal:
+    type: number
+    description: "Tarifa de pedido de cartao nominal\r\n<br />"
+    format: double
+  TarifaCartaoNoName:
+    type: number
+    description: "Tarifa de cadastro de cartao no name\r\n<br />"
+    format: double
+  TarifaMensalCartao:
+    type: number
+    description: "Mensalidade de cartao\r\n<br />"
+    format: double
+xml:
+  name: TarifaCartaoContaDigital

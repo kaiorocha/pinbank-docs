@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./CadastroPfRequestData.yaml
+xml:
+  name: CadastroPfSingleRequest

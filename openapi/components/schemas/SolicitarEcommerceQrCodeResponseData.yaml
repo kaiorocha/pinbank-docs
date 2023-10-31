@@ -1,0 +1,14 @@
+type: object
+properties:
+  PinbankQrCodeId:
+    type: integer
+    description: "Pinbank QrCode id\r\n<br />"
+    format: int64
+  NsuPinbank:
+    type: string
+    description: "NSU Pinbank\r\n<br />"
+  TextoQrCode:
+    type: string
+    description: "Texto do QR Code\r\n<br />"
+xml:
+  name: SolicitarEcommerceQrCodeResponseData

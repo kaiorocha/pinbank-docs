@@ -1,0 +1,43 @@
+type: object
+properties:
+  SeqTransacao:
+    type: integer
+    description: "Sequencia das Transações.\r\n<br />"
+    format: int32
+  CdMoeda:
+    type: integer
+    description: "Codigo da Moeda\r\n986 - Reais\r\n840 - Dolar\r\nDiferente de 986 ou 840\r\n<br />"
+    format: int32
+  DsTransacao:
+    type: string
+    description: Decrição da transação
+  VlOriginalTransacao:
+    type: integer
+    description: ''
+    format: int64
+  DtTransacao:
+    type: integer
+    description: "Data que foi realizada Transação - DDMM.\r\n<br />"
+    format: int64
+  NrParcela:
+    type: integer
+    description: "Propriedade de Numero da Parcela da Transação Parcelada\r\n<br />"
+    format: int32
+  QtTotalParcelas:
+    type: integer
+    description: "Quantidade Total de Parcela do Contrato de Transação Parcelada.\r\n<br />"
+    format: int32
+  VlTransacao:
+    type: integer
+    description: "Valor em Reais.\r\n<br />"
+    format: int64
+  CotacaoDolar:
+    type: integer
+    description: "Cotação de Dolar.\r\n<br />"
+    format: int64
+  NumPortador:
+    type: string
+    description: "Número portador\r\n<br />"
+description: "Detalhe da Fatura\r\n<br />"
+xml:
+  name: DetalheFaturaCartaoCreditoResponseData

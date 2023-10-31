@@ -1,0 +1,23 @@
+type: object
+properties:
+  NumParcela:
+    type: integer
+    description: "Número da parcela\r\n<br />"
+    format: int32
+  ValorParcela:
+    type: number
+    description: "Valor da parcela         \r\n<br />"
+    format: double
+  ValorFinalCliente:
+    type: number
+    description: "Valor da parcela         \r\n<br />"
+    format: double
+  IdBandeira:
+    type: integer
+    description: "Tipo de bandeira\r\n<br />"
+    format: int32
+  DescBandeira:
+    type: string
+    description: "Descrição da bandeira\r\n<br />"
+xml:
+  name: Vender

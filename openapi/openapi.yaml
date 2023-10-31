@@ -1,79 +1,532 @@
-openapi: 3.1.0
+openapi: 3.0.1
 info:
+  title: Documentação API PINbank Open Banking
   version: 1.0.0
-  title: Example.com
-  termsOfService: https://example.com/terms/
+  x-swagger-net-version: 8.3.22.101
   contact:
-    email: contact@example.com
-    url: http://example.com/contact
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
+    name: Suporte Técnico
+    email: suporte@pinbank.com.br
   x-logo:
-    url: https://redocly.github.io/openapi-template/logo.png
+    url: https://www.pinbank.com.br/images/logo_pinbank.png
+    altText: PINBank logo
   description: >
-    This is an **example** API to demonstrate features of the OpenAPI
-    specification.
+    # Introdução
 
-    # Introduction
+    A API PINbank Open Banking permite que desenvolvedores consumam dados e
+    serviços do sistema financeiro brasileiro de forma padronizada e segura. A
+    API segue os padrões definidos pelo Banco Central do Brasil e pela Open
+    Banking Brasil.
 
-    This API definition is intended to to be a good starting point for
-    describing your API in [OpenAPI/Swagger
-    format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md).
+    # Pré-requisitos
 
-    It also demonstrates features of the
-    [create-openapi-repo](https://github.com/Redocly/create-openapi-repo) tool
-    and the [Redoc](https://github.com/Redocly/Redoc) documentation engine.
-    Beyond the standard OpenAPI syntax, we use a few  [vendor
-    extensions](https://github.com/Redocly/Redoc/blob/master/docs/redoc-vendor-extensions.md).
+    Para usar a API PINbank Open Banking, você precisa:
 
-    # OpenAPI Specification
+    - Solicitar uma credencial de acesso à API, que consiste em um **client_id**
+    e um **client_secret**.
 
-    The goal of The OpenAPI Specification is to define a standard,
-    language-agnostic interface to REST APIs which allows both humans and
-    computers to discover and understand the capabilities of the service without
-    access to source code, documentation, or through network traffic inspection.
-    When properly defined via OpenAPI, a consumer can  understand and interact
-    with the remote service with a minimal amount of implementation logic.
-    Similar to what interfaces have done for lower-level programming, OpenAPI
-    removes the guesswork in calling the service.
+    - Gerar um token de autenticação OAuth2, usando a credencial fornecida e o
+    fluxo de autorização **client_credentials**.
+
+    - Enviar o token de autenticação no cabeçalho **Authorization** de cada
+    requisição para a API.
+
+    # Como solicitar uma credencial
+
+    Para a utilização das APIs PINBank Open Banking, é necessário uma credencial
+    de acesso que pode ser obtida através do preenchimento do "[formulário de
+    acesso](https://dev.pinbank.com.br/ManualIntegracao/Home/CredencialPasso1)".
+
+
+    Após a análise e aprovação das suas informações, você receberá um e-mail com
+    o seu **client_id** e **client_secret**, que são únicos e confidenciais.
+    Você deve armazená-los de forma segura e não compartilhá-los com terceiros.
+
+
+    Você também poderá acompanhar o status desta solicitação na área de
+    "[Login](https://dev.pinbank.com.br/ManualIntegracao/Home/Login)" utilizando
+    o usuário e senha informados no formulário de acesso.
 servers:
-  - url: https://{tenant}/api/v1
-    variables:
-      tenant:
-        default: www
-        description: Your tenant id
-  - url: https://example.com/api/v1
+  - url: https://dev.pinbank.com.br/services/
+    description: Desenvolvimento]
+security:
+  - bearerAuth:
+      - CartaoCredito
 tags:
-  - name: Echo
-    description: Example echo operations.
-  - name: User
-    description: Operations about users.
-  - name: Tag
-    description: This is a tag description.
+  - name: TokenOAuth2
+    description: >-
+      As APIs são protegidas utilizando o protocolo OAuth2. Para chamar as APIs,
+      você deve enviar um token OAuth2 válido com os níveis de autorização
+      necessários.
+  - name: CartaoCredito
+    description: >-
+      Um serviço que permite gerenciar cartões de crédito, como consultar saldo,
+      extrato, fatura, limite, bloquear e desbloquear cartões, etc.
+  - name: CashIn
+    description: >-
+      Um serviço que permite realizar depósitos em contas digitais, usando
+      boleto bancário, transferência bancária ou PIX.
+  - name: CashOut
+    description: >-
+      Um serviço que permite realizar saques em contas digitais, usando
+      transferência bancária, PIX ou saque em caixas eletrônicos da rede TecBan.
+  - name: ContaDigital
+    description: >-
+      Um serviço que permite criar e gerenciar contas digitais, como consultar
+      saldo, extrato, dados cadastrais, etc.
+  - name: DuplaAprovacao
+    description: >-
+      Um serviço que permite configurar e validar transações que exigem dupla
+      aprovação, como transferências entre contas ou pagamentos de boletos.
+  - name: GiftCard
+    description: >-
+      Um serviço que permite gerar e resgatar cartões presente, como consultar
+      saldo, extrato, código de barras, etc.
+  - name: Gs
+    description: >-
+      Um serviço que permite gerenciar grupos de segurança, como criar, editar,
+      excluir e consultar grupos, usuários e permissões.
+  - name: Pix
+    description: >-
+      Um serviço que permite realizar e receber pagamentos instantâneos usando o
+      PIX, o sistema de pagamentos do Banco Central do Brasil.
+  - name: PixDictOperacoes
+    description: >-
+      Um serviço que permite realizar operações relacionadas ao DICT, o
+      Diretório de Identificadores de Contas Transacionais do PIX, como
+      cadastrar, alterar ou excluir chaves PIX.
+  - name: QRCode
+    description: >-
+      Um serviço que permite gerar e ler códigos QR para realizar pagamentos
+      usando o PIX ou outros meios de pagamento.
+  - name: RecargaCelular
+    description: >-
+      Um serviço que permite realizar recargas de celular usando o saldo da
+      conta digital ou cartão de crédito.
+  - name: TecBan
+    description: >-
+      Um serviço que permite realizar saques em caixas eletrônicos da rede
+      TecBan usando o saldo da conta digital ou cartão de crédito.
+  - name: Transacoes
+    description: >-
+      Um serviço que permite consultar transações realizadas em contas digitais
+      ou cartões de crédito, como pagamentos, transferências, depósitos, saques,
+      etc.
+  - name: TransferenciaRecebiveis
+    description: >-
+      Um serviço que permite transferir recebíveis de cartões de crédito para
+      contas digitais ou bancárias.
 paths:
-  /users/{username}:
-    $ref: paths/users_{username}.yaml
-  /echo:
-    $ref: paths/echo.yaml
-  /pathItem:
-    $ref: paths/pathItem.yaml
-  /pathItemWithExamples:
-    $ref: paths/pathItemWithExamples.yaml
-components:
-  securitySchemes:
-    main_auth:
-      type: oauth2
-      flows:
-        implicit:
-          authorizationUrl: http://example.com/api/oauth/dialog
-          scopes:
-            read:users: read users info
-            write:users: modify or remove users
-    api_key:
-      type: apiKey
-      in: header
-      name: api_key
-    basic_auth:
-      type: http
-      scheme: basic
+  /api/token:
+    $ref: paths/api_token.yaml
+  /api/CartaoCredito/ListarCartaoCredito:
+    $ref: paths/api_CartaoCredito_ListarCartaoCredito.yaml
+  /api/CartaoCredito/DadosCadastraisCartaoCredito:
+    $ref: paths/api_CartaoCredito_DadosCadastraisCartaoCredito.yaml
+  /api/CartaoCredito/DadosCartaoCredito:
+    $ref: paths/api_CartaoCredito_DadosCartaoCredito.yaml
+  /api/CartaoCredito/ResumoFaturaCartaoCredito:
+    $ref: paths/api_CartaoCredito_ResumoFaturaCartaoCredito.yaml
+  /api/CartaoCredito/HistoricoFaturaFechadaCartaoCredito:
+    $ref: paths/api_CartaoCredito_HistoricoFaturaFechadaCartaoCredito.yaml
+  /api/CartaoCredito/HistoricoTransacoesCartaoCredito:
+    $ref: paths/api_CartaoCredito_HistoricoTransacoesCartaoCredito.yaml
+  /api/CartaoCredito/DetalheFaturaCartaoCredito:
+    $ref: paths/api_CartaoCredito_DetalheFaturaCartaoCredito.yaml
+  /api/CartaoCredito/LinhaDigitavelBoletoCartaoCredito:
+    $ref: paths/api_CartaoCredito_LinhaDigitavelBoletoCartaoCredito.yaml
+  /api/CartaoCredito/NovaContaPFCartaoCredito:
+    $ref: paths/api_CartaoCredito_NovaContaPFCartaoCredito.yaml
+  /api/CartaoCredito/DesbloquearCartaoCredito:
+    $ref: paths/api_CartaoCredito_DesbloquearCartaoCredito.yaml
+  /api/CartaoCredito/IdPdfFaturaCartaoCredito:
+    $ref: paths/api_CartaoCredito_IdPdfFaturaCartaoCredito.yaml
+  /api/CartaoCredito/IdFaturaPdfArquivoCartaoCredito:
+    $ref: paths/api_CartaoCredito_IdFaturaPdfArquivoCartaoCredito.yaml
+  /api/CartaoCredito/AdicionalCartaoCredito:
+    $ref: paths/api_CartaoCredito_AdicionalCartaoCredito.yaml
+  /api/CartaoCredito/TrocaSenhaCartaoCredito:
+    $ref: paths/api_CartaoCredito_TrocaSenhaCartaoCredito.yaml
+  /api/CartaoCredito/ObterContaCartaoCredito:
+    $ref: paths/api_CartaoCredito_ObterContaCartaoCredito.yaml
+  /api/CartaoCredito/PagamentoContaCartaoCredito:
+    $ref: paths/api_CartaoCredito_PagamentoContaCartaoCredito.yaml
+  /api/CartaoCredito/ReversaoCartaoCredito:
+    $ref: paths/api_CartaoCredito_ReversaoCartaoCredito.yaml
+  /api/CashIn/Deposito:
+    $ref: paths/api_CashIn_Deposito.yaml
+  /api/CashIn/GerarBoleto:
+    $ref: paths/api_CashIn_GerarBoleto.yaml
+  /api/CashIn/GerarBoletoSplit:
+    $ref: paths/api_CashIn_GerarBoletoSplit.yaml
+  /api/CashIn/ConsultarBoleto:
+    $ref: paths/api_CashIn_ConsultarBoleto.yaml
+  /api/CashIn/ConsultarBoletoLote:
+    $ref: paths/api_CashIn_ConsultarBoletoLote.yaml
+  /api/CashIn/ConsultarResumoBoletos:
+    $ref: paths/api_CashIn_ConsultarResumoBoletos.yaml
+  /api/CashIn/CheckoutTransferencia:
+    $ref: paths/api_CashIn_CheckoutTransferencia.yaml
+  /api/CashIn/CheckoutTransferenciaConsultaLote:
+    $ref: paths/api_CashIn_CheckoutTransferenciaConsultaLote.yaml
+  /api/CashIn/PromessaDocTed:
+    $ref: paths/api_CashIn_PromessaDocTed.yaml
+  /api/CashIn/InformaLiquidacao:
+    $ref: paths/api_CashIn_InformaLiquidacao.yaml
+  /api/CashOut/TransferenciaEntreContas:
+    $ref: paths/api_CashOut_TransferenciaEntreContas.yaml
+  /api/CashOut/DocTed:
+    $ref: paths/api_CashOut_DocTed.yaml
+  /api/CashOut/ConsultarDocTed:
+    $ref: paths/api_CashOut_ConsultarDocTed.yaml
+  /api/CashOut/CadastrarTed:
+    $ref: paths/api_CashOut_CadastrarTed.yaml
+  /api/CashOut/ConsultarTed:
+    $ref: paths/api_CashOut_ConsultarTed.yaml
+  /api/CashOut/CancelarTed:
+    $ref: paths/api_CashOut_CancelarTed.yaml
+  /api/CashOut/AprovarTed:
+    $ref: paths/api_CashOut_AprovarTed.yaml
+  /api/CashOut/TransferenciaNaoCliente:
+    $ref: paths/api_CashOut_TransferenciaNaoCliente.yaml
+  /api/CashOut/PagamentoConta:
+    $ref: paths/api_CashOut_PagamentoConta.yaml
+  /api/CashOut/PagamentoTributo:
+    $ref: paths/api_CashOut_PagamentoTributo.yaml
+  /api/CashOut/ConsultarPagamentosAgendados:
+    $ref: paths/api_CashOut_ConsultarPagamentosAgendados.yaml
+  /api/CashOut/CadastrarFavorecidoDocTed:
+    $ref: paths/api_CashOut_CadastrarFavorecidoDocTed.yaml
+  /api/CashOut/ConsultarFavorecidoDocTed:
+    $ref: paths/api_CashOut_ConsultarFavorecidoDocTed.yaml
+  /api/CashOut/ExcluirFavorecidoDocTed:
+    $ref: paths/api_CashOut_ExcluirFavorecidoDocTed.yaml
+  /api/CashOut/Saque:
+    $ref: paths/api_CashOut_Saque.yaml
+  /api/CashOut/CancelarSaque:
+    $ref: paths/api_CashOut_CancelarSaque.yaml
+  /api/CashOut/ConsultarBoletoPagamentoOnline:
+    $ref: paths/api_CashOut_ConsultarBoletoPagamentoOnline.yaml
+  /api/ContaDigital/OfertaOptIn:
+    $ref: paths/api_ContaDigital_OfertaOptIn.yaml
+  /api/ContaDigital/NaoVerMaisOfertaOptIn:
+    $ref: paths/api_ContaDigital_NaoVerMaisOfertaOptIn.yaml
+  /api/ContaDigital/AceitarOfertaOptIn:
+    $ref: paths/api_ContaDigital_AceitarOfertaOptIn.yaml
+  /api/ContaDigital/TermosDeUso:
+    $ref: paths/api_ContaDigital_TermosDeUso.yaml
+  /api/ContaDigital/RegistraTermosAceite:
+    $ref: paths/api_ContaDigital_RegistraTermosAceite.yaml
+  /api/ContaDigital/RegistraToken:
+    $ref: paths/api_ContaDigital_RegistraToken.yaml
+  /api/ContaDigital/ValidaToken:
+    $ref: paths/api_ContaDigital_ValidaToken.yaml
+  /api/ContaDigital/ConsultarAgendamentos:
+    $ref: paths/api_ContaDigital_ConsultarAgendamentos.yaml
+  /api/ContaDigital/CancelarAgendamento:
+    $ref: paths/api_ContaDigital_CancelarAgendamento.yaml
+  /api/ContaDigital/ConsultarConfiguracoesApp:
+    $ref: paths/api_ContaDigital_ConsultarConfiguracoesApp.yaml
+  /api/ContaDigital/ConsultarTerminaisCliente:
+    $ref: paths/api_ContaDigital_ConsultarTerminaisCliente.yaml
+  /api/ContaDigital/CadastroPf:
+    $ref: paths/api_ContaDigital_CadastroPf.yaml
+  /api/ContaDigital/CadastroPj:
+    $ref: paths/api_ContaDigital_CadastroPj.yaml
+  /api/ContaDigital/CanaisHabilitados:
+    $ref: paths/api_ContaDigital_CanaisHabilitados.yaml
+  /api/ContaDigital/Login:
+    $ref: paths/api_ContaDigital_Login.yaml
+  /api/ContaDigital/DadosPessoais:
+    $ref: paths/api_ContaDigital_DadosPessoais.yaml
+  /api/ContaDigital/ConsultarComprovante:
+    $ref: paths/api_ContaDigital_ConsultarComprovante.yaml
+  /api/ContaDigital/ListarComprovantes:
+    $ref: paths/api_ContaDigital_ListarComprovantes.yaml
+  /api/ContaDigital/ListaFuncionalidades:
+    $ref: paths/api_ContaDigital_ListaFuncionalidades.yaml
+  /api/ContaDigital/RegistrarDispositivo:
+    $ref: paths/api_ContaDigital_RegistrarDispositivo.yaml
+  /api/ContaDigital/ConfirmarRegistroDispositivo:
+    $ref: paths/api_ContaDigital_ConfirmarRegistroDispositivo.yaml
+  /api/ContaDigital/ValidarDispositivo:
+    $ref: paths/api_ContaDigital_ValidarDispositivo.yaml
+  /api/ContaDigital/RemoverDispositivo:
+    $ref: paths/api_ContaDigital_RemoverDispositivo.yaml
+  /api/ContaDigital/ConsultarConta:
+    $ref: paths/api_ContaDigital_ConsultarConta.yaml
+  /api/ContaDigital/ConsultarClientesCanal:
+    $ref: paths/api_ContaDigital_ConsultarClientesCanal.yaml
+  /api/ContaDigital/Saldo:
+    $ref: paths/api_ContaDigital_Saldo.yaml
+  /api/ContaDigital/EsqueceuSenha:
+    $ref: paths/api_ContaDigital_EsqueceuSenha.yaml
+  /api/ContaDigital/EnviarCodigoAlteracaoSenha:
+    $ref: paths/api_ContaDigital_EnviarCodigoAlteracaoSenha.yaml
+  /api/ContaDigital/ValidarCodigoAlteracaoSenha:
+    $ref: paths/api_ContaDigital_ValidarCodigoAlteracaoSenha.yaml
+  /api/ContaDigital/AlterarSenha:
+    $ref: paths/api_ContaDigital_AlterarSenha.yaml
+  /api/ContaDigital/IncluirDocumento:
+    $ref: paths/api_ContaDigital_IncluirDocumento.yaml
+  /api/ContaDigital/ConsultarDocumento:
+    $ref: paths/api_ContaDigital_ConsultarDocumento.yaml
+  /api/ContaDigital/AlterarDocumento:
+    $ref: paths/api_ContaDigital_AlterarDocumento.yaml
+  /api/ContaDigital/ConsultarStatusDocumento:
+    $ref: paths/api_ContaDigital_ConsultarStatusDocumento.yaml
+  /api/ContaDigital/ExtratoContaDigital:
+    $ref: paths/api_ContaDigital_ExtratoContaDigital.yaml
+  /api/ContaDigital/ExtratoPos:
+    $ref: paths/api_ContaDigital_ExtratoPos.yaml
+  /api/ContaDigital/ConsultarCartaoPrePago:
+    $ref: paths/api_ContaDigital_ConsultarCartaoPrePago.yaml
+  /api/ContaDigital/ConsultarLimitePadraoCartao:
+    $ref: paths/api_ContaDigital_ConsultarLimitePadraoCartao.yaml
+  /api/ContaDigital/AtualizarLimiteCartao:
+    $ref: paths/api_ContaDigital_AtualizarLimiteCartao.yaml
+  /api/ContaDigital/IncluirPedidoAprovacaoCartao:
+    $ref: paths/api_ContaDigital_IncluirPedidoAprovacaoCartao.yaml
+  /api/ContaDigital/SolicitarCartaoContaDigital:
+    $ref: paths/api_ContaDigital_SolicitarCartaoContaDigital.yaml
+  /api/ContaDigital/AtivarCartaoContaDigital:
+    $ref: paths/api_ContaDigital_AtivarCartaoContaDigital.yaml
+  /api/ContaDigital/ConsultarMovimentoCartaoPrePago:
+    $ref: paths/api_ContaDigital_ConsultarMovimentoCartaoPrePago.yaml
+  /api/ContaDigital/BloquearCartaoContaDigital:
+    $ref: paths/api_ContaDigital_BloquearCartaoContaDigital.yaml
+  /api/ContaDigital/EsqueciSenhaCartaoContaDigital:
+    $ref: paths/api_ContaDigital_EsqueciSenhaCartaoContaDigital.yaml
+  /api/ContaDigital/AlterarSenhaCartaoContaDigital:
+    $ref: paths/api_ContaDigital_AlterarSenhaCartaoContaDigital.yaml
+  /api/ContaDigital/BloqueioCartaoContaDigitalEcommerce:
+    $ref: paths/api_ContaDigital_BloqueioCartaoContaDigitalEcommerce.yaml
+  /api/ContaDigital/ConsultarCep:
+    $ref: paths/api_ContaDigital_ConsultarCep.yaml
+  /api/ContaDigital/EnviarSms:
+    $ref: paths/api_ContaDigital_EnviarSms.yaml
+  /api/ContaDigital/ConsultarNotificacaoNaoLidas:
+    $ref: paths/api_ContaDigital_ConsultarNotificacaoNaoLidas.yaml
+  /api/ContaDigital/ConsultarNotificacao:
+    $ref: paths/api_ContaDigital_ConsultarNotificacao.yaml
+  /api/ContaDigital/AtivarPushNotification:
+    $ref: paths/api_ContaDigital_AtivarPushNotification.yaml
+  /api/ContaDigital/DesativarPushNotification:
+    $ref: paths/api_ContaDigital_DesativarPushNotification.yaml
+  /api/ContaDigital/ConsultarBanco:
+    $ref: paths/api_ContaDigital_ConsultarBanco.yaml
+  /api/ContaDigital/ConsultarTarifas:
+    $ref: paths/api_ContaDigital_ConsultarTarifas.yaml
+  /api/ContaDigital/TipoTerminalSimulador:
+    $ref: paths/api_ContaDigital_TipoTerminalSimulador.yaml
+  /api/ContaDigital/ConsultarSimulador:
+    $ref: paths/api_ContaDigital_ConsultarSimulador.yaml
+  /api/ContaDigital/BuscaLancamentosFuturosPinSafe:
+    $ref: paths/api_ContaDigital_BuscaLancamentosFuturosPinSafe.yaml
+  /api/ContaDigital/BuscaLancamentosPinSafeCartao:
+    $ref: paths/api_ContaDigital_BuscaLancamentosPinSafeCartao.yaml
+  /api/ContaDigital/BuscaQRCodePinSafe:
+    $ref: paths/api_ContaDigital_BuscaQRCodePinSafe.yaml
+  /api/ContaDigital/InserirQRCodePinSafe:
+    $ref: paths/api_ContaDigital_InserirQRCodePinSafe.yaml
+  /api/ContaDigital/AtualizarQRCodePinSafe:
+    $ref: paths/api_ContaDigital_AtualizarQRCodePinSafe.yaml
+  /api/ContaDigital/EfetuarTransacaoPinSafe:
+    $ref: paths/api_ContaDigital_EfetuarTransacaoPinSafe.yaml
+  /api/ContaDigital/IncluirPinSafePush:
+    $ref: paths/api_ContaDigital_IncluirPinSafePush.yaml
+  /api/ContaDigital/ConsultarPinSafePush:
+    $ref: paths/api_ContaDigital_ConsultarPinSafePush.yaml
+  /api/ContaDigital/AtualizarPinSafePush:
+    $ref: paths/api_ContaDigital_AtualizarPinSafePush.yaml
+  /api/ContaDigital/GerarQrCodePinSafe:
+    $ref: paths/api_ContaDigital_GerarQrCodePinSafe.yaml
+  /api/ContaDigital/CadastrarPagador:
+    $ref: paths/api_ContaDigital_CadastrarPagador.yaml
+  /api/ContaDigital/ConsultarPagador:
+    $ref: paths/api_ContaDigital_ConsultarPagador.yaml
+  /api/ContaDigital/ExcluirPagador:
+    $ref: paths/api_ContaDigital_ExcluirPagador.yaml
+  /api/ContaDigital/Rastreabilidade:
+    $ref: paths/api_ContaDigital_Rastreabilidade.yaml
+  /api/DuplaAprovacao/ConsultarVinculo:
+    $ref: paths/api_DuplaAprovacao_ConsultarVinculo.yaml
+  /api/DuplaAprovacao/ListarTransacoesSolicitante:
+    $ref: paths/api_DuplaAprovacao_ListarTransacoesSolicitante.yaml
+  /api/DuplaAprovacao/ListarTransacoesAprovador:
+    $ref: paths/api_DuplaAprovacao_ListarTransacoesAprovador.yaml
+  /api/DuplaAprovacao/AvaliarTransacoes:
+    $ref: paths/api_DuplaAprovacao_AvaliarTransacoes.yaml
+  /api/DuplaAprovacao/ListarContasAvaliadasAprovador:
+    $ref: paths/api_DuplaAprovacao_ListarContasAvaliadasAprovador.yaml
+  /api/DuplaAprovacao/ListarHorarioLimiteAprovacao:
+    $ref: paths/api_DuplaAprovacao_ListarHorarioLimiteAprovacao.yaml
+  /api/GiftCard/GiftCardBuscarProdutos:
+    $ref: paths/api_GiftCard_GiftCardBuscarProdutos.yaml
+  /api/GiftCard/GiftCardBuscarSubProdutos:
+    $ref: paths/api_GiftCard_GiftCardBuscarSubProdutos.yaml
+  /api/GiftCard/GiftCardEfetuarCompra:
+    $ref: paths/api_GiftCard_GiftCardEfetuarCompra.yaml
+  /api/GiftCard/GiftCardBuscarCompras:
+    $ref: paths/api_GiftCard_GiftCardBuscarCompras.yaml
+  /api/Gs/ConsultarTemplate:
+    $ref: paths/api_Gs_ConsultarTemplate.yaml
+  /api/Gs/SolicitarProposta:
+    $ref: paths/api_Gs_SolicitarProposta.yaml
+  /api/Gs/EnviarDocumentoProposta:
+    $ref: paths/api_Gs_EnviarDocumentoProposta.yaml
+  /api/Gs/FinalizarProposta:
+    $ref: paths/api_Gs_FinalizarProposta.yaml
+  /api/Gs/ConsultarProposta:
+    $ref: paths/api_Gs_ConsultarProposta.yaml
+  /api/Gs/CancelarProposta:
+    $ref: paths/api_Gs_CancelarProposta.yaml
+  /api/Gs/SolicitarPasso:
+    $ref: paths/api_Gs_SolicitarPasso.yaml
+  /api/Gs/SolicitarReenvioSms:
+    $ref: paths/api_Gs_SolicitarReenvioSms.yaml
+  /api/Pix/SolicitarEcommerceQrCode:
+    $ref: paths/api_Pix_SolicitarEcommerceQrCode.yaml
+  /api/Pix/WebhookNotificacaoRecebimentoPix:
+    $ref: paths/api_Pix_WebhookNotificacaoRecebimentoPix.yaml
+  /api/Pix/SolicitarDynamicQrCode:
+    $ref: paths/api_Pix_SolicitarDynamicQrCode.yaml
+  /api/Pix/ConsultarDynamicQrCode:
+    $ref: paths/api_Pix_ConsultarDynamicQrCode.yaml
+  /api/Pix/AlterarStatusDynamicQrCode:
+    $ref: paths/api_Pix_AlterarStatusDynamicQrCode.yaml
+  /api/Pix/ConsultaDadosPagamentoPixQrCode:
+    $ref: paths/api_Pix_ConsultaDadosPagamentoPixQrCode.yaml
+  /api/Pix/EfetuarPagamentoPixQrCode:
+    $ref: paths/api_Pix_EfetuarPagamentoPixQrCode.yaml
+  /api/Pix/TransferenciaRecursoStatus:
+    $ref: paths/api_Pix_TransferenciaRecursoStatus.yaml
+  /api/Pix/ConsultarPagamentoPixTed:
+    $ref: paths/api_Pix_ConsultarPagamentoPixTed.yaml
+  /api/Pix/CadastrarFavorecidoPix:
+    $ref: paths/api_Pix_CadastrarFavorecidoPix.yaml
+  /api/Pix/ConsultarFavorecidoPix:
+    $ref: paths/api_Pix_ConsultarFavorecidoPix.yaml
+  /api/Pix/ExcluirFavorecidoPix:
+    $ref: paths/api_Pix_ExcluirFavorecidoPix.yaml
+  /api/Pix/CadastrarAgendamento:
+    $ref: paths/api_Pix_CadastrarAgendamento.yaml
+  /api/Pix/ConsultarDetalheAgendamentoPix:
+    $ref: paths/api_Pix_ConsultarDetalheAgendamentoPix.yaml
+  /api/Pix/AlteraLimitesPix:
+    $ref: paths/api_Pix_AlteraLimitesPix.yaml
+  /api/Pix/ConsultaLimitesPix:
+    $ref: paths/api_Pix_ConsultaLimitesPix.yaml
+  /api/Pix/AlteraHorarioNoturnoPix:
+    $ref: paths/api_Pix_AlteraHorarioNoturnoPix.yaml
+  /api/Pix/CancelaAlteracaoHorarioNoturnoPix:
+    $ref: paths/api_Pix_CancelaAlteracaoHorarioNoturnoPix.yaml
+  /api/Pix/ConsultaHorarioNoturnoPix:
+    $ref: paths/api_Pix_ConsultaHorarioNoturnoPix.yaml
+  /api/Pix/ListaCategoriasLimitesPix:
+    $ref: paths/api_Pix_ListaCategoriasLimitesPix.yaml
+  /api/Pix/DevolucaoPixConsulta:
+    $ref: paths/api_Pix_DevolucaoPixConsulta.yaml
+  /api/Pix/DevolucaoPix:
+    $ref: paths/api_Pix_DevolucaoPix.yaml
+  /Pix/ProcessaBancoBrasil/{id}:
+    $ref: paths/Pix_ProcessaBancoBrasil_{id}.yaml
+  /api/PixDictOperacoes/PixPreCadastro:
+    $ref: paths/api_PixDictOperacoes_PixPreCadastro.yaml
+  /api/PixDictOperacoes/PixConsultarChaves:
+    $ref: paths/api_PixDictOperacoes_PixConsultarChaves.yaml
+  /api/PixDictOperacoes/PixConsultarCliente:
+    $ref: paths/api_PixDictOperacoes_PixConsultarCliente.yaml
+  /api/PixDictOperacoes/PixAlterarStatusChave:
+    $ref: paths/api_PixDictOperacoes_PixAlterarStatusChave.yaml
+  /api/PixDictOperacoes/ConsultarNuOPPix:
+    $ref: paths/api_PixDictOperacoes_ConsultarNuOPPix.yaml
+  /api/QRCode/GenerateQRCode:
+    $ref: paths/api_QRCode_GenerateQRCode.yaml
+  /api/QRCode/GetQRCodeStatus:
+    $ref: paths/api_QRCode_GetQRCodeStatus.yaml
+  /api/QRCode/InvalidateQRCode:
+    $ref: paths/api_QRCode_InvalidateQRCode.yaml
+  /api/QRCode/SendDigitalAccountTransaction:
+    $ref: paths/api_QRCode_SendDigitalAccountTransaction.yaml
+  /api/QRCode/SendCardTransaction:
+    $ref: paths/api_QRCode_SendCardTransaction.yaml
+  /api/QRCode/ReadEMVQRCode:
+    $ref: paths/api_QRCode_ReadEMVQRCode.yaml
+  /api/RecargaCelular/RecargaCelularBuscarOperadoras:
+    $ref: paths/api_RecargaCelular_RecargaCelularBuscarOperadoras.yaml
+  /api/RecargaCelular/RecargaCelularBuscarValores:
+    $ref: paths/api_RecargaCelular_RecargaCelularBuscarValores.yaml
+  /api/RecargaCelular/RecargaCelularEfetuar:
+    $ref: paths/api_RecargaCelular_RecargaCelularEfetuar.yaml
+  /api/TecBan/GetATMsByLocation:
+    $ref: paths/api_TecBan_GetATMsByLocation.yaml
+  /api/TecBan/AuthorizeQRCodeWithdrawal:
+    $ref: paths/api_TecBan_AuthorizeQRCodeWithdrawal.yaml
+  /api/TecBan/GetQRCodeWithdrawalStatus:
+    $ref: paths/api_TecBan_GetQRCodeWithdrawalStatus.yaml
+  /api/TecBan/RegisterTokenWithdrawal:
+    $ref: paths/api_TecBan_RegisterTokenWithdrawal.yaml
+  /api/TecBan/CancelTokenWithdrawalRegister:
+    $ref: paths/api_TecBan_CancelTokenWithdrawalRegister.yaml
+  /api/TecBan/GetWithdrawalsByAccount:
+    $ref: paths/api_TecBan_GetWithdrawalsByAccount.yaml
+  /api/Transacoes/EfetuarTransacao:
+    $ref: paths/api_Transacoes_EfetuarTransacao.yaml
+  /api/Transacoes/CapturarTransacao:
+    $ref: paths/api_Transacoes_CapturarTransacao.yaml
+  /api/Transacoes/CancelarTransacao:
+    $ref: paths/api_Transacoes_CancelarTransacao.yaml
+  /api/Transacoes/EfetuarTransacaoCartaoId:
+    $ref: paths/api_Transacoes_EfetuarTransacaoCartaoId.yaml
+  /api/Transacoes/EfetuarTransacaoSplit:
+    $ref: paths/api_Transacoes_EfetuarTransacaoSplit.yaml
+  /api/Transacoes/EfetuarTransacaoSplitCartaoId:
+    $ref: paths/api_Transacoes_EfetuarTransacaoSplitCartaoId.yaml
+  /api/Transacoes/CancelarTransacaoSplit:
+    $ref: paths/api_Transacoes_CancelarTransacaoSplit.yaml
+  /api/Transacoes/EfetuarTransacaoContaDigital:
+    $ref: paths/api_Transacoes_EfetuarTransacaoContaDigital.yaml
+  /api/Transacoes/CancelarTransacaoContaDigital:
+    $ref: paths/api_Transacoes_CancelarTransacaoContaDigital.yaml
+  /api/Transacoes/IncluirCartao:
+    $ref: paths/api_Transacoes_IncluirCartao.yaml
+  /api/Transacoes/AtivarCartao:
+    $ref: paths/api_Transacoes_AtivarCartao.yaml
+  /api/Transacoes/ExcluirCartao:
+    $ref: paths/api_Transacoes_ExcluirCartao.yaml
+  /api/Transacoes/ConsultarDadosCartao:
+    $ref: paths/api_Transacoes_ConsultarDadosCartao.yaml
+  /api/Transacoes/ConsultarCartoes:
+    $ref: paths/api_Transacoes_ConsultarCartoes.yaml
+  /api/Transacoes/CadastrarCobrancaRecorrente:
+    $ref: paths/api_Transacoes_CadastrarCobrancaRecorrente.yaml
+  /api/Transacoes/AtivarCobrancaRecorrente:
+    $ref: paths/api_Transacoes_AtivarCobrancaRecorrente.yaml
+  /api/Transacoes/AlterarCobrancaRecorrente:
+    $ref: paths/api_Transacoes_AlterarCobrancaRecorrente.yaml
+  /api/Transacoes/AlterarValorCobrancaRecorrente:
+    $ref: paths/api_Transacoes_AlterarValorCobrancaRecorrente.yaml
+  /api/Transacoes/CancelarCobrancaRecorrente:
+    $ref: paths/api_Transacoes_CancelarCobrancaRecorrente.yaml
+  /api/Transacoes/ConsultarTransacoesCobrancaRecorrente:
+    $ref: paths/api_Transacoes_ConsultarTransacoesCobrancaRecorrente.yaml
+  /api/Transacoes/EfetuarTransacaoCobrancaRecorrente:
+    $ref: paths/api_Transacoes_EfetuarTransacaoCobrancaRecorrente.yaml
+  /api/Transacoes/GerarCobrancaCartao:
+    $ref: paths/api_Transacoes_GerarCobrancaCartao.yaml
+  /api/Transacoes/ConsultarNumeroParcelasCobrancaCartao:
+    $ref: paths/api_Transacoes_ConsultarNumeroParcelasCobrancaCartao.yaml
+  /api/TransferenciaRecebiveis/ConsultarElegibilidade:
+    $ref: paths/api_TransferenciaRecebiveis_ConsultarElegibilidade.yaml
+  /api/TransferenciaRecebiveis/ConsultarTransacoes:
+    $ref: paths/api_TransferenciaRecebiveis_ConsultarTransacoes.yaml
+  /api/TransferenciaRecebiveis/GerarContrato:
+    $ref: paths/api_TransferenciaRecebiveis_GerarContrato.yaml
+  /api/TransferenciaRecebiveis/AceitarContrato:
+    $ref: paths/api_TransferenciaRecebiveis_AceitarContrato.yaml
+  /api/TransferenciaRecebiveis/ConsultarContratos:
+    $ref: paths/api_TransferenciaRecebiveis_ConsultarContratos.yaml
+  /api/TransferenciaRecebiveis/ConsultarDadosContrato:
+    $ref: paths/api_TransferenciaRecebiveis_ConsultarDadosContrato.yaml
+  /api/TransferenciaRecebiveis/ConsultarRecebedor:
+    $ref: paths/api_TransferenciaRecebiveis_ConsultarRecebedor.yaml

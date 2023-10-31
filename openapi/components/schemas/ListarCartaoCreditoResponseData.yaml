@@ -1,0 +1,24 @@
+type: object
+properties:
+  TpRegistro:
+    type: string
+    description: "Tipo de registro\r\n<br />"
+  NrConta:
+    type: string
+    description: "Numero da conta\r\n<br />"
+  NmPortador:
+    type: string
+    description: "Nome do Portador\r\n<br />"
+  CdBloqueio:
+    type: string
+    description: "Código de bloqueio\r\n<br />"
+  CdClassificacaoBloqueio:
+    type: string
+    description: "Código de Classificacao Bloqueio\r\n<br />"
+  Endereco:
+    $ref: ./EnderecoCartaoCredito.yaml
+  Cartao:
+    $ref: ./DadosCartao.yaml
+description: ''
+xml:
+  name: ListarCartaoCreditoResponseData

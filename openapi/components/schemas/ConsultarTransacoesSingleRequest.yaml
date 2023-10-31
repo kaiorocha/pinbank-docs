@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ConsultarTransacoesRequestData.yaml
+xml:
+  name: ConsultarTransacoesSingleRequest

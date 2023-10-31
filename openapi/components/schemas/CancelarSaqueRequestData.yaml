@@ -1,0 +1,23 @@
+required:
+  - CodigoCanalLoja
+  - CodigoClienteLoja
+  - NsuOperacao
+type: object
+properties:
+  NsuOperacao:
+    type: integer
+    description: "NSU do Saque\r\nResponse do endpoint /api/CashOut/Saque\r\nPropriedade: \"NsuOperacao\"\r\n<br />"
+    format: int64
+    default: 0
+  CodigoClienteLoja:
+    type: integer
+    description: "Código do cliente da loja\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanalLoja:
+    type: integer
+    description: "Código do canal da loja\r\n<br />"
+    format: int32
+    default: 0
+xml:
+  name: CancelarSaqueRequestData

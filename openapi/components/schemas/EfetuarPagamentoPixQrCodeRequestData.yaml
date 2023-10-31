@@ -1,0 +1,45 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  TextoQrCode:
+    type: string
+    description: "Texto do QR Code\r\n<br />"
+  Key:
+    type: string
+    description: "Key\r\n<br />"
+  IdOrigem:
+    type: string
+    description: "Id origem\r\n<br />"
+  Valor:
+    type: number
+    description: "Valor final\r\n<br />"
+    format: double
+  TipoPagamento:
+    type: string
+    description: "Tipo pagamento\r\n<br />"
+    default: '0'
+    enum:
+      - NENHUM
+      - EMV
+      - KEY
+      - BANCO
+  PagamentoBanco:
+    $ref: ./PagamentoBanco.yaml
+  InfoEntreUsuarios:
+    maxLength: 140
+    type: string
+    description: "Info descritivo do usuario para o pagamento PIX\r\n<br />"
+xml:
+  name: EfetuarPagamentoPixQrCodeRequestData

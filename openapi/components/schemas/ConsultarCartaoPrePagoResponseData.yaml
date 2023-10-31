@@ -1,0 +1,20 @@
+type: object
+properties:
+  TarifaInclusaoCartaoNoName:
+    type: integer
+    description: "Tarifa de inclusão de cartão anônimo\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+  TarifaSolicitacaoCartaoNominal:
+    type: integer
+    description: "Tarifa de solicitação de cartão nominal\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+  ListaCartoes:
+    type: array
+    description: "Lista de cartões\r\n<br />"
+    xml:
+      name: CartaoPre
+      wrapped: true
+    items:
+      $ref: ./CartaoPre.yaml
+xml:
+  name: ConsultarCartaoPrePagoResponseData

@@ -1,0 +1,8 @@
+type: object
+properties:
+  NrConta:
+    type: string
+    description: "Numero da conta\r\n<br />"
+description: ''
+xml:
+  name: ObterContaCartaoCreditoResponseData

@@ -1,0 +1,26 @@
+type: object
+properties:
+  DataSolicitacaoAgendamento:
+    type: string
+    description: "Data de solicitação do agendamento\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataAgendamento:
+    type: string
+    description: "Data do agendamento\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataVencimento:
+    type: string
+    description: "Data do vencimento\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor do boleto\r\nEx: 100 = R$1,00\r\n<br />"
+    format: int64
+  CodigoBarras:
+    type: string
+    description: "Codigo de barras\r\n<br />"
+  Status:
+    type: string
+    description: "Status do agendamento\r\n<br />"
+  Descricao:
+    type: string
+    description: "Descrfição\r\n<br />"
+xml:
+  name: ConsultarPagamentosAgendadosResponseData

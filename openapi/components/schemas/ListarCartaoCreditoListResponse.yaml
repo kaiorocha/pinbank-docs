@@ -1,0 +1,19 @@
+type: object
+properties:
+  Data:
+    type: array
+    xml:
+      name: ListarCartaoCreditoResponseData
+      wrapped: true
+    items:
+      $ref: ./ListarCartaoCreditoResponseData.yaml
+  ResultCode:
+    type: integer
+    format: int32
+  Message:
+    type: string
+  ValidationData:
+    $ref: ./ValidationData.yaml
+description: ''
+xml:
+  name: ListarCartaoCreditoListResponse

@@ -1,0 +1,18 @@
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  ConteudoQRCode:
+    type: string
+    description: "Conteúdo do QR Code gerado\r\n<br />"
+    default: '0'
+xml:
+  name: ReadEMVQRCodeRequestData

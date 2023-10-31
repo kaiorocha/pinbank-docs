@@ -1,0 +1,38 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - DataFinal
+  - DataInicial
+  - Status
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  DataInicial:
+    maxLength: 8
+    type: string
+    description: "Data inicial\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataFinal:
+    maxLength: 8
+    type: string
+    description: "Data final\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  Status:
+    type: string
+    description: "Status pagamento        \r\n<br />"
+    default: '0'
+    enum:
+      - TODOS
+      - PAGO
+      - PENDENTE
+      - DEVOLVIDO
+      - CANCELADO
+xml:
+  name: ConsultarPagamentosAgendadosRequestData

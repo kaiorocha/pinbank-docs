@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./IncluirPedidoAprovacaoCartaoRequestData.yaml
+xml:
+  name: IncluirPedidoAprovacaoCartaoSingleRequest

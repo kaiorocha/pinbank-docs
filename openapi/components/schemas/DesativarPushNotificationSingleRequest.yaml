@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./DesativarPushNotificationRequestData.yaml
+xml:
+  name: DesativarPushNotificationSingleRequest

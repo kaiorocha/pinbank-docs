@@ -1,0 +1,18 @@
+type: object
+properties:
+  IdentificadorQrCode:
+    type: string
+    description: "Identificador do QR Code\r\n<br />"
+  NomeEstabelecimento:
+    type: string
+    description: "Nome do estabelecimento\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor\r\n<br />"
+    format: int64
+  QrCodeCielo:
+    $ref: ./QrCodeCielo.yaml
+  QrCodePinBank:
+    $ref: ./QrCodePinBank.yaml
+xml:
+  name: ReadEMVQRCodeResponseData

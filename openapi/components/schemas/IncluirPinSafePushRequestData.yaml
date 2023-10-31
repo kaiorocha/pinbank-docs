@@ -1,0 +1,29 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - QrCode
+  - Status
+  - Valor
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  QrCode:
+    type: string
+    description: "QR Code\r\n<br />"
+  Status:
+    type: string
+    description: "QR Code\r\n<br />"
+  Valor:
+    type: string
+    description: "Valor\r\n<br />"
+xml:
+  name: IncluirPinSafePushRequestData

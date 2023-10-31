@@ -1,0 +1,32 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  TextoQrCode:
+    type: string
+    description: "Texto do QR Code\r\n<br />"
+  TransferenciaPorChave:
+    type: boolean
+    description: "Transferencia por chave\r\n<br />"
+    default: false
+  SomenteTarifaPix:
+    type: boolean
+    description: "Consulta de tarifa\r\n<br />"
+    default: false
+  Valor:
+    type: integer
+    description: "Valor final\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+xml:
+  name: ConsultaDadosPagamentoPixQrCodeRequestData

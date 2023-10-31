@@ -1,0 +1,27 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - DataFinal
+  - DataInicial
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  DataInicial:
+    maxLength: 8
+    type: string
+    description: "Data inicial\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataFinal:
+    maxLength: 8
+    type: string
+    description: "Data final\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+xml:
+  name: BuscaLancamentosFuturosPinSafeRequestData

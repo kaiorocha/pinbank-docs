@@ -1,0 +1,11 @@
+type: object
+properties:
+  NsuPagamento:
+    type: string
+    description: "NSU do pagamento\r\n<br />"
+  Status:
+    type: string
+  CanalCorban:
+    $ref: ./PagtoCanalCorban.yaml
+xml:
+  name: PagamentoTributoResponseData

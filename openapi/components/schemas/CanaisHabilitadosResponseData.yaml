@@ -1,0 +1,18 @@
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  CodigoProduto:
+    type: integer
+    description: "Código do produto\r\n<br />"
+    format: int32
+  DescProduto:
+    type: string
+    description: "Descrição do produto\r\n<br />"
+  DescUrl:
+    type: string
+    description: "Url acesso site\r\n<br />"
+xml:
+  name: CanaisHabilitadosResponseData

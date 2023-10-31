@@ -1,0 +1,34 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - CpfCnpjPortador
+  - DataNascimentoPortador
+  - IdCartao
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  IdCartao:
+    type: integer
+    description: "ID do cartão\r\n<br />"
+    format: int32
+    default: 0
+  CpfCnpjPortador:
+    type: integer
+    description: "CPF ou CNPJ do portador       \r\n<br />"
+    format: int64
+    default: 0
+  DataNascimentoPortador:
+    maxLength: 8
+    type: string
+    description: "Data de nascimento do portador\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+xml:
+  name: EsqueciSenhaCartaoContaDigitalRequestData

@@ -1,0 +1,54 @@
+type: object
+properties:
+  Key:
+    type: string
+    description: "Key\r\n<br />"
+  IdOrigem:
+    type: string
+    description: "Id origem\r\n<br />"
+  Valor:
+    type: number
+    description: "Valor\r\n<br />"
+    format: double
+  Instituicao:
+    type: string
+    description: "Instituição\r\n<br />"
+  Nome:
+    type: string
+    description: "Nome\r\n<br />"
+  CpfCnpj:
+    type: integer
+    description: "Cpf/Cnpj\r\n<br />"
+    format: int64
+  CodigoBanco:
+    type: integer
+    description: "CodigoBanco\r\n<br />"
+    format: int32
+  Banco:
+    type: string
+    description: "Banco\r\n<br />"
+  Agencia:
+    type: string
+    description: "Agência\r\n<br />"
+  NumeroConta:
+    type: string
+    description: "Número conta\r\n<br />"
+  TipoConta:
+    type: string
+    description: "Tipo conta\r\n<br />"
+    enum:
+      - CACC
+      - SLRY
+      - SVGS
+  TipoPessoa:
+    type: string
+    description: "Tipo Pessoa\r\n<br />"
+    enum:
+      - Fisica
+      - Juridica
+  valorTarifaPix:
+    type: number
+    description: Valor de tarifa a ser cobrado
+    format: double
+xml:
+  name: ConsultaDadosPagamentoPixQrCodeResponseData

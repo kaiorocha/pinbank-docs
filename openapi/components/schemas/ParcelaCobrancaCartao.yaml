@@ -1,0 +1,12 @@
+type: object
+properties:
+  NumeroParcela:
+    type: integer
+    description: "Número da parcela\r\n<br />"
+    format: int32
+  ValorParcela:
+    type: integer
+    description: "Valor da parcela\r\nEx: R$ 100 =&gt; 1,00\r\n<br />"
+    format: int64
+xml:
+  name: ParcelaCobrancaCartao

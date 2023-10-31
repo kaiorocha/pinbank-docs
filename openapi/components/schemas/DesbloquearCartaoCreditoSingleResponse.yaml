@@ -1,0 +1,14 @@
+type: object
+properties:
+  Data:
+    $ref: ./DesbloquearCartaoCreditoResponseData.yaml
+  ResultCode:
+    type: integer
+    format: int32
+  Message:
+    type: string
+  ValidationData:
+    $ref: ./ValidationData.yaml
+description: Desbloquear Cartão de Crédito
+xml:
+  name: DesbloquearCartaoCreditoSingleResponse

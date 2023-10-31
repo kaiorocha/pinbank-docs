@@ -1,0 +1,8 @@
+type: object
+properties:
+  Saldo:
+    type: number
+    description: "Saldo disponível\r\n<br />"
+    format: double
+xml:
+  name: SaldoResponseData

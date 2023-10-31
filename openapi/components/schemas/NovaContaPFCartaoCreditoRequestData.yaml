@@ -1,0 +1,109 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - DiaVencimento
+  - DsOrgaoEmissor
+  - DtNascimento1
+  - IdNacionalidade
+  - IdSexo
+  - NmEmbossing
+  - Nome1
+  - NrCPFPortador
+  - NrDocumento
+  - TpCartao1
+  - TpCliente
+  - TpDocumento
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  Endereco:
+    $ref: ./EnderecoCadastroContaPFCartaoCredito.yaml
+  Email:
+    maxLength: 70
+    type: string
+    description: "Email do titular do cartão\r\n<br />"
+  Telefone1:
+    $ref: ./Telefone1.yaml
+  Telefone2:
+    $ref: ./Telefone.yaml
+  Telefone3:
+    $ref: ./Telefone.yaml
+  DiaVencimento:
+    maxLength: 2
+    type: string
+    description: "Dia vencimento\r\n<br />"
+  Nome1:
+    maxLength: 40
+    type: string
+    description: "Nome 1\r\nFormato: NOME E SOBRENOME\r\n<br />"
+  Nome2:
+    maxLength: 40
+    type: string
+    description: "Nome 2\r\nFormato: NOME E SOBRENOME\r\n<br />"
+  Nome3:
+    maxLength: 40
+    type: string
+    description: "Nome 3\r\nFormato: NOME E SOBRENOME\r\n<br />"
+  Nome4:
+    maxLength: 40
+    type: string
+    description: "Nome 4\r\nFormato: NOME E SOBRENOME\r\n<br />"
+  DtNascimento1:
+    type: string
+    description: "Data de nascimento do portador \r\nFormato Padrão: yyyyMMdd\r\n<br />"
+  TpCartao1:
+    maxLength: 1
+    type: string
+    description: "Tipo de Cartão\r\nA - AMEX\r\nK - ELO\r\nV - VISA\r\n<br />"
+  TpCartao2:
+    maxLength: 1
+    type: string
+    description: "Tipo de Cartão\r\nM - MASTER \r\n** Quando utilizar o tpCartao1, enviar o tpCartão2 sempre vazio\r\n<br />"
+  IdSexo:
+    maxLength: 1
+    type: string
+    description: "Sexo\r\nM - MASCULINO\r\nF - FEMININO\r\n<br />"
+  NrCPFPortador:
+    maxLength: 11
+    type: string
+    description: "Número do CPF do portador\r\n<br />"
+  TpDocumento:
+    maxLength: 2
+    type: string
+    description: "Tipo do Documento\r\n01 - Cedula Identidade\r\n02 - Orgão de Classe\r\n03 - Carteira de Trabalho\r\n04 - Identificação Militar\r\n05 - Passaporte\r\n06 - Registro N ecionalidade Estrangeiro\r\n07 - Carteira de Habilitação\r\n08 - Certidão de Nascimento\r\n09 - NIS\r\n<br />"
+  NrDocumento:
+    maxLength: 18
+    type: string
+    description: "Número do Documento\r\n<br />"
+  DsOrgaoEmissor:
+    maxLength: 5
+    type: string
+    description: "Orgão Emissor\r\n<br />"
+  IdNacionalidade:
+    maxLength: 2
+    type: string
+    description: "Nacionalidade\r\n01 - Brasileiro\r\n02 - Estrangeiro\r\n09 - Desconhecido\r\n<br />"
+  NmEmbossing:
+    maxLength: 19
+    type: string
+    description: "Nome gravado no cartão\r\nFormato: NOME E SOBRENOME\r\n<br />"
+  TpCliente:
+    maxLength: 2
+    type: string
+    description: "Tipo do Relacionamento com o Emissor\r\n00 - Não Correntista\r\n01 - Correntista(Obrigatoriso quando Debito em C/C)\r\n<br />"
+  CdFormaPagamento:
+    maxLength: 2
+    type: string
+    description: "Forma de Pagamento\r\n'' - Boleto\r\nH - Débito Automático\r\n<br />"
+description: Nova Conta PF para Cartão de Crédito
+xml:
+  name: NovaContaPFCartaoCreditoRequestData

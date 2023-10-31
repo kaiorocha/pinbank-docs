@@ -1,0 +1,28 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - DataFinal
+  - DataInicial
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  DataInicial:
+    type: string
+    description: "Data inicial\r\n<br />"
+  DataFinal:
+    type: string
+    description: "Data final\r\n<br />"
+  Nsu:
+    type: integer
+    description: "Nsu\r\n<br />"
+    format: int64
+    default: 0
+xml:
+  name: ConsultarTransacoesRequestData

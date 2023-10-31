@@ -1,0 +1,25 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  DataInicialGeracao:
+    maxLength: 8
+    type: string
+    description: "Data inicial Geração\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataFinalGeracao:
+    maxLength: 8
+    type: string
+    description: "Data Final Geração\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+xml:
+  name: ConsultarResumoBoletosRequestData

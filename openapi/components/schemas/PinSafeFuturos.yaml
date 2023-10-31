@@ -1,0 +1,71 @@
+type: object
+properties:
+  IdPinsafeTransacao:
+    type: integer
+    description: "Id pinsafe transação\r\n<br />"
+    format: int32
+  NsuToken:
+    type: integer
+    description: "NSU token\r\n<br />"
+    format: int64
+  NsuTransacao:
+    type: integer
+    description: "NSU transação\r\n<br />"
+    format: int32
+  ValorTransacao:
+    type: number
+    description: "Valor da transação\r\n<br />"
+    format: double
+  ValorLiquido:
+    type: number
+    description: "Valor liquido da transação\r\n<br />"
+    format: double
+  CodigoClienteRecebedor:
+    type: integer
+    description: "Codigo cliente recebedor\r\n<br />"
+    format: int32
+  CodigoCanalRecebedor:
+    type: integer
+    description: "Codigo canal recebedor\r\n<br />"
+    format: int32
+  CodigoClientePagador:
+    type: integer
+    description: "Codigo cliente pagador\r\n<br />"
+    format: int32
+  CodigoCanalPagador:
+    type: integer
+    description: "Codigo canal pagador\r\n<br />"
+    format: int32
+  DataGeracao:
+    type: string
+    description: "Data geração\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataCaptura:
+    type: string
+    description: "Data captura\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataCancelamento:
+    type: string
+    description: "Data de cancelamento\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataConfirmacaoRecebimento:
+    type: string
+    description: "Data confirmação de recebimento\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataFuturaRecebimento:
+    type: string
+    description: "Data futura recebimento\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  ConfirmacaoRecebimento:
+    type: boolean
+    description: "Confirmação de recebimento\r\n<br />"
+  CodAutorizacao:
+    type: integer
+    description: "Código de autorização\r\n<br />"
+    format: int32
+  IdCartao:
+    type: string
+    description: "Id do cartão\r\n<br />"
+  NomeRecebedor:
+    type: string
+    description: "Nome do recebedor\r\n<br />"
+  NomePagador:
+    type: string
+    description: "Nome do pagador\r\n<br />"
+xml:
+  name: PinSafeFuturos

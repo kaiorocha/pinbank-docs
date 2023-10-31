@@ -1,0 +1,67 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - DtNascimentoPortador
+  - FoneResidencial
+  - IdRelacaoTitular
+  - IdSexo
+  - NmAdicional
+  - NmEmbossing
+  - NrContaCartaoTitular
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  TpCartao2:
+    maxLength: 1
+    type: string
+    description: "Tipo de Cartão\r\n• A - AMEX\r\n• K - ELO\r\n• V - VISA\r\n• M - MASTER\r\n<br />"
+  FoneComercial:
+    $ref: ./Telefone.yaml
+  FoneResidencial:
+    $ref: ./Telefone.yaml
+  TpCartao1:
+    maxLength: 1
+    type: string
+    description: "Tipo de Cartão\r\n• A - AMEX\r\n• K - ELO\r\n• V - VISA\r\n• M - MASTER\r\n<br />"
+  NmAdicional:
+    maxLength: 40
+    type: string
+    description: "Nome do Adicional do cartão\r\nFormato: NOME E SOBRENOME\r\n<br />"
+  IdRelacaoTitular:
+    maxLength: 1
+    type: string
+    description: "Relação com o Titular\r\n• 1 - Conjuge\r\n• 2 - Filho\r\n• 3 - Irmão/Irmã\r\n• 4 - Pai/Mãe\r\n• 5 - Outros\r\n• 6 - Desconhecido\r\n<br />"
+  IdSexo:
+    maxLength: 1
+    type: string
+    description: "Sexo\r\n• M - MASCULINO\r\n• F - FEMININO\r\n<br />"
+  NrContaCartaoTitular:
+    maxLength: 16
+    type: string
+    description: "Número da conta cartão do Titular\r\n<br />"
+  FoneOutros:
+    $ref: ./Telefone.yaml
+  VlLimiteCreditoPortador:
+    type: integer
+    description: "Valor do limíte de crédito do Portador - Valor Inteiro\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  DtNascimentoPortador:
+    type: string
+    description: "Data de nascimento do portador\r\nFormato Padrão: yyyyMMdd\r\n<br />"
+  NmEmbossing:
+    maxLength: 19
+    type: string
+    description: "Nome gravado no cartão.\r\n<br />"
+description: Dados para criação de novo cartão Adicional PF
+xml:
+  name: AdicionalCartaoCreditoRequestData

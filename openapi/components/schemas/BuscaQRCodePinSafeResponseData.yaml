@@ -1,0 +1,44 @@
+type: object
+properties:
+  IdPinsafeToken:
+    type: integer
+    description: "Id pinsafe token\r\n<br />"
+    format: int32
+  IdCartao:
+    type: string
+    description: "Id do cartão\r\n<br />"
+  NsuToken:
+    type: integer
+    description: "NSU token\r\n<br />"
+    format: int64
+  CodigoClienteRecebedor:
+    type: integer
+    description: "Codigo cliente recebedor\r\n<br />"
+    format: int32
+  CodigoCanalRecebedor:
+    type: integer
+    description: "Codigo canal recebedor\r\n<br />"
+    format: int32
+  CodigoClientePagador:
+    type: integer
+    description: "Codigo cliente pagador\r\n<br />"
+    format: int32
+  CodigoCanalPagador:
+    type: integer
+    description: "Codigo canal pagador\r\n<br />"
+    format: int32
+  ValorTransacao:
+    type: number
+    description: "Valor da transação\r\n<br />"
+    format: double
+  DataCadastroToken:
+    type: string
+    description: "Data cadastro token\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataValidadeToken:
+    type: string
+    description: "Data validade token\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataUtilizacaoToken:
+    type: string
+    description: "Data utilização token\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+xml:
+  name: BuscaQRCodePinSafeResponseData

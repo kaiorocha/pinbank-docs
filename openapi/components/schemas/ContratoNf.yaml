@@ -1,0 +1,17 @@
+type: object
+properties:
+  NotaFiscal:
+    type: integer
+    description: "Número da nota fiscal\r\n <br />"
+    format: int64
+  Valor:
+    type: number
+    description: "Valor da nota fiscal\r\n <br />"
+    format: double
+  DataVencimento:
+    type: string
+    description: "Data de vencimento\r\n<br />"
+    format: date-time
+description: ''
+xml:
+  name: ContratoNf

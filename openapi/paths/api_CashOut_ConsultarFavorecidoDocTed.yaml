@@ -1,0 +1,66 @@
+post:
+  tags:
+    - CashOut
+  summary: Consulta a lista de favorecidos para transferência DOC / TED.
+  operationId: CashOut_ConsultarFavorecidoDocTed
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ConsultarFavorecidoDocTedSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/ConsultarFavorecidoDocTedSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarFavorecidoDocTedSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/ConsultarFavorecidoDocTedSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/ConsultarFavorecidoDocTedSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarFavorecidoDocTedListResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarFavorecidoDocTedListResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarFavorecidoDocTedListResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarFavorecidoDocTedListResponseData.yaml
+  x-codegen-request-body-name: request

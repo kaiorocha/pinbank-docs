@@ -1,0 +1,15 @@
+type: object
+properties:
+  Lojista:
+    $ref: ./Lojista.yaml
+  Adesao:
+    $ref: ./Adesao.yaml
+  Plano:
+    $ref: ./Plano.yaml
+  Recebedor:
+    $ref: ./Recebedor.yaml
+  FuncionalidadeLiberada:
+    type: boolean
+    description: "Informa se a funcionalidade está liberada/cadastrada\r\n<br />"
+xml:
+  name: ConsultarElegibilidadeResponseData

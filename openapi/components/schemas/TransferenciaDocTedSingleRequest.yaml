@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./TransferenciaDocTedRequestData.yaml
+xml:
+  name: TransferenciaDocTedSingleRequest

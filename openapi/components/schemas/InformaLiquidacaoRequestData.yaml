@@ -1,0 +1,29 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - IdentificadorOrigem
+  - TipoLiquidacao
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  IdentificadorOrigem:
+    type: string
+    description: "Identificador da transação\r\n<br />"
+    default: '0'
+  TipoLiquidacao:
+    type: string
+    description: "Tipo liquidação\r\n<br />"
+    enum:
+      - CONFIRMADA
+      - NEGADA
+xml:
+  name: InformaLiquidacaoRequestData

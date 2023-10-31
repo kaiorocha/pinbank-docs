@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./TransferenciaRecursoStatusRequestData.yaml
+xml:
+  name: TransferenciaRecursoStatusSingleRequest

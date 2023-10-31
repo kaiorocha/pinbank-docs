@@ -1,0 +1,24 @@
+type: object
+properties:
+  CodigoAutorizacaoAcquirer:
+    type: string
+    description: "Código de autorização\r\n<br />"
+  NumeroCartao:
+    type: string
+    description: "Número do cartão\r\n<br />"
+  DataHorarioHost:
+    type: integer
+    description: "Data e hora do host\r\n<br />"
+    format: int64
+  NsuAcquirer:
+    type: string
+    description: "NSU do Adquirente\r\n<br />"
+  NsuPinbank:
+    type: string
+    description: "NSU da PINbank\r\n<br />"
+  ValorTotal:
+    type: integer
+    description: "Valor total do QR Code (incluindo taxa ou gorjeta)\r\n<br />"
+    format: int64
+xml:
+  name: GetQRCodeStatusResponseData

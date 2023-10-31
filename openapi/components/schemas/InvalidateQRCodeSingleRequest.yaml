@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./InvalidateQRCodeRequestData.yaml
+xml:
+  name: InvalidateQRCodeSingleRequest

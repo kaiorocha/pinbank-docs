@@ -1,0 +1,14 @@
+type: object
+properties:
+  Name:
+    type: string
+    description: Nome do icone
+  Size:
+    type: string
+    description: Tamanho do icone
+  Color:
+    type: string
+    description: Cor do icone
+description: Dadfos do Icone
+xml:
+  name: Icon

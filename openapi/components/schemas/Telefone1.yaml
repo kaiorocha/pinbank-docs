@@ -1,0 +1,18 @@
+required:
+  - DDD
+  - Numero
+type: object
+properties:
+  DDD:
+    maxLength: 3
+    type: string
+    description: "Número do DDD do telefone residencial.\r\n<br />"
+    default: ''
+  Numero:
+    maxLength: 9
+    type: string
+    description: "Número do telefone residencial\r\n<br />"
+    default: ''
+description: Número telefone 1 - Residencial
+xml:
+  name: Telefone1

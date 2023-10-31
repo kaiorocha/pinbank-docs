@@ -1,0 +1,12 @@
+type: object
+properties:
+  TarifaSaqueTecbanQrcode:
+    type: number
+    description: "Tarifa saque tecban QrCode\r\n<br />"
+    format: double
+  TarifaSaqueTecbanBeneficiario:
+    type: number
+    description: "Tarifa saque tecban beneficiário\r\n<br />"
+    format: double
+xml:
+  name: TarifaTecBan

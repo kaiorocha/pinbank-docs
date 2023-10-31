@@ -1,0 +1,4 @@
+type: object
+description: Valida token
+xml:
+  name: ValidaTokenResponseData

@@ -1,0 +1,13 @@
+type: object
+properties:
+  DescricaoHorario:
+    type: string
+    description: "Descrição do Horário\r\n<br />"
+  HorarioLimite:
+    type: string
+    description: "Horário Limite da Aprovação\r\n<br />"
+  CodigoIdentificacao:
+    type: string
+    description: "Código de Identificação\r\n<br />"
+xml:
+  name: ListarHorarioLimiteAprovacaoResponseData

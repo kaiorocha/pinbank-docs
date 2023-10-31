@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./EsqueceuSenhaRequestData.yaml
+xml:
+  name: EsqueceuSenhaSingleRequest

@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./TipoTerminalSimuladorRequestData.yaml
+xml:
+  name: TipoTerminalSimuladorSingleRequest

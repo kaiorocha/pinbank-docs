@@ -1,0 +1,16 @@
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  NsuSistemaOrigem:
+    type: integer
+    description: "NSU gerado para uso do sistema de origem\r\n<br />"
+    format: int64
+xml:
+  name: PixConsultarClienteResponseData

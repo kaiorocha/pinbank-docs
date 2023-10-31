@@ -1,0 +1,20 @@
+type: object
+properties:
+  IdDevolucao:
+    type: string
+    description: "Id da devolução\r\n<br />"
+  ValorDevolvido:
+    type: string
+    description: "Valor\r\n<br />"
+  DataHoraDevolucao:
+    type: string
+    description: "Data / Horário devolução\r\n<br />"
+    format: date-time
+  Status:
+    type: string
+    description: "Status da devolução\r\n<br />"
+  Motivo:
+    type: string
+    description: "Motivo da devolução\r\n<br />"
+xml:
+  name: ItauDevolucao

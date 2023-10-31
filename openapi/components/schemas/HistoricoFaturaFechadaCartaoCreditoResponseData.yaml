@@ -1,0 +1,39 @@
+type: object
+properties:
+  DtVencimento:
+    type: string
+    description: "Data de vencimento yyyy-MM-dd.\r\n<br />"
+  VlSaldoAnterior:
+    type: integer
+    description: "Valor Saldo Anterior.\r\n Ex: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlSaldoAtual:
+    type: integer
+    description: "Valor Saldo Atual\r\n Ex: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlTotalPagamentoFatura:
+    type: integer
+    description: "Valor Total Pagamento Fatura\r\n Ex: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlMinimoPagamentoFatura:
+    type: integer
+    description: "Valor Pagamento Minimo Fatura\r\n<br />"
+    format: int64
+  VlTotalCompras:
+    type: integer
+    description: "Valor Toral Compras\r\n Ex: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlMultas:
+    type: integer
+    description: "Valor Multa\r\n Ex: R$1,00 = 100\r\n<br />"
+    format: int64
+  VlEncargos:
+    type: integer
+    description: "Valor Encargos\r\n Ex: R$1,00 = 100\r\n<br />"
+    format: int64
+  StatusFatura:
+    type: string
+    description: "Retorna o Status da Fatura\r\nAberta, Fechada ou Paga"
+description: "Historico Fatura Fechada\r\n<br />"
+xml:
+  name: HistoricoFaturaFechadaCartaoCreditoResponseData

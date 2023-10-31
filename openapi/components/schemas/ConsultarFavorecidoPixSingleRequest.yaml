@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ConsultarFavorecidoPixRequestData.yaml
+xml:
+  name: ConsultarFavorecidoPixSingleRequest

@@ -1,0 +1,17 @@
+type: object
+properties:
+  Success:
+    type: string
+    description: "success - retorno ok\r\nfailed  - retorno com os erro"
+  Message:
+    type: string
+    description: Mensagem do erro
+  Guid:
+    type: string
+    description: Identificador unico para o CPF informado
+  PropostaStatus:
+    type: string
+    description: "Proposta status\r\nindica a fase que está a proposta\r\n<br />\r\n    P00 - Todas\r\n    P01 - Proposta iniciada\r\n    P02 - Proposta dados basicos\r\n    P03 - Proposta oferta\r\n    P04 - Proposta captura foto\r\n    P05 - Proposta captura documento\r\n    P06 - Proposta finalizada\r\n    P07 - Proposta confirma SMS\r\n    P08 - Proposta efetivada\r\n    P09 - Proposta erro dados\r\n    P10 - Proposta erro ao registrar dados\r\n    P11 - Proposta erro ao obter passo\r\n    P12 - Proposta reenvio de sms\r\n    P13 - Proposta cancelada"
+description: Dados do cancelamento da proposta
+xml:
+  name: CancelarPropostaResponseData

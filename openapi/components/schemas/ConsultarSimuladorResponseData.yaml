@@ -1,0 +1,20 @@
+type: object
+properties:
+  PorQuantoVender:
+    type: array
+    description: "Por quanto vender\r\n<br />"
+    xml:
+      name: Vender
+      wrapped: true
+    items:
+      $ref: ./Vender.yaml
+  PorQuantoReceber:
+    type: array
+    description: "Quanto receber\r\n<br />"
+    xml:
+      name: Receber
+      wrapped: true
+    items:
+      $ref: ./Receber.yaml
+xml:
+  name: ConsultarSimuladorResponseData

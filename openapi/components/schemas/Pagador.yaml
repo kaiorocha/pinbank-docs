@@ -1,0 +1,38 @@
+type: object
+properties:
+  CpfCnpj:
+    type: integer
+    description: "CPF ou CNPJ do sacado (pagador)       \r\n<br />"
+    format: int64
+  Nome:
+    type: string
+    description: "Nome do sacado (pagador) \r\n<br />"
+  Endereco:
+    type: string
+    description: "Endereço\r\n<br />"
+  Bairro:
+    type: string
+    description: "Bairro\r\n<br />"
+  Cidade:
+    type: string
+    description: "Cidade\r\n<br />"
+  Cep:
+    type: string
+    description: "Cep\r\n<br />"
+  Uf:
+    type: string
+    description: "UF\r\n<br />"
+  DdiTerceiro:
+    type: integer
+    description: "DDI Celular\r\n<br />"
+    format: int32
+  DddTerceiro:
+    type: integer
+    description: "DDD Celular\r\n<br />"
+    format: int32
+  NumeroCelularTerceiro:
+    type: integer
+    description: "Número do celular\r\n<br />"
+    format: int64
+xml:
+  name: Pagador

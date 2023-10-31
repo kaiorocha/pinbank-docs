@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./SolicitarDynamicQrCodeRequestData.yaml
+xml:
+  name: SolicitarDynamicQrCodeSingleRequest

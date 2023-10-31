@@ -1,0 +1,66 @@
+post:
+  tags:
+    - GiftCard
+  summary: Busca os sub produtos disponiveis
+  operationId: GiftCard_GiftCardBuscarSubProdutos
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/GiftCardBuscarSubProdutosSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/GiftCardBuscarSubProdutosSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/GiftCardBuscarSubProdutosSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/GiftCardBuscarSubProdutosSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/GiftCardBuscarSubProdutosSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/GiftCardBuscarSubProdutosSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/GiftCardBuscarSubProdutosSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/GiftCardBuscarSubProdutosSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/GiftCardBuscarSubProdutosSingleResponseData.yaml
+  x-codegen-request-body-name: request

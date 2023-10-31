@@ -1,0 +1,12 @@
+type: object
+properties:
+  TarifaRecebimentoTed:
+    type: number
+    description: "Tarifa recebimento de TED\r\n<br />"
+    format: double
+  PercentualRetencaoTedRecebida:
+    type: number
+    description: "Percentual de retencao de TED recebida\r\n<br />"
+    format: double
+xml:
+  name: TarifaTedRecebida

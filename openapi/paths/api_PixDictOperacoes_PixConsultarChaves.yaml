@@ -1,0 +1,62 @@
+post:
+  tags:
+    - PixDictOperacoes
+  summary: Consultar lista de chaves por cliente e canal
+  operationId: PixDictOperacoes_PixConsultarChaves
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/PixConsultarChavesSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/PixConsultarChavesSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/PixConsultarChavesSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/PixConsultarChavesSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/PixConsultarChavesSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/PixConsultarChavesListResponseData.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/PixConsultarChavesListResponseData.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/PixConsultarChavesListResponseData.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/PixConsultarChavesListResponseData.yaml
+  x-codegen-request-body-name: request

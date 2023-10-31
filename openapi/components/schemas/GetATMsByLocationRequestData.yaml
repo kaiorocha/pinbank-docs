@@ -1,0 +1,40 @@
+required:
+  - AccessibleOnly
+  - CodigoCanal
+  - CodigoCliente
+  - Latitude
+  - Longitude
+  - NumberOfItems
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  AccessibleOnly:
+    type: boolean
+    description: "Indica se a busca deve retornar apenas as ATMs que possuem acessibilidade\r\n<br />"
+    default: false
+  Latitude:
+    type: number
+    description: "Latitude da localização\r\n<br />"
+    format: double
+    default: 0
+  Longitude:
+    type: number
+    description: "Longitude da localização\r\n<br />"
+    format: double
+    default: 0
+  NumberOfItems:
+    type: integer
+    description: "Número de itens a serem retornados pela busca (o máximo de 30 itens é permitido)\r\n<br />"
+    format: int32
+    default: 0
+xml:
+  name: GetATMsByLocationRequestData

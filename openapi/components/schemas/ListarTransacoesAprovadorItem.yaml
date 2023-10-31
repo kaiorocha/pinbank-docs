@@ -1,0 +1,52 @@
+type: object
+properties:
+  IdOperacao:
+    type: integer
+    description: "Id da operação\r\n<br />"
+    format: int64
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  Funcionalidade:
+    type: string
+    description: "Funcionalidade\r\n<br />"
+  Valor:
+    type: integer
+    description: "Valor\r\n<br />"
+    format: int64
+  DadosOperacao:
+    type: string
+    description: "Dados da operação\r\n<br />"
+  DataHoraCriacao:
+    type: string
+    description: "Data/Hora da criação\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  Avaliador:
+    type: string
+    description: "Responsável pelo avaliação\r\n<br />"
+  DataHoraAvaliador:
+    type: string
+    description: "Data/Hora do avaliador\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  DataHoraAlteracao:
+    type: string
+    description: "Data/Hora da alteração\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  CpfCnpj:
+    type: string
+    description: "CPF/CNPJ\r\n<br />"
+  NomeRazaoSocial:
+    type: string
+    description: "Nome/Razão Social\r\n<br />"
+  Status:
+    type: string
+    description: "Status do pagmento\r\n<br />"
+  Observacao:
+    type: string
+    description: "Obervação\r\n<br />"
+  MotivoRejeicao:
+    type: string
+xml:
+  name: ListarTransacoesAprovadorItem

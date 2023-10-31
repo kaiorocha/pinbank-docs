@@ -1,0 +1,44 @@
+required:
+  - Avaliacao
+  - CodigoCanal
+  - CodigoCliente
+  - IdAprovadorCliente
+  - ListaTransacoes
+  - Token
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  Token:
+    type: string
+    description: "Token\r\n<br />"
+  IdAprovadorCliente:
+    type: integer
+    description: "Id Aprovador\r\n<br />"
+    format: int64
+  Observacao:
+    type: string
+    description: "Observação\r\n<br />"
+  ListaTransacoes:
+    type: array
+    description: "Lista com Id Operação de cada transação a ser avaliada\r\n<br />"
+    items:
+      type: integer
+      format: int64
+  Avaliacao:
+    type: string
+    description: "Lista com Id Operação de cada transação a ser avaliada\r\n<br />"
+    default: '0'
+    enum:
+      - APROVAR
+      - REPROVAR
+xml:
+  name: AvaliarTransacoesRequestData

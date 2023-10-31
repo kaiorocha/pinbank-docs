@@ -1,0 +1,22 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - IdentificacaoContrato
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  IdentificacaoContrato:
+    type: integer
+    description: "Número/Identificação do cotnrato\r\n<br />"
+    format: int32
+xml:
+  name: ConsultarDadosContratoRequestData

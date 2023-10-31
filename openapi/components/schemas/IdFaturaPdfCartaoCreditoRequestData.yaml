@@ -1,0 +1,37 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - DtFim
+  - DtInicio
+  - NrConta
+  - TpCliente
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  NrConta:
+    type: string
+    description: "Número da conta cartão\r\n<br />"
+  TpCliente:
+    type: string
+    description: "Tipo do cliente\r\nPF - Pessoa Fisica\r\nPJ - Pessoa Juridica\r\n<br />"
+  DtInicio:
+    type: string
+    description: "Data de inicio de consulta\r\nFormato Padrão: yyyyMMdd\r\n<br />"
+  DtFim:
+    type: string
+    description: "Data de final de consulta\r\nFormato Padrão: yyyyMMdd\r\n<br />"
+  NrCPF:
+    type: string
+    description: "Número do CPF\r\n<br />"
+description: Obtem as faturas de um determinado período
+xml:
+  name: IdFaturaPdfCartaoCreditoRequestData

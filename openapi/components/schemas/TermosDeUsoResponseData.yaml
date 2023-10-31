@@ -1,0 +1,29 @@
+type: object
+properties:
+  Termo:
+    type: string
+    description: "Texto do termo de uso\r\n<br />"
+  TermoArquivo:
+    type: string
+    description: Arquivo com dados do termo de uso
+  IdTermo:
+    type: integer
+    description: "Número identificador do termo\r\n<br />"
+    format: int32
+  Tipo:
+    type: string
+    description: "Tipo/Formato do termo (ARQUIVO OU TEXTO)\r\n<br />"
+    enum:
+      - ARQUIVO
+      - TEXTO
+  termoBase64:
+    type: string
+    description: Termo em base 64
+  TermoArqHeader:
+    type: string
+    description: Txt do arq header
+  termoConteudo:
+    type: string
+    description: "Texto em conteúdo\r\n<br />"
+xml:
+  name: TermosDeUsoResponseData

@@ -1,0 +1,20 @@
+type: object
+properties:
+  UrlCheckout:
+    type: string
+    description: "Url do checkout\r\n<br />"
+  NsuTransferencia:
+    type: string
+    description: "NSU Transferencia\r\n<br />"
+  PinbankQrCodeId:
+    type: integer
+    description: "Pinbank QrCode id\r\n<br />"
+    format: int64
+  TextoQrCode:
+    type: string
+    description: "Texto do QR Code\r\n<br />"
+  Base64:
+    type: string
+    description: "Base64 do QR Code\r\n<br />"
+xml:
+  name: CheckoutTransferenciaResponseData

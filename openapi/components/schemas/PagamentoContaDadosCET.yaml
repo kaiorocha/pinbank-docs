@@ -1,0 +1,47 @@
+type: object
+properties:
+  ValorTRF:
+    type: integer
+    description: "Valor TRF\r\n<br />"
+    format: int64
+  ValorTRIB:
+    type: integer
+    description: "Valor TRIB\r\n<br />"
+    format: int64
+  ValorSeguro:
+    type: integer
+    description: "Valor Seguro\r\n<br />"
+    format: int64
+  ValorPagamentoTerc:
+    type: integer
+    description: "Valor pagamento Terc\r\n<br />"
+    format: int64
+  ValorPagamentoReg:
+    type: integer
+    description: "Valor pagamento Reg\r\n<br />"
+    format: int64
+  ValorTotal:
+    type: integer
+    description: "Valor total\r\n<br />"
+    format: int64
+  DataPrimeiraParcela:
+    type: string
+    description: "Data de pagamento da primeira parcela\r\n<br />"
+  NumeroParcelas:
+    type: integer
+    description: "Numero de Parcelas\r\n<br />"
+    format: int32
+  TxJurosMensal:
+    type: integer
+    description: "Taxa de juros mensal\r\n<br />"
+    format: int64
+  CetAnual:
+    type: string
+    description: "CET anual\r\n<br />"
+  ValorParcela:
+    type: integer
+    description: "Valor da parcela\r\n<br />"
+    format: int64
+description: dadosCET
+xml:
+  name: PagamentoContaDadosCET

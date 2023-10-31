@@ -1,0 +1,12 @@
+type: object
+properties:
+  ListaTransferencia:
+    type: array
+    description: "NSU Transferencia\r\n<br />"
+    xml:
+      name: CheckoutTransferencia
+      wrapped: true
+    items:
+      $ref: ./CheckoutTransferencia.yaml
+xml:
+  name: CheckoutTransferenciaConsultaLoteResponseData

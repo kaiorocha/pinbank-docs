@@ -1,0 +1,37 @@
+type: object
+properties:
+  IdOrigem:
+    type: string
+    description: "Id origem da transação\r\n<br />"
+  DataTransacao:
+    type: string
+    description: "Data da transação\r\n<br />"
+  Descricao:
+    type: string
+    description: "Descrição\r\n<br />"
+  TipoTransacao:
+    type: string
+    description: "Tipo da transação\r\n<br />"
+  Valor:
+    type: number
+    description: "Valor da transação\r\n<br />"
+    format: double
+  OrigemTransacao:
+    type: string
+    description: "Origem da transação       \r\nS - Site\r\nM - Mobile"
+  IdLpf:
+    type: integer
+    description: "ID único do lançamento\r\n<br />"
+    format: int64
+  IdComprovante:
+    type: integer
+    description: "ID único do comprovante da operação\r\nCaso não tenha comprovante retornará null\r\n<br />"
+    format: int64
+  InformacaoAdicional:
+    type: object
+    additionalProperties:
+      type: object
+      properties: {}
+    description: "Informação adicional\r\n<br />"
+xml:
+  name: Transacao

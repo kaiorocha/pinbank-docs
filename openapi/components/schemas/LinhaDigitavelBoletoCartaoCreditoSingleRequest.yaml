@@ -1,0 +1,7 @@
+type: object
+properties:
+  Data:
+    $ref: ./LinhaDigitavelBoletoCartaoCreditoRequestData.yaml
+description: Linha Digitavel Boleto de Cartão de Crédito
+xml:
+  name: LinhaDigitavelBoletoCartaoCreditoSingleRequest

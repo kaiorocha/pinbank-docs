@@ -1,0 +1,51 @@
+type: object
+properties:
+  CodigoReceita:
+    type: integer
+    description: "Código da receita\r\n<br />"
+    format: int32
+    default: 0
+  TipoDocumento:
+    type: integer
+    description: "Tipo de documento\r\n<br />"
+    format: int32
+    default: 0
+  CpfCnpj:
+    maxLength: 14
+    minLength: 11
+    type: string
+    description: "CPF ou CNPJ\r\n<br />"
+  InscricaoEstadual:
+    type: string
+    description: "Inscrição estadual\r\n<br />"
+  DividaAtiva:
+    type: string
+    description: "Dívida ativa\r\n<br />"
+  Referencia:
+    type: string
+    description: "Referência\r\n<br />"
+  NotificacaoNumParcela:
+    type: string
+    description: "Notificação do número da parcela\r\n<br />"
+  ValorReceita:
+    type: integer
+    description: "Valor da receita \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  ValorJuros:
+    type: integer
+    description: "Valor dos juros \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  ValorMulta:
+    type: integer
+    description: "Valor da multa \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+  ValorTotal:
+    type: integer
+    description: "Valor total\r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+    default: 0
+xml:
+  name: PagamentoTributoGARERequestData

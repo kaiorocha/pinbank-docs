@@ -1,0 +1,71 @@
+post:
+  tags:
+    - Pix
+  summary: Consulta detalhes do agendamento do PIX.
+  operationId: Pix_ConsultarDetalheAgendamentoPix
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: >-
+            ../components/schemas/ConsultarDetalheAgendamentoPixSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: >-
+            ../components/schemas/ConsultarDetalheAgendamentoPixSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/ConsultarDetalheAgendamentoPixSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: >-
+            ../components/schemas/ConsultarDetalheAgendamentoPixSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: >-
+            ../components/schemas/ConsultarDetalheAgendamentoPixSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarDetalheAgendamentoPixSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarDetalheAgendamentoPixSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarDetalheAgendamentoPixSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/ConsultarDetalheAgendamentoPixSingleResponseData.yaml
+  x-codegen-request-body-name: request

@@ -1,0 +1,41 @@
+required:
+  - EndeResBairro
+  - EndeResCep
+  - EndeResCidade
+  - EndeResEstado
+  - EndeResLogradouro
+  - EndeResNumero
+type: object
+properties:
+  EndeResCep:
+    type: integer
+    description: "CEP residencial\r\n<br />"
+    format: int32
+    default: 0
+  EndeResLogradouro:
+    maxLength: 100
+    type: string
+    description: "Logradouro residencial\r\n<br />"
+  EndeResNumero:
+    maxLength: 5
+    type: string
+    description: "Número residencial\r\n<br />"
+  EndeResComplemento:
+    maxLength: 100
+    type: string
+    description: "Complemento residencial\r\n<br />"
+  EndeResEstado:
+    maxLength: 2
+    type: string
+    description: "Sigla do estado residencial\r\n<br />"
+  EndeResCidade:
+    maxLength: 100
+    type: string
+    description: "Cidade residencial\r\n<br />"
+  EndeResBairro:
+    maxLength: 100
+    type: string
+    description: "Bairro residencial\r\n<br />"
+description: "Endereço residencial\r\n<br />"
+xml:
+  name: EnderecoResidencial

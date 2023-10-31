@@ -1,0 +1,8 @@
+type: object
+properties:
+  Chave:
+    type: string
+    description: Chave para a validação do token
+description: ''
+xml:
+  name: TokenResponseData

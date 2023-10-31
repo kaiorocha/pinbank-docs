@@ -1,0 +1,18 @@
+type: object
+properties:
+  Data:
+    type: array
+    xml:
+      name: ConsultarClientesCanalResponseData
+      wrapped: true
+    items:
+      $ref: ./ConsultarClientesCanalResponseData.yaml
+  ResultCode:
+    type: integer
+    format: int32
+  Message:
+    type: string
+  ValidationData:
+    $ref: ./ValidationData.yaml
+xml:
+  name: ConsultarClientesCanalListResponseData

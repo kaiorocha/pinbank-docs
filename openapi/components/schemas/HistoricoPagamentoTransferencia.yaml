@@ -1,0 +1,13 @@
+type: object
+properties:
+  Status:
+    type: string
+    description: "Status\r\n<br />"
+  Data:
+    type: string
+    description: "Data\r\n<br />"
+  Operador:
+    type: string
+    description: "Operador\r\n<br />"
+xml:
+  name: HistoricoPagamentoTransferencia

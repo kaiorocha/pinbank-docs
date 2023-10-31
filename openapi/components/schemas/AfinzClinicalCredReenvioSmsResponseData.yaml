@@ -1,0 +1,20 @@
+type: object
+properties:
+  Success:
+    type: string
+    description: "Indica o sucesso ou falha de envio dos dados\r\nsuccess - retorno ok do step\r\nfailed  - retorno com os erros encontrados"
+  Dados:
+    $ref: ./clinicalCredData.yaml
+  Erros:
+    type: array
+    description: Lista com os erros de validações dos dados
+    xml:
+      name: Dictionary`2
+      wrapped: true
+    items:
+      type: object
+      additionalProperties:
+        type: string
+description: ''
+xml:
+  name: AfinzClinicalCredReenvioSmsResponseData

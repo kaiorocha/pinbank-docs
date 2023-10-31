@@ -1,0 +1,24 @@
+type: object
+properties:
+  TxnTarifa:
+    type: integer
+    description: "Txn da tarifa\r\n<br />"
+    format: int32
+  MinimoDiasVencimentoParcela:
+    type: integer
+    description: "Dias mínimos para vencimento da parcela\r\n<br />"
+    format: int32
+  ValorTarifa:
+    type: number
+    description: "Valor da tarifa\r\n <br />"
+    format: double
+  ValorMinimoOperacao:
+    type: number
+    description: "Valor mínimo da operação\r\n<br />"
+    format: double
+  ValorMaximoOperacao:
+    type: number
+    description: "Valor máximo da operação\r\n<br />"
+    format: double
+xml:
+  name: Plano

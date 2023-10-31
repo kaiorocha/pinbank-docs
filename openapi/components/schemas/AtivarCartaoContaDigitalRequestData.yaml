@@ -1,0 +1,55 @@
+required:
+  - CartaoEvento
+  - CodigoCanal
+  - CodigoCliente
+  - CpfPortador
+  - CvvCartao
+  - DataNascimentoPortador
+  - IdApelidoCartao
+  - NumeroCartao
+  - ValidadeCartao
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  IdApelidoCartao:
+    type: integer
+    description: "Id apelido do cartão\r\n<br />"
+    format: int32
+    default: 0
+  CpfPortador:
+    type: integer
+    description: "CPF do portador\r\n<br />"
+    format: int64
+    default: 0
+  DataNascimentoPortador:
+    type: string
+    description: "Data de nascimento do portador\r\nFormato: \"yyyyMMdd\"\r\n<br />"
+  CartaoEvento:
+    type: boolean
+    description: "Cartão evento    \r\n<br />"
+    default: false
+  NumeroCartao:
+    type: integer
+    description: "Número do cartão    \r\n<br />"
+    format: int64
+    default: 0
+  CvvCartao:
+    type: integer
+    description: "CVV do cartão    \r\n<br />"
+    format: int32
+    default: 0
+  ValidadeCartao:
+    maxLength: 6
+    type: string
+    description: "Validade do cartão    \r\nFormato: \"yyyyMM\"\r\n<br />"
+xml:
+  name: AtivarCartaoContaDigitalRequestData

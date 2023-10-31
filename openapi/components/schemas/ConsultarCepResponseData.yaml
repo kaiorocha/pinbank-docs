@@ -1,0 +1,31 @@
+type: object
+properties:
+  Cep:
+    type: string
+    description: "CEP\r\n<br />"
+  Logradouro:
+    type: string
+    description: "Logradouro\r\n<br />"
+  Complemento:
+    type: string
+    description: "Complemento\r\n<br />"
+  Bairro:
+    type: string
+    description: "Bairro\r\n<br />"
+  Localidade:
+    type: string
+    description: "Localidade\r\n<br />"
+  UF:
+    type: string
+    description: "UF\r\n<br />"
+  Unidade:
+    type: string
+    description: "Unidade\r\n<br />"
+  IBGE:
+    type: string
+    description: "IBGE\r\n<br />"
+  GIA:
+    type: string
+    description: "GIA\r\n<br />"
+xml:
+  name: ConsultarCepResponseData

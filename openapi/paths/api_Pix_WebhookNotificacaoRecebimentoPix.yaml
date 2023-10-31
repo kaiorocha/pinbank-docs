@@ -1,0 +1,29 @@
+post:
+  tags:
+    - Pix
+  summary: Webhook - Notificação de Recebimento PIX
+  description: "Enviamos a informação de forma ativa para sua empresa, sem a necessidade de solicitação. A notificação é enviada imediatamente, assim que o pagamento Pix for efetivado.\r\nA URL de envio das notificações deve ser cadastrada na área logada do Portal https://dev.pinbank.com.br/manualintegracao\r\n<br /><b>Deve ser desenvolvida pelo cliente API que será responsável por efetuar a recepção da notificação de pagamento instantâneo seguindo a especificação a seguir:</b>"
+  operationId: Pix_WebhookNotificacaoRecebimentoPix
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/WebhookNotificacaoRecebimentoPix.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/WebhookNotificacaoRecebimentoPix.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/WebhookNotificacaoRecebimentoPix.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/WebhookNotificacaoRecebimentoPix.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/WebhookNotificacaoRecebimentoPix.yaml
+    required: true
+  responses:
+    '204':
+      description: No Content
+      content: {}
+  x-codegen-request-body-name: request

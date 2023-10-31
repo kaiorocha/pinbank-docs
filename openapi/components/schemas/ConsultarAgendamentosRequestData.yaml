@@ -1,0 +1,38 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - TipoAgendamneto
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  TipoAgendamneto:
+    type: string
+    description: "Tipo do Agendamento \r\n<br />"
+    enum:
+      - PIX
+  TipoPeriodo:
+    type: string
+    description: "Tipo do periodo da pesquisa \r\n<br />"
+    default: '0'
+    enum:
+      - INTERVALO
+      - PENDENTES_FUTUROS
+  DataInicio:
+    type: string
+    description: "Dta inicio \r\n<br />"
+    format: date-time
+  DataFim:
+    type: string
+    description: "Data fim \r\n<br />"
+    format: date-time
+xml:
+  name: ConsultarAgendamentosRequestData

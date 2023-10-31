@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./EnviarCodigoAlteracaoSenhaRequestData.yaml
+xml:
+  name: EnviarCodigoAlteracaoSenhaSingleRequest

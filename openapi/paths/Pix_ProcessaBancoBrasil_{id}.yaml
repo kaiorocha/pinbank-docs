@@ -1,0 +1,82 @@
+post:
+  tags:
+    - Pix
+  operationId: Pix_ProcessaBancoBrasil
+  parameters:
+    - name: qrCodeDinamico
+      in: header
+      required: true
+      schema: {}
+    - name: response
+      in: header
+      required: true
+      schema: {}
+    - name: valor
+      in: query
+      required: true
+      schema:
+        type: number
+        format: double
+    - name: keyGerador
+      in: query
+      required: true
+      schema:
+        type: string
+    - name: nomeGerador
+      in: query
+      required: true
+      schema:
+        type: string
+    - name: provedorId
+      in: query
+      required: true
+      schema:
+        type: integer
+        format: int32
+    - name: TxId
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: boolean
+        text/json:
+          schema:
+            type: boolean
+        application/xml:
+          schema:
+            type: boolean
+        text/xml:
+          schema:
+            type: boolean

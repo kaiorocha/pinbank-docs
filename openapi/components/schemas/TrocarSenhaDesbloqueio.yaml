@@ -1,0 +1,18 @@
+required:
+  - NovaSenha
+  - ValidadeCartao
+type: object
+properties:
+  NovaSenha:
+    maxLength: 4
+    minLength: 4
+    type: string
+    description: "Senha nova.\r\n<br />"
+  ValidadeCartao:
+    maxLength: 6
+    minLength: 6
+    type: string
+    description: "Validade do cartão (AAAAMM)\r\n<br />"
+description: ''
+xml:
+  name: TrocarSenhaDesbloqueio

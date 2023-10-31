@@ -1,0 +1,97 @@
+type: object
+properties:
+  IdTerminal:
+    type: string
+    description: "Id do terminal\r\n<br />"
+  SerialNumber:
+    type: string
+    description: "Serial Number do terminal\r\n<br />"
+  Terminal:
+    type: string
+    description: "Terminal\r\n<br />"
+  Bandeira:
+    type: string
+    description: "Bandeira\r\n<br />"
+  TipoCompra:
+    type: string
+    description: "Tipo de compra\r\n<br />"
+  DadosExtra:
+    type: string
+    description: "Dados extra\r\n<br />"
+  CpfCnpjComprador:
+    type: string
+    description: "CPF /CNPJ do comprador\r\n<br />"
+  NomeRazaoSocialComprador:
+    type: string
+    description: "Nome / Razão social do comprador\r\n<br />"
+  NumeroParcela:
+    type: integer
+    description: "Número da parcela\r\n<br />"
+    format: int32
+  NumeroTotalParcelas:
+    type: integer
+    description: "Número total de parcelas\r\n<br />"
+    format: int32
+  DataTransacao:
+    type: string
+    description: "Data da transação\r\n<br />"
+    format: date-time
+  DataFuturaPagamento:
+    type: string
+    description: "Data futura do pagamento\r\n<br />"
+    format: date-time
+  CodAutorizAdquirente:
+    type: string
+    description: "Código de autorização adquirente\r\n<br />"
+  NsuOperacao:
+    type: integer
+    description: "NSU Operação\r\n<br />"
+    format: int64
+  NsuOperacaoLoja:
+    type: string
+    description: "Nsu Operacao da loja\r\n<br />"
+  ValorBruto:
+    type: number
+    description: "Valor bruto da transação\r\n<br />"
+    format: double
+  ValorBrutoParcela:
+    type: number
+    description: "Valor bruto da parcela\r\n<br />"
+    format: double
+  ValorLiquidoRepasse:
+    type: number
+    description: "Valor líquido do repasse\r\n<br />"
+    format: double
+  ValorSplit:
+    type: number
+    description: "Valor do split\r\n<br />"
+    format: double
+  IdStatus:
+    type: string
+    description: "Id Status da transação\r\n<br />"
+  DescricaoStatus:
+    type: string
+    description: "Descrição status da transação\r\n<br />"
+  IdStatusPagamento:
+    type: string
+    description: "Id Status do pagamento\r\n<br />"
+  DescricaoStatusPagamento:
+    type: string
+    description: "Descrição Status do pagamento\r\n<br />"
+  ValorTaxaAdm:
+    type: number
+    description: "Valor da taxa de administração referente à parcela\r\n<br />"
+    format: double
+  ValorTaxaMes:
+    type: number
+    description: "Valor da taxa mês referente à parcela\r\n<br />"
+    format: double
+  NumeroCartao:
+    type: string
+    description: "Número do cartão\r\n<br />"
+  DataCancelamento:
+    type: string
+    description: "Data do cancelamento\r\n<br />"
+    format: date-time
+xml:
+  name: ExtratoPosResponseData

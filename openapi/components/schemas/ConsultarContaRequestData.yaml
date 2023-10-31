@@ -1,0 +1,22 @@
+type: object
+properties:
+  NumeroCelular:
+    maxLength: 20
+    type: string
+    description: "Número de celular\r\nEx: 00550011000999999999\r\n0055 - DDI\r\n0011 – DDD(número internacional utilizar 0000)\r\n000999999999 – Numero celular (número internacional, o código de área vem a frente do número)\r\n<br />"
+  Email:
+    maxLength: 50
+    type: string
+    description: "Email\r\n<br />"
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CpfCnpj:
+    type: integer
+    description: "CPF / CNPJ\r\n<br />"
+    format: int64
+    default: 0
+xml:
+  name: ConsultarContaRequestData

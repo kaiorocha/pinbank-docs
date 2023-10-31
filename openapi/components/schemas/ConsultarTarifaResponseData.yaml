@@ -1,0 +1,20 @@
+type: object
+properties:
+  Tarifas:
+    $ref: ./Tarifa.yaml
+  TarifasBoletoRecarga:
+    $ref: ./BoletoRecarga.yaml
+  TarifasBoletoCobranca:
+    $ref: ./BoletoCobranca.yaml
+  TarifasTecBan:
+    $ref: ./TarifaTecBan.yaml
+  TarifasTedRecebida:
+    $ref: ./TarifaTedRecebida.yaml
+  TarifasCartaoContaDigital:
+    $ref: ./TarifaCartaoContaDigital.yaml
+  TarifasPixRecebido:
+    $ref: ./TarifaPixRecebido.yaml
+  TarifasPixEnviado:
+    $ref: ./TarifaPixEnviado.yaml
+xml:
+  name: ConsultarTarifaResponseData

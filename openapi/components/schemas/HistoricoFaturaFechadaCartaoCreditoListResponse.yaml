@@ -1,0 +1,19 @@
+type: object
+properties:
+  Data:
+    type: array
+    xml:
+      name: HistoricoFaturaFechadaCartaoCreditoResponseData
+      wrapped: true
+    items:
+      $ref: ./HistoricoFaturaFechadaCartaoCreditoResponseData.yaml
+  ResultCode:
+    type: integer
+    format: int32
+  Message:
+    type: string
+  ValidationData:
+    $ref: ./ValidationData.yaml
+description: Historico Fatura Fechada
+xml:
+  name: HistoricoFaturaFechadaCartaoCreditoListResponse

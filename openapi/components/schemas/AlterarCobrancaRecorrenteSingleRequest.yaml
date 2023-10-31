@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./AlterarCobrancaRecorrenteRequestData.yaml
+xml:
+  name: AlterarCobrancaRecorrenteSingleRequest

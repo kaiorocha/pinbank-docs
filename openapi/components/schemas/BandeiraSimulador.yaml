@@ -1,0 +1,11 @@
+type: object
+properties:
+  IdBandeira:
+    type: integer
+    description: "Tipo de bandeira\r\n<br />"
+    format: int32
+  DescBandeira:
+    type: string
+    description: "Descrição da bandeira\r\n<br />"
+xml:
+  name: BandeiraSimulador

@@ -1,0 +1,66 @@
+post:
+  tags:
+    - CartaoCredito
+  summary: Dados cadastrais da conta informada
+  operationId: CartaoCredito_DadosCadastraisCartaoCredito
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/DadosCadastraisCartaoCreditoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/DadosCadastraisCartaoCreditoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/DadosCadastraisCartaoCreditoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/DadosCadastraisCartaoCreditoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/DadosCadastraisCartaoCreditoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/DadosCadastraisCartaoCreditoSingleResponse.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/DadosCadastraisCartaoCreditoSingleResponse.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/DadosCadastraisCartaoCreditoSingleResponse.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/DadosCadastraisCartaoCreditoSingleResponse.yaml
+  x-codegen-request-body-name: request

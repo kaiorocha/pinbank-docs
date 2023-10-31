@@ -1,0 +1,14 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    format: int32
+xml:
+  name: ListaCategoriasLimitesPixRequestData

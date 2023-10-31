@@ -1,0 +1,39 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - CpfCnpj
+  - KeyType
+  - KeyValue
+  - TipoAlteracao
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  CpfCnpj:
+    type: integer
+    description: "Cpf ou Cnpj\r\n<br />"
+    format: int64
+  KeyType:
+    type: string
+    description: "Tipo de chave\r\n<br />"
+  KeyValue:
+    type: string
+    description: "Valor da chave\r\n<br />"
+  UsuarioAlteracao:
+    type: string
+    description: "Usuário responsável pela alteração\r\n<br />"
+  TipoAlteracao:
+    type: string
+    description: "Tipo de alteração a ser realizada\r\n<br />"
+    enum:
+      - EXCLUIR_CHAVE
+xml:
+  name: PixAlterarStatusChaveRequestData

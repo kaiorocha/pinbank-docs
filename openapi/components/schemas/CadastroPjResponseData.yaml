@@ -1,0 +1,14 @@
+type: object
+properties:
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+  Senha:
+    type: string
+    description: "Senha de acesso ao sistema\r\n<br />"
+  KeyLoja:
+    type: string
+    description: "Key loja\r\n<br />"
+xml:
+  name: CadastroPjResponseData

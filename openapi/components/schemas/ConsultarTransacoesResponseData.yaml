@@ -1,0 +1,20 @@
+type: object
+properties:
+  Lojista:
+    $ref: ./Lojista.yaml
+  Adesao:
+    $ref: ./Adesao.yaml
+  Plano:
+    $ref: ./Plano.yaml
+  Recebedor:
+    $ref: ./Recebedor.yaml
+  ListaTransacoes:
+    type: array
+    description: "Transações\r\n<br />"
+    xml:
+      name: Provisionamento
+      wrapped: true
+    items:
+      $ref: ./Provisionamento.yaml
+xml:
+  name: ConsultarTransacoesResponseData

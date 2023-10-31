@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./ExcluirFavorecidoDocTedRequestData.yaml
+xml:
+  name: ExcluirFavorecidoDocTedSingleRequest

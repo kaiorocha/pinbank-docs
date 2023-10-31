@@ -1,0 +1,16 @@
+type: object
+properties:
+  NsuOperacao:
+    type: integer
+    description: "NSU do saque\r\n<br />"
+    format: int64
+  ValorSaldo:
+    type: integer
+    description: "Saldo do cliente \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+  ValorTarifa:
+    type: integer
+    description: "Valor da tarifa \r\nEx: R$1,00 = 100\r\n<br />"
+    format: int64
+xml:
+  name: DepositoResponseData

@@ -1,0 +1,62 @@
+post:
+  tags:
+    - ContaDigital
+  summary: Cancelar Agendamento.
+  operationId: ContaDigital_CancelarAgendamento
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/CancelarAgendamentoSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/CancelarAgendamentoSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/CancelarAgendamentoSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/CancelarAgendamentoSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/CancelarAgendamentoSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CancelarAgendamentoSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: ../components/schemas/CancelarAgendamentoSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: ../components/schemas/CancelarAgendamentoSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: ../components/schemas/CancelarAgendamentoSingleResponseData.yaml
+  x-codegen-request-body-name: request

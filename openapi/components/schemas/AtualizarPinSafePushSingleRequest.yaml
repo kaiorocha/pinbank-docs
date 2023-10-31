@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./AtualizarPinSafePushRequestData.yaml
+xml:
+  name: AtualizarPinSafePushSingleRequest

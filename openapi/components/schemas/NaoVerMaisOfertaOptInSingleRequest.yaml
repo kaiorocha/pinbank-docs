@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./NaoVerMaisOfertaOptInRequestData.yaml
+xml:
+  name: NaoVerMaisOfertaOptInSingleRequest

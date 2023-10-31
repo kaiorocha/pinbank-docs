@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./CancelarPropostaRequestData.yaml
+xml:
+  name: CancelarPropostaSingleRequest

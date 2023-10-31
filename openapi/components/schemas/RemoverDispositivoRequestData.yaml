@@ -1,0 +1,25 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - IdentificadorDispositivo
+  - UsuarioBackoffice
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal\r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  UsuarioBackoffice:
+    type: string
+    description: "Identificação do usuário backoffice\r\n<br />"
+  IdentificadorDispositivo:
+    type: string
+    description: "Identificador do dispositivo\r\n<br />"
+xml:
+  name: RemoverDispositivoRequestData

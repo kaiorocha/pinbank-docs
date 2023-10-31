@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./LoginRequestData.yaml
+xml:
+  name: LoginSingleRequest

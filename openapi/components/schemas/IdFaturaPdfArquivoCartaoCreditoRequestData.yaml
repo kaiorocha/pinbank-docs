@@ -1,0 +1,22 @@
+required:
+  - CodigoCanal
+  - CodigoCliente
+  - IdDoc
+type: object
+properties:
+  CodigoCanal:
+    type: integer
+    description: "Código do canal \r\n<br />"
+    format: int32
+    default: 0
+  CodigoCliente:
+    type: integer
+    description: "Código do cliente\r\n<br />"
+    format: int32
+    default: 0
+  IdDoc:
+    type: string
+    description: "Id do documento para obter o arquivo PDF\r\n<br />"
+description: Obtem as faturas de um determinado período
+xml:
+  name: IdFaturaPdfArquivoCartaoCreditoRequestData

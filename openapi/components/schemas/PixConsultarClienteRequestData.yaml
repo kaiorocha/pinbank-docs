@@ -1,0 +1,22 @@
+required:
+  - Ispb
+type: object
+properties:
+  Ispb:
+    type: string
+    description: "Isbp do cliente\r\n<br />"
+  CpfCnpj:
+    type: integer
+    description: "CPF/CNPJ do cliente\r\n<br />"
+    format: int64
+    default: 0
+  KeyValue:
+    type: string
+    description: "Chave PIX do cliente\r\n<br />"
+  IdSistemaOrigem:
+    type: integer
+    description: "ID do sistema de origem para geração de NSU\r\n<br />"
+    format: int32
+    default: 0
+xml:
+  name: PixConsultarClienteRequestData

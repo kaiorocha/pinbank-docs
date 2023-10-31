@@ -1,0 +1,14 @@
+type: object
+properties:
+  Data:
+    $ref: ./ReversaoCartaoCreditoResponseData.yaml
+  ResultCode:
+    type: integer
+    format: int32
+  Message:
+    type: string
+  ValidationData:
+    $ref: ./ValidationData.yaml
+description: ''
+xml:
+  name: ReversaoCartaoCreditoSingleResponse

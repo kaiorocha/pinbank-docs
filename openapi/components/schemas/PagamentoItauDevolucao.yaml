@@ -1,0 +1,19 @@
+type: object
+properties:
+  Valor:
+    type: string
+    description: "Valor\r\n<br />"
+  DataHora:
+    type: string
+    description: "Data / Horário\r\n<br />"
+    format: date-time
+  Devolucoes:
+    type: array
+    description: "Lista de devoluções\r\n<br />"
+    xml:
+      name: ItauDevolucao
+      wrapped: true
+    items:
+      $ref: ./ItauDevolucao.yaml
+xml:
+  name: PagamentoItauDevolucao

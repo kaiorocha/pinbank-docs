@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./GiftCardBuscarSubProdutosRequestData.yaml
+xml:
+  name: GiftCardBuscarSubProdutosSingleRequest

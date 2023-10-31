@@ -1,0 +1,14 @@
+type: object
+properties:
+  IdPDF:
+    type: string
+    description: "Id para obter o pdf da Fatura\r\n<br />"
+  DtVencimento:
+    type: string
+    description: "Data de vencimento da Fatura\r\n<br />"
+  DtMovimento:
+    type: string
+    description: "Data do movimento da Fatura\r\n<br />"
+description: "Objeto de dados da Fatura\r\n<br />"
+xml:
+  name: idFaturaPdf

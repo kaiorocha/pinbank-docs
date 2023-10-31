@@ -1,0 +1,66 @@
+post:
+  tags:
+    - CashOut
+  summary: Cadastra novo favorecido para transferência DOC / TED.
+  operationId: CashOut_CadastrarFavorecidoDocTed
+  parameters:
+    - name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        default: application/json
+    - name: UserName
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+    - name: RequestOrigin
+      in: header
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/CadastrarFavorecidoDocTedSingleRequest.yaml
+      text/json:
+        schema:
+          $ref: ../components/schemas/CadastrarFavorecidoDocTedSingleRequest.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/CadastrarFavorecidoDocTedSingleRequest.yaml
+      text/xml:
+        schema:
+          $ref: ../components/schemas/CadastrarFavorecidoDocTedSingleRequest.yaml
+      application/x-www-form-urlencoded:
+        schema:
+          $ref: ../components/schemas/CadastrarFavorecidoDocTedSingleRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/CadastrarFavorecidoDocTedSingleResponseData.yaml
+        text/json:
+          schema:
+            $ref: >-
+              ../components/schemas/CadastrarFavorecidoDocTedSingleResponseData.yaml
+        application/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/CadastrarFavorecidoDocTedSingleResponseData.yaml
+        text/xml:
+          schema:
+            $ref: >-
+              ../components/schemas/CadastrarFavorecidoDocTedSingleResponseData.yaml
+  x-codegen-request-body-name: request

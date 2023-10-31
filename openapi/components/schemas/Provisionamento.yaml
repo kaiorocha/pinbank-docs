@@ -1,0 +1,62 @@
+type: object
+properties:
+  IdRegistro:
+    type: integer
+    description: "Nsu da operação\r\n<br />"
+    format: int64
+  NsuOperacao:
+    type: integer
+    description: <br />
+    format: int64
+  DataVendaOriginal:
+    type: string
+    description: "Data da venda original\r\n<br />"
+  DataPagamentoOriginal:
+    type: string
+    description: "Data do pagamento original\r\n<br />"
+  ValorBrutoParcela:
+    type: number
+    description: "Valor bruto da parcela\r\n<br />"
+    format: double
+  ValorLiquidoRepasse:
+    type: number
+    description: "Valor líquido do repasse\r\n<br />"
+    format: double
+  NumeroTotalParcelas:
+    type: integer
+    description: "Número total de parcelas\r\n<br />"
+    format: int32
+  NumeroParcela:
+    type: integer
+    description: "Número parcela\r\n<br />"
+    format: int32
+  ValorTarifa:
+    type: number
+    description: "Valor tarifa\r\n<br />"
+    format: double
+  IdBandeira:
+    type: integer
+    description: "Id bandeira\r\n<br />"
+    format: int32
+  Bandeira:
+    type: string
+    description: "Bandeira\r\n<br />"
+  ValorLiquidoAdquirente:
+    type: number
+    description: "Valor líquido adquirente\r\n<br />"
+    format: double
+  Adquirente:
+    type: string
+    description: "Adquirente\r\n<br />"
+  DataPagamentoAdquirente:
+    type: string
+    description: "Data de pagamento adquirente\r\n<br />"
+  DataPagamentoRecebedor:
+    type: string
+    description: "Data de pagamento recebedor\r\n<br />"
+  ValorLiquidoRecebedor:
+    type: number
+    description: "Valor liquido recebedor\r\n<br />"
+    format: double
+xml:
+  name: Provisionamento

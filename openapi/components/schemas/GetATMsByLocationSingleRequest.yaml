@@ -1,0 +1,6 @@
+type: object
+properties:
+  Data:
+    $ref: ./GetATMsByLocationRequestData.yaml
+xml:
+  name: GetATMsByLocationSingleRequest
